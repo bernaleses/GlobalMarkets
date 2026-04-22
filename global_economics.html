@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Global Economics — Guía de Estudio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@300;400;500&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0b0d11;
+  --surface: #131620;
+  --card: #191d27;
+  --border: #242836;
+  --text: #dde3f0;
+  --muted: #5a6282;
+  --accent: #c8a84b;
+  --accent2: #4fa8c8;
+  --accent3: #c84f4f;
+  --accent4: #4fc87a;
+  --supply: #4fa8c8;
+  --demand: #c8a84b;
+  --red: #e05555;
+  --green: #4caf78;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Sora',sans-serif;font-size:15px;line-height:1.7;min-height:100vh}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(11,13,17,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 20px;display:flex;align-items:center;gap:2px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+.nav-brand{font-family:'Libre Baskerville',serif;font-size:13px;color:var(--accent);white-space:nowrap;padding:14px 16px 14px 0;border-right:1px solid var(--border);margin-right:8px;letter-spacing:.5px}
+.nav-tab{padding:14px 14px;font-size:12px;color:var(--muted);cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s;letter-spacing:.3px;font-weight:500;background:none;border-top:none;border-left:none;border-right:none}
+.nav-tab:hover{color:var(--text)}
+.nav-tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+
+/* SECTIONS */
+.section{display:none;padding:40px 20px;max-width:1100px;margin:0 auto}
+.section.active{display:block}
+
+/* HERO */
+.hero{text-align:center;padding:60px 20px 40px;border-bottom:1px solid var(--border);margin-bottom:40px}
+.hero-label{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--muted);text-transform:uppercase;margin-bottom:12px}
+.hero h1{font-family:'Libre Baskerville',serif;font-size:clamp(28px,5vw,52px);font-weight:700;color:var(--text);line-height:1.2;margin-bottom:16px}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--muted);max-width:600px;margin:0 auto;font-size:15px}
+
+/* CARDS & LAYOUT */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+@media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px}
+.card-title{font-family:'Libre Baskerville',serif;font-size:16px;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.tag{display:inline-block;font-family:'DM Mono',monospace;font-size:10px;padding:3px 8px;border-radius:4px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.tag-micro{background:rgba(200,168,75,.12);color:var(--accent);border:1px solid rgba(200,168,75,.25)}
+.tag-macro{background:rgba(79,168,200,.12);color:var(--accent2);border:1px solid rgba(79,168,200,.25)}
+
+/* TYPOGRAPHY */
+h2{font-family:'Libre Baskerville',serif;font-size:22px;color:var(--text);margin:32px 0 16px;font-weight:700}
+h3{font-family:'Sora',sans-serif;font-size:15px;font-weight:600;color:var(--accent);margin:24px 0 10px;text-transform:uppercase;letter-spacing:.5px}
+p{margin-bottom:12px;color:#b0b8cc}
+strong{color:var(--text);font-weight:600}
+ul,ol{padding-left:20px;margin-bottom:12px;color:#b0b8cc}
+li{margin-bottom:4px}
+
+/* FORMULA BOX */
+.formula{background:rgba(200,168,75,.06);border:1px solid rgba(200,168,75,.2);border-radius:8px;padding:14px 18px;font-family:'DM Mono',monospace;font-size:13px;color:var(--accent);margin:12px 0;letter-spacing:.5px}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:13px}
+th{background:rgba(200,168,75,.08);color:var(--accent);font-weight:600;padding:10px 14px;text-align:left;border-bottom:1px solid var(--border);font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.5px;text-transform:uppercase}
+td{padding:9px 14px;border-bottom:1px solid rgba(36,40,54,.6);color:#b0b8cc;vertical-align:top}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.02)}
+
+/* KEY CONCEPT */
+.key-concept{background:var(--surface);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:14px 18px;margin:16px 0}
+.key-concept strong{display:block;font-size:12px;font-family:'DM Mono',monospace;letter-spacing:1px;color:var(--accent);margin-bottom:4px;text-transform:uppercase}
+
+/* CANVAS CHARTS */
+.chart-wrap{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin:20px 0}
+.chart-title{font-family:'Libre Baskerville',serif;font-size:15px;color:var(--text);margin-bottom:4px}
+.chart-sub{font-size:12px;color:var(--muted);margin-bottom:16px;font-family:'DM Mono',monospace}
+canvas{display:block;max-width:100%}
+.chart-controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.ctrl-btn{padding:7px 14px;border-radius:6px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:12px;cursor:pointer;font-family:'Sora',sans-serif;transition:all .15s}
+.ctrl-btn:hover,.ctrl-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(200,168,75,.08)}
+.ctrl-btn.red-btn{border-color:var(--accent3);color:var(--accent3)}
+.ctrl-btn.green-btn{border-color:var(--accent4);color:var(--accent4)}
+.slider-row{display:flex;align-items:center;gap:12px;margin-top:10px;font-size:12px;color:var(--muted)}
+input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
+.slider-val{font-family:'DM Mono',monospace;font-size:12px;color:var(--accent);min-width:40px;text-align:right}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.leg{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
+.leg-dot{width:10px;height:10px;border-radius:50%}
+.leg-line{width:18px;height:2px;border-radius:1px}
+
+/* QUIZ */
+.quiz-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:24px}
+.quiz-score{font-family:'DM Mono',monospace;font-size:13px;color:var(--accent);padding:8px 16px;border:1px solid rgba(200,168,75,.3);border-radius:8px}
+.q-block{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:14px;transition:border-color .2s}
+.q-block.correct{border-color:var(--green)}
+.q-block.wrong{border-color:var(--red)}
+.q-num{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;margin-bottom:6px}
+.q-text{font-size:14px;color:var(--text);margin-bottom:14px;line-height:1.6;font-weight:500}
+.q-options{display:grid;gap:8px}
+.q-opt{padding:9px 14px;border:1px solid var(--border);border-radius:7px;font-size:13px;cursor:pointer;transition:all .15s;color:#b0b8cc;background:var(--surface)}
+.q-opt:hover{border-color:var(--accent2);color:var(--text)}
+.q-opt.selected{border-color:var(--accent);color:var(--accent);background:rgba(200,168,75,.06)}
+.q-opt.correct-ans{border-color:var(--green);color:var(--green);background:rgba(76,175,120,.08)}
+.q-opt.wrong-ans{border-color:var(--red);color:var(--red);background:rgba(224,85,85,.08)}
+.q-explain{display:none;margin-top:10px;font-size:12.5px;color:var(--muted);background:var(--surface);border-radius:6px;padding:10px 14px;line-height:1.6;border-left:2px solid var(--accent2)}
+.q-explain.show{display:block}
+.quiz-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.quiz-btn{padding:10px 20px;border-radius:8px;font-size:13px;cursor:pointer;font-family:'Sora',sans-serif;font-weight:500;transition:all .2s}
+.quiz-btn-primary{background:var(--accent);color:#000;border:none}
+.quiz-btn-primary:hover{background:#d4b055}
+.quiz-btn-secondary{background:transparent;color:var(--muted);border:1px solid var(--border)}
+.quiz-btn-secondary:hover{color:var(--text);border-color:var(--text)}
+.filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.filter-chip{padding:6px 14px;border-radius:20px;font-size:11px;cursor:pointer;border:1px solid var(--border);color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:.5px;background:none;transition:all .15s}
+.filter-chip.active{background:rgba(200,168,75,.1);border-color:var(--accent);color:var(--accent)}
+.progress-bar{height:4px;background:var(--border);border-radius:2px;margin-bottom:20px;overflow:hidden}
+.progress-fill{height:100%;background:var(--accent);border-radius:2px;transition:width .3s}
+
+/* MODULE OVERVIEW CARDS */
+.module-card{display:flex;gap:16px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:12px;transition:border-color .2s}
+.module-card:hover{border-color:var(--accent)}
+.module-num{font-family:'Libre Baskerville',serif;font-size:32px;font-weight:700;color:var(--border);min-width:48px;line-height:1}
+.module-info h4{font-size:14px;font-weight:600;color:var(--text);margin-bottom:4px}
+.module-info p{font-size:12px;color:var(--muted);margin:0;line-height:1.5}
+.module-sessions{font-family:'DM Mono',monospace;font-size:10px;color:var(--accent);margin-top:6px;letter-spacing:.5px}
+
+.divider{height:1px;background:var(--border);margin:28px 0}
+.back-top{text-align:center;padding:20px 0}
+.back-top a{font-size:12px;color:var(--muted);text-decoration:none;font-family:'DM Mono',monospace;letter-spacing:1px}
+.back-top a:hover{color:var(--accent)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-brand">Global Economics</div>
+  <button class="nav-tab active" onclick="showSection('home',this)">Inicio</button>
+  <button class="nav-tab" onclick="showSection('micro1',this)">S1 · Mercados</button>
+  <button class="nav-tab" onclick="showSection('micro2',this)">S2 · Trabajo & Tech</button>
+  <button class="nav-tab" onclick="showSection('micro3',this)">S3 · Price Controls</button>
+  <button class="nav-tab" onclick="showSection('micro4',this)">S4 · Impuestos</button>
+  <button class="nav-tab" onclick="showSection('macro1',this)">Macro · AD-AS</button>
+  <button class="nav-tab" onclick="showSection('macro2',this)">Macro · Fiscal</button>
+  <button class="nav-tab" onclick="showSection('macro3',this)">Macro · Monetaria</button>
+  <button class="nav-tab" onclick="showSection('quiz',this)">📝 Test</button>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="section active">
+  <div class="hero">
+    <div class="hero-label">IE Business School · Prof. Enrique Ide</div>
+    <h1>Global <span>Economics</span></h1>
+    <p>Guía de estudio completa. Resumen teórico por módulo, gráficos interactivos y banco de preguntas tipo test para el examen final.</p>
+  </div>
+
+  <h2>Estructura del Curso</h2>
+  <div class="module-card">
+    <div class="module-num">I</div>
+    <div class="module-info">
+      <h4>Microeconomía</h4>
+      <p>Mercados competitivos · Automatización y mercado laboral · Controles de precio (Hurricane Sandy) · Impuestos e incidencia fiscal</p>
+      <div class="module-sessions">Sesiones 1–4</div>
+    </div>
+  </div>
+  <div class="module-card">
+    <div class="module-num">II</div>
+    <div class="module-info">
+      <h4>Macroeconomía (economía cerrada)</h4>
+      <p>Medición económica · Marco AD-AS · Política fiscal (Francia) · Política monetaria y tipo neutral (Fed)</p>
+      <div class="module-sessions">Sesiones 5–8</div>
+    </div>
+  </div>
+  <div class="module-card">
+    <div class="module-num">III</div>
+    <div class="module-info">
+      <h4>Finanzas Internacionales</h4>
+      <p>Tipos de cambio · Flujos de capital · Políticas en economías abiertas · Peso chileno, Noruega, Argentina</p>
+      <div class="module-sessions">Sesiones 9–12 · Midterm Sesión 11</div>
+    </div>
+  </div>
+  <div class="module-card">
+    <div class="module-num">IV</div>
+    <div class="module-info">
+      <h4>Casos Globales</h4>
+      <p>Hong Kong · Sri Lanka · USA · Japón · México · Chile · Eurozona</p>
+      <div class="module-sessions">Sesiones 13–19 · Final Sesión 22</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <h2>Evaluación</h2>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">📊 Examen Final</div>
+      <p>Tipo test. Cubre todos los módulos. Practica en la pestaña <strong>Test</strong> con +70 preguntas organizadas por tema.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🎯 Distribución</div>
+      <table><tr><td>Participación</td><td style="color:var(--accent);font-family:'DM Mono',monospace;font-weight:600">40%</td></tr><tr><td>Exámenes</td><td style="color:var(--accent);font-family:'DM Mono',monospace;font-weight:600">60%</td></tr></table>
+    </div>
+  </div>
+  <div class="key-concept" style="margin-top:20px">
+    <strong>Hilo conductor del curso</strong>
+    Todos los módulos se anclan en el mismo modelo fundamental: oferta y demanda. Desde mercados de gasolina hasta tipos de cambio, la lógica es siempre la misma — qué desplaza las curvas, cómo se ajusta el equilibrio, qué ganan o pierden los agentes.
+  </div>
+</div>
+
+<!-- SESIÓN 1: MERCADOS COMPETITIVOS -->
+<div id="micro1" class="section">
+  <div class="tag tag-micro">Módulo I · Sesión 1</div>
+  <h2>Mercados Competitivos</h2>
+  <p>El modelo central del curso. Compradores y vendedores interactuando en un mercado donde ninguno tiene poder sobre el precio. Aprenderemos a predecir cómo cambia el equilibrio ante cualquier shock.</p>
+
+  <h3>El Modelo: Oferta y Demanda</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">📉 Curva de Demanda</div>
+      <p>Muestra cuánto están dispuestos a <strong>comprar</strong> los consumidores a cada precio. Pendiente negativa (Ley de la Demanda). Representa también la <strong>willingness to pay</strong>.</p>
+      <p><strong>Precio sube → movimiento a lo largo.</strong><br>Cualquier otro factor → desplazamiento de la curva.</p>
+      <h3 style="margin-top:12px">Shifters de Demanda</h3>
+      <ul>
+        <li>Renta (bienes normales: +renta → +demanda)</li>
+        <li>Precio de sustitutos (↑ sustituto → ↑ demanda del bien)</li>
+        <li>Precio de complementarios (↑ complementario → ↓ demanda)</li>
+        <li>Expectativas de precio futuro más alto</li>
+        <li>Preferencias / publicidad</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Curva de Oferta</div>
+      <p>Muestra cuánto están dispuestos a <strong>vender</strong> los productores a cada precio. Pendiente positiva. Refleja también el <strong>coste marginal</strong> de producción.</p>
+      <p><strong>Precio sube → movimiento a lo largo.</strong><br>Cualquier otro factor → desplazamiento de la curva.</p>
+      <h3 style="margin-top:12px">Shifters de Oferta</h3>
+      <ul>
+        <li>Coste de inputs (↑ coste → ↓ oferta)</li>
+        <li>Tecnología (mejor tecnología → ↑ oferta)</li>
+        <li>Número de productores</li>
+        <li>Expectativas de precio futuro</li>
+        <li>Regulación / impuestos</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="key-concept">
+    <strong>Regla de los 3 pasos para analizar un shock</strong>
+    1. ¿Afecta al comprador (demanda) o al vendedor (oferta)? · 2. ¿En qué dirección se desplaza la curva? · 3. ¿Cómo cambian P* y Q* en el nuevo equilibrio?
+  </div>
+
+  <div class="chart-wrap">
+    <div class="chart-title">Mercado Competitivo — Modelo Interactivo</div>
+    <div class="chart-sub">Haz clic en los botones para simular shocks y observa el nuevo equilibrio</div>
+    <canvas id="sdCanvas" width="680" height="380"></canvas>
+    <div class="chart-controls">
+      <button class="ctrl-btn" onclick="sdShock('demandUp')">▲ Demanda sube</button>
+      <button class="ctrl-btn" onclick="sdShock('demandDown')">▼ Demanda baja</button>
+      <button class="ctrl-btn" onclick="sdShock('supplyUp')">▲ Oferta sube</button>
+      <button class="ctrl-btn" onclick="sdShock('supplyDown')">▼ Oferta baja</button>
+      <button class="ctrl-btn" onclick="sdShock('reset')">↺ Reset</button>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-line" style="background:var(--demand)"></div>Demanda</div>
+      <div class="leg"><div class="leg-line" style="background:var(--supply)"></div>Oferta</div>
+      <div class="leg"><div class="leg-dot" style="background:#fff"></div>Equilibrio (P*, Q*)</div>
+    </div>
+  </div>
+
+  <h3>Excedentes y Eficiencia</h3>
+  <div class="grid3">
+    <div class="card">
+      <div class="card-title">👤 Excedente del Consumidor</div>
+      <p>Diferencia entre lo que el consumidor está dispuesto a pagar (willingness to pay) y lo que realmente paga. Área triangular <strong>sobre el precio de equilibrio</strong> y bajo la curva de demanda.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🏭 Excedente del Productor</div>
+      <p>Diferencia entre el precio que recibe el productor y su coste de producción. Área triangular <strong>bajo el precio de equilibrio</strong> y sobre la curva de oferta.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">⚖️ Bienestar Total</div>
+      <p>Suma de excedentes del consumidor y del productor. El equilibrio competitivo lo <strong>maximiza</strong>. Cualquier restricción genera pérdida irrecuperable (DWL).</p>
+    </div>
+  </div>
+
+  <h3>Elasticidad</h3>
+  <table>
+    <tr><th>Concepto</th><th>Fórmula</th><th>Interpretación</th></tr>
+    <tr><td>Elasticidad-precio de demanda</td><td><code>ε = %ΔQ / %ΔP</code></td><td>|ε|>1 elástica; |ε|<1 inelástica</td></tr>
+    <tr><td>Determinantes</td><td>—</td><td>Más sustitutos, horizonte largo, categoría específica → más elástica</td></tr>
+    <tr><td>Relevancia</td><td>—</td><td>Determina cómo se reparte el ajuste entre precio y cantidad ante un shock</td></tr>
+  </table>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Movimiento a lo largo de la curva vs. desplazamiento de la curva (¡distinción crítica!)</li>
+    <li>Los 5 shifters de demanda y los principales de oferta</li>
+    <li>3 pasos para analizar cualquier shock</li>
+    <li>Consumer Surplus y Producer Surplus: definición y localización en el gráfico</li>
+    <li>Por qué los mercados competitivos son eficientes y cuándo ese argumento falla</li>
+  </ul>
+</div>
+
+<!-- SESIÓN 2: AUTOMATIZACIÓN -->
+<div id="micro2" class="section">
+  <div class="tag tag-micro">Módulo I · Sesión 2</div>
+  <h2>Automatización y Polarización del Empleo</h2>
+  <p>Aplicación del modelo S&D al mercado laboral. El reencuadre clave: <strong>Salario = Precio del trabajo; Empleo = Cantidad.</strong> Las empresas demandan trabajo, las personas lo ofrecen.</p>
+
+  <h3>El Patrón de Desigualdad</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">📊 1974–1988: Desigualdad Uniforme</div>
+      <p>La desigualdad crece en <em>toda</em> la distribución. Tanto el ratio 90/50 como el 50/10 suben. El crecimiento real de salarios es positivo arriba, débil en el medio, negativo abajo.</p>
+      <p style="color:var(--muted);font-size:12px">La distribución se <strong>estira uniformemente</strong> hacia arriba.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 1988–2008: Polarización</div>
+      <p>El 90/50 sigue subiendo, pero el 50/10 <strong>deja de subir</strong>. Los salarios bajos crecen modestamente mientras el medio se estanca. La desigualdad se concentra en la parte superior.</p>
+      <p style="color:var(--muted);font-size:12px">La distribución se <strong>"vacía" en el medio</strong>. Arriba crece, abajo crece modestamente, el medio se queda atrás.</p>
+    </div>
+  </div>
+
+  <div class="key-concept">
+    <strong>Routinization Hypothesis</strong>
+    Los ordenadores y robots sustituyen tareas <em>rutinarias y codificables</em> — precisamente las del nivel medio (operadores, administrativos, contabilidad, ensamblaje). Los trabajadores de nivel alto (creatividad, gestión, análisis) y bajo (servicios en persona, limpieza) son más difíciles de automatizar.
+  </div>
+
+  <h3>Efecto sobre los Tres Segmentos de Trabajadores</h3>
+  <div class="chart-wrap">
+    <div class="chart-title">Mercado Laboral: Impacto de la Automatización</div>
+    <div class="chart-sub">Selecciona el segmento salarial para ver el efecto en el mercado de trabajo</div>
+    <canvas id="laborCanvas" width="680" height="360"></canvas>
+    <div class="chart-controls">
+      <button class="ctrl-btn active" onclick="laborScenario('mid',this)">Trabajadores Medio</button>
+      <button class="ctrl-btn" onclick="laborScenario('high',this)">Trabajadores Alto</button>
+      <button class="ctrl-btn" onclick="laborScenario('low',this)">Trabajadores Bajo</button>
+    </div>
+    <div id="laborExplain" style="margin-top:12px;font-size:12.5px;color:var(--muted);padding:10px 14px;background:var(--surface);border-radius:6px;border-left:2px solid var(--accent2)">
+      Tecnología actúa como <strong>sustituto</strong> de trabajadores rutinarios. La demanda de trabajo medio cae → curva de demanda se desplaza a la izquierda → salario y empleo caen.
+    </div>
+  </div>
+
+  <h3>El Efecto Escala</h3>
+  <p>La automatización no solo destruye empleos — también los crea. Al reducir costes, las empresas producen más y necesitan más trabajadores complementarios (ej. programadores, analistas). Para los trabajadores de nivel alto, la tecnología actúa como <strong>complemento</strong>, desplazando su curva de demanda a la derecha.</p>
+
+  <h3>¿Por qué los Desplazados del Medio van hacia Abajo?</h3>
+  <p>Cuando los trabajadores de nivel medio son desplazados, tienen dos opciones: recualificarse hacia tareas de alto nivel (costoso, requiere tiempo) o redirigirse a empleos de nivel bajo (accesibles de inmediato). La mayoría toma el camino de menor resistencia → la oferta de trabajo bajo aumenta → esto <strong>presiona los salarios bajos a la baja</strong>, aunque la demanda de esos trabajos también suba.</p>
+
+  <table>
+    <tr><th>Segmento</th><th>Efecto tecnológico</th><th>Resultado en S&D laboral</th><th>Salario</th></tr>
+    <tr><td>Alto (abstracto / gestor)</td><td>Complemento → ↑ demanda</td><td>Demanda laboral desplaza →→ derecha</td><td>↑↑</td></tr>
+    <tr><td>Medio (rutinario)</td><td>Sustituto → ↓ demanda</td><td>Demanda laboral desplaza ←← izquierda</td><td>↓↓</td></tr>
+    <tr><td>Bajo (servicio en persona)</td><td>Difícil automatizar + oferta extra del medio</td><td>Demanda ↑ pero también oferta ↑</td><td>↑ modesto</td></tr>
+  </table>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Routinization Hypothesis: qué predice y por qué</li>
+    <li>Ratios 90/50 y 50/10: cómo se comportaron en cada período y qué significa</li>
+    <li>Tecnología como sustituto vs. complemento del trabajo (efecto sobre demanda laboral)</li>
+    <li>El efecto escala: por qué la automatización también crea empleo</li>
+    <li>Por qué los desplazados del medio no van hacia arriba sino hacia abajo</li>
+    <li>Conexión con el modelo S&D básico: salario = precio, empleo = cantidad</li>
+  </ul>
+</div>
+
+<!-- SESIÓN 3: CONTROLES DE PRECIO -->
+<div id="micro3" class="section">
+  <div class="tag tag-micro">Módulo I · Sesión 3</div>
+  <h2>Controles de Precio — Hurricane Sandy</h2>
+  <p>El caso más rico en debate ético del módulo. La pregunta central es incómoda: ¿debería haberse permitido que el precio de la gasolina subiera libremente durante un desastre natural? El modelo S&D da una respuesta clara; la política y la ética complican el cuadro.</p>
+
+  <h3>El Doble Shock del Huracán</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">⬇️ Shock de Oferta Negativo</div>
+      <p>Gasolineras sin electricidad para bombear. Cadenas de suministro cortadas. Regulaciones que impedían comprar a proveedores de otros estados.</p>
+      <p><strong>Curva de oferta se desplaza a la izquierda</strong> → menos gasolina disponible a cualquier precio.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">⬆️ Shock de Demanda Positivo</div>
+      <p>Pánico generalizado. Gente llenando bidones preventivamente. El miedo a quedarse sin gasolina genera demanda extra.</p>
+      <p><strong>Curva de demanda se desplaza a la derecha</strong> → más demanda a cualquier precio.</p>
+    </div>
+  </div>
+  <p>Ambos shocks presionan el precio al alza. El precio de equilibrio libre habría subido muy por encima del precio pre-huracán. Craigslist llegó a $18–20/galón.</p>
+
+  <h3>Price Ceiling — Techo de Precio</h3>
+  <div class="chart-wrap">
+    <div class="chart-title">Price Ceiling — Modelo Interactivo</div>
+    <div class="chart-sub">Activa el techo de precio y observa el shortage generado</div>
+    <canvas id="ceilingCanvas" width="680" height="380"></canvas>
+    <div class="chart-controls">
+      <button class="ctrl-btn active" onclick="ceilingMode('base')">Equilibrio base</button>
+      <button class="ctrl-btn" onclick="ceilingMode('shock')">Shock huracán (S↓ D↑)</button>
+      <button class="ctrl-btn" onclick="ceilingMode('ceiling')">+ Price Ceiling</button>
+    </div>
+    <div id="ceilingExplain" style="margin-top:12px;font-size:12.5px;color:var(--muted);padding:10px 14px;background:var(--surface);border-radius:6px;border-left:2px solid var(--accent3)">
+      Equilibrio sin intervención. El precio P* y la cantidad Q* se determinan en la intersección de oferta y demanda.
+    </div>
+  </div>
+
+  <div class="key-concept">
+    <strong>Price Ceiling Vinculante</strong>
+    Un techo de precio solo tiene efecto si está <em>por debajo</em> del precio de equilibrio. En ese caso genera <strong>exceso de demanda</strong> (shortage): a ese precio la gente quiere más de lo que los vendedores están dispuestos a ofrecer.
+  </div>
+
+  <h3>¿Qué Sustituye al Precio como Mecanismo de Racionamiento?</h3>
+  <table>
+    <tr><th>Mecanismo</th><th>Descripción</th><th>Problema</th></tr>
+    <tr><td>Colas (tiempo)</td><td>Quien más espera consigue el bien</td><td>Destruye valor — el tiempo tiene coste pero no se transfiere a nadie</td></tr>
+    <tr><td>Favoritismo / contactos</td><td>El vendedor elige a quién vender</td><td>Asignación ineficiente e inequitativa</td></tr>
+    <tr><td>Lotería</td><td>Acceso aleatorio</td><td>No va a quien más lo valora</td></tr>
+    <tr><td>Mercado negro</td><td>Precio libre en canal ilegal</td><td>Sin protección al consumidor, precio puede ser aún más alto</td></tr>
+  </table>
+
+  <h3>Las 4 Ineficiencias de un Price Ceiling Vinculante</h3>
+  <ol>
+    <li><strong>Desperdicio de recursos:</strong> El tiempo de cola tiene coste pero no genera ingreso para nadie — destrucción pura de valor.</li>
+    <li><strong>Asignación ineficiente:</strong> El bien no va a quien más lo valora, sino a quien llega antes o conoce al vendedor.</li>
+    <li><strong>Pérdida de ganancias del intercambio:</strong> Transacciones mutuamente beneficiosas que no ocurren por falta de oferta (DWL).</li>
+    <li><strong>Calidad reducida:</strong> Con precio fijo, los vendedores tienen menos incentivo a mantener calidad.</li>
+  </ol>
+
+  <h3>El Papel de la Elasticidad de Oferta</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">⚡ Oferta Inelástica (corto plazo)</div>
+      <p>El price ceiling causa mucho menos daño en oferta: aunque el precio sea bajo, los productores no pueden reducir mucho su producción de inmediato. El shortage existe pero es moderado.</p>
+      <p style="font-size:12px;color:var(--muted)">Argumento <em>a favor</em> del price ceiling transitorio durante emergencias.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">📉 Oferta Elástica (largo plazo)</div>
+      <p>El price ceiling causa enorme daño. Los productores salen del mercado o reducen inversión → la oferta cae → el shortage se agrava con el tiempo.</p>
+      <p style="font-size:12px;color:var(--muted)">Argumento <em>en contra</em> del price ceiling permanente.</p>
+    </div>
+  </div>
+
+  <h3>Price Floor — Suelo de Precio</h3>
+  <div class="key-concept">
+    <strong>Price Floor Vinculante</strong>
+    Actúa al revés: un precio mínimo <em>por encima</em> del equilibrio genera <strong>exceso de oferta</strong> (surplus). Ejemplo clásico: el salario mínimo genera desempleo en el mercado laboral si está por encima del salario de equilibrio.
+  </div>
+
+  <h3>El Debate Normativo</h3>
+  <p>El precio libre asigna eficientemente pero puede excluir a quienes más lo necesitan. El price ceiling protege el acceso equitativo pero genera ineficiencia. La clave está en la distinción entre <strong>eficiencia</strong> (maximizar el tamaño del pastel) y <strong>equidad</strong> (cómo se reparte). Son objetivos distintos que a menudo se contraponen.</p>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Definición de price ceiling y cuándo es vinculante</li>
+    <li>Por qué un price ceiling vinculante genera shortage (exceso de demanda)</li>
+    <li>Las 4 ineficiencias de un price ceiling vinculante</li>
+    <li>Mecanismos alternativos de racionamiento cuando el precio no puede hacerlo</li>
+    <li>Price floor: definición, vinculante, genera excess supply. Aplicación: salario mínimo</li>
+    <li>Papel de la elasticidad de oferta: price ceilings transitorios vs. permanentes</li>
+    <li>La distinción normativa eficiencia vs. equidad</li>
+  </ul>
+</div>
+
+<!-- SESIÓN 4: IMPUESTOS -->
+<div id="micro4" class="section">
+  <div class="tag tag-micro">Módulo I · Sesión 4</div>
+  <h2>Impuestos e Incidencia Fiscal</h2>
+  <p>La pregunta central del caso: si el gobierno grava con un impuesto cada botella de vino, ¿quién paga realmente? La respuesta sorprende: <strong>da igual quién lo ingrese físicamente a Hacienda</strong>. Lo que importa es la elasticidad relativa.</p>
+
+  <h3>Incidencia Fiscal — Tax Incidence</h3>
+  <div class="key-concept">
+    <strong>Regla de Oro</strong>
+    La parte más inelástica del mercado soporta la mayor parte del impuesto. Quien puede "escapar" del mercado (sustitutos, redirigir producción) transfiere la carga al otro lado.
+  </div>
+
+  <div class="chart-wrap">
+    <div class="chart-title">Cuña Fiscal — Simulador Interactivo</div>
+    <div class="chart-sub">Ajusta el impuesto y las elasticidades para ver cómo cambia la incidencia y el DWL</div>
+    <canvas id="taxCanvas" width="680" height="400"></canvas>
+    <div class="slider-row">
+      <span>Impuesto (t)</span>
+      <input type="range" id="taxSlider" min="0" max="40" value="20" oninput="drawTax()">
+      <span class="slider-val" id="taxVal">20</span>
+    </div>
+    <div class="slider-row">
+      <span>Elasticidad Demanda</span>
+      <input type="range" id="elastD" min="1" max="9" value="5" oninput="drawTax()">
+      <span class="slider-val" id="elastDVal">media</span>
+    </div>
+    <div class="slider-row">
+      <span>Elasticidad Oferta</span>
+      <input type="range" id="elastS" min="1" max="9" value="5" oninput="drawTax()">
+      <span class="slider-val" id="elastSVal">media</span>
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-dot" style="background:rgba(76,200,120,.3);width:14px;height:14px;border-radius:2px"></div>Recaudación fiscal</div>
+      <div class="leg"><div class="leg-dot" style="background:rgba(224,85,85,.3);width:14px;height:14px;border-radius:2px"></div>DWL (pérdida irrecuperable)</div>
+      <div class="leg"><div class="leg-line" style="background:var(--demand)"></div>Demanda</div>
+      <div class="leg"><div class="leg-line" style="background:var(--supply)"></div>Oferta</div>
+    </div>
+    <div id="taxInfo" style="margin-top:12px;font-size:12.5px;color:var(--muted);padding:10px 14px;background:var(--surface);border-radius:6px;border-left:2px solid var(--accent)">
+      La cuña fiscal separa el precio del comprador del precio del vendedor. Ajusta los sliders.
+    </div>
+  </div>
+
+  <table>
+    <tr><th>Situación</th><th>¿Quién paga más?</th></tr>
+    <tr><td>Demanda más elástica que oferta</td><td>El <strong>vendedor</strong></td></tr>
+    <tr><td>Oferta más elástica que demanda</td><td>El <strong>comprador</strong></td></tr>
+    <tr><td>Ambas igual de elásticas</td><td>Se reparte al <strong>50%</strong></td></tr>
+    <tr><td>Demanda perfectamente inelástica</td><td>Todo el comprador (100%)</td></tr>
+    <tr><td>Oferta perfectamente inelástica</td><td>Todo el vendedor (100%)</td></tr>
+  </table>
+
+  <h3>Deadweight Loss (DWL)</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">✅ Recaudación Fiscal</div>
+      <p>Rectángulo verde en el gráfico. Es una <strong>transferencia</strong> de los agentes privados al gobierno. El bienestar total no cae — el gobierno puede usarlo para gasto público.</p>
+      <p style="font-family:'DM Mono',monospace;font-size:12px;color:var(--accent)">TR = t × Qt</p>
+    </div>
+    <div class="card">
+      <div class="card-title">❌ Deadweight Loss</div>
+      <p>Triángulo rojo en el gráfico. Pérdida para compradores y vendedores <strong>sin contrapartida</strong> en recaudación. Transacciones que habrían ocurrido sin el impuesto y generaban valor conjunto.</p>
+      <p style="font-family:'DM Mono',monospace;font-size:12px;color:var(--red)">DWL = ½ × t × ΔQ</p>
+    </div>
+  </div>
+
+  <div class="key-concept">
+    <strong>¿Cuándo es mayor el DWL?</strong>
+    DWL crece con: (1) mayor impuesto t (¡crece con el cuadrado!), (2) mayor elasticidad de demanda, (3) mayor elasticidad de oferta. Mercados inelásticos generan menos DWL — por eso se gravan más los bienes inelásticos como el tabaco o la gasolina.
+  </div>
+
+  <h3>Implicaciones de Política</h3>
+  <ul>
+    <li>Impuesto sobre bien inelástico (tabaco) → alta recaudación, bajo DWL, pero regresivo</li>
+    <li>Impuesto sobre bien elástico → baja recaudación, alto DWL — ineficiente</li>
+    <li>Impuesto Pigouviano: si hay externalidad negativa, el impuesto <em>reduce</em> el DWL al corregir el fallo de mercado</li>
+    <li>La incidencia legal ≠ incidencia económica</li>
+  </ul>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Definición de incidencia fiscal y la regla de la elasticidad</li>
+    <li>La cuña fiscal: qué separa, qué determina su distribución</li>
+    <li>Recaudación fiscal (rectángulo) vs. DWL (triángulo): diferencia conceptual</li>
+    <li>Cuándo es mayor el DWL y por qué crece con el cuadrado del impuesto</li>
+    <li>Por qué la incidencia legal no es la económica</li>
+    <li>Impuesto Pigouviano: lógica y aplicación</li>
+  </ul>
+</div>
+
+<!-- MACRO: AD-AS -->
+<div id="macro1" class="section">
+  <div class="tag tag-macro">Módulo II · Sesiones 5–6</div>
+  <h2>Macroeconomía — Marco AD-AS</h2>
+  <p>El modelo central de la macroeconomía. Extensión del modelo S&D al nivel agregado de la economía. En lugar de un mercado individual, estudiamos el nivel de producción y precios de toda la economía.</p>
+
+  <h3>Los 4 Termómetros de la Economía</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">📊 Variables Clave</div>
+      <table>
+        <tr><th>Variable</th><th>Qué mide</th></tr>
+        <tr><td>PIB Real</td><td>Producción agregada (sin efecto precios)</td></tr>
+        <tr><td>Inflación</td><td>Variación del nivel general de precios</td></tr>
+        <tr><td>Desempleo</td><td>Recursos laborales sin usar</td></tr>
+        <tr><td>Tipo de interés real</td><td>Coste "verdadero" de endeudarse</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-title">⚠️ Nominal vs. Real</div>
+      <p><strong>PIB nominal</strong> = precio × cantidad (ambas cambian)</p>
+      <p><strong>PIB real</strong> = precio fijo × cantidad (solo producción)</p>
+      <div class="formula">r = i − πᵉ (Ecuación de Fisher)</div>
+      <p style="font-size:12px;color:var(--muted)">Los agentes toman decisiones en términos <em>reales</em>, aunque el mundo les hable en nominales.</p>
+    </div>
+  </div>
+
+  <h3>El Marco AD-AS</h3>
+  <div class="chart-wrap">
+    <div class="chart-title">Modelo AD-AS Interactivo</div>
+    <div class="chart-sub">Simula shocks de demanda, oferta a corto y largo plazo</div>
+    <canvas id="adasCanvas" width="680" height="400"></canvas>
+    <div class="chart-controls">
+      <button class="ctrl-btn active" onclick="adasShock('reset',this)">Equilibrio base</button>
+      <button class="ctrl-btn" onclick="adasShock('adUp',this)">▲ AD sube (estímulo)</button>
+      <button class="ctrl-btn" onclick="adasShock('adDown',this)">▼ AD baja (recesión)</button>
+      <button class="ctrl-btn" onclick="adasShock('srasUp',this)">▼ SRAS sube (stagflation)</button>
+      <button class="ctrl-btn" onclick="adasShock('lrasRight',this)">→ LRAS crece (tech)</button>
+    </div>
+    <div id="adasExplain" style="margin-top:12px;font-size:12.5px;color:var(--muted);padding:10px 14px;background:var(--surface);border-radius:6px;border-left:2px solid var(--accent2)">
+      Equilibrio inicial. AD corta SRAS en Y* (PIB potencial). La economía opera en pleno empleo.
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-line" style="background:#4fa8c8"></div>AD — Demanda Agregada</div>
+      <div class="leg"><div class="leg-line" style="background:#c84f4f"></div>SRAS — Oferta Agregada CP</div>
+      <div class="leg"><div class="leg-line" style="background:#4fc87a;width:2px;height:14px;border-radius:0;border-right:2px dashed #4fc87a;width:0"></div>LRAS — Oferta Agregada LP</div>
+    </div>
+  </div>
+
+  <h3>Las Tres Curvas</h3>
+  <div class="grid3">
+    <div class="card">
+      <div class="card-title">🔵 AD — Demanda Agregada</div>
+      <p>Pendiente negativa (en gráfico P-Y). Componentes: <strong>C + I + G + NX</strong>. Se desplaza con: política fiscal, monetaria, expectativas, comercio exterior.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🔴 SRAS — Oferta CP</div>
+      <p>Pendiente positiva. Se desplaza con: costes de inputs, expectativas de inflación, shocks de oferta. A mayor P esperado, mayor P actual exigido.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🟢 LRAS — Oferta LP</div>
+      <p>Vertical en Y*. Representa el PIB potencial — los recursos disponibles. No depende del nivel de precios. Sólo crece con: tecnología, capital, trabajo, instituciones.</p>
+    </div>
+  </div>
+
+  <h3>El Ajuste Automático</h3>
+  <table>
+    <tr><th>Situación</th><th>Gap</th><th>Presión</th><th>Ajuste SRAS</th><th>Resultado LP</th></tr>
+    <tr><td>AD↑, Y > Y*</td><td>Expansionary</td><td>Salarios y precios suben</td><td>SRAS se desplaza ↑</td><td>P sube, Y vuelve a Y*</td></tr>
+    <tr><td>AD↓, Y < Y*</td><td>Recessionary</td><td>Desempleo → salarios bajan</td><td>SRAS se desplaza ↓</td><td>P baja, Y vuelve a Y*</td></tr>
+  </table>
+
+  <div class="key-concept">
+    <strong>Rigidez Salarial — Por Qué el Ajuste es Asimétrico</strong>
+    Los salarios son más rígidos a la baja que al alza. Contratos, moral, poder sindical. Resultado: la economía sale de las recesiones más lento que de las expansiones. Justificación para la política de estabilización.
+  </div>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Nominal vs. real: PIB, salarios, tipos de interés (Ecuación de Fisher)</li>
+    <li>Las tres curvas AD, SRAS, LRAS: forma, shifters, lógica</li>
+    <li>Recessionary gap vs. expansionary gap: cómo identificarlos y qué pasa en LP</li>
+    <li>El ajuste automático: mecanismo y por qué puede ser lento</li>
+    <li>Por qué la rigidez salarial justifica la intervención de política económica</li>
+  </ul>
+</div>
+
+<!-- MACRO: FISCAL -->
+<div id="macro2" class="section">
+  <div class="tag tag-macro">Módulo II · Sesión 7</div>
+  <h2>Política Fiscal — El Dilema de Francia</h2>
+  <p>Francia en 2023–24: deuda pública al 110% del PIB, déficit al 6%, presión de los mercados para consolidar. ¿Puede ajustar sin hundir el crecimiento? El caso ilustra el dilema central de la política fiscal y el efecto crowding-out.</p>
+
+  <h3>El Marco del Mercado de Fondos Prestables</h3>
+  <div class="chart-wrap">
+    <div class="chart-title">Mercado de Fondos Prestables (Loanable Funds)</div>
+    <div class="chart-sub">La oferta es el ahorro de los hogares; la demanda es la inversión privada + deuda pública</div>
+    <canvas id="fiscalCanvas" width="680" height="380"></canvas>
+    <div class="chart-controls">
+      <button class="ctrl-btn active" onclick="fiscalShock('base',this)">Base</button>
+      <button class="ctrl-btn" onclick="fiscalShock('deficit',this)">↑ Déficit público (G sube)</button>
+      <button class="ctrl-btn" onclick="fiscalShock('austerity',this)">↓ Austeridad (G baja)</button>
+      <button class="ctrl-btn" onclick="fiscalShock('savings',this)">↑ Ahorro privado</button>
+    </div>
+    <div id="fiscalExplain" style="margin-top:12px;font-size:12.5px;color:var(--muted);padding:10px 14px;background:var(--surface);border-radius:6px;border-left:2px solid var(--accent2)">
+      Equilibrio inicial. El tipo de interés real r* equilibra el ahorro privado con la inversión privada + deuda pública.
+    </div>
+  </div>
+
+  <h3>Crowding-Out — El Efecto Central</h3>
+  <div class="key-concept">
+    <strong>Mecanismo del Crowding-Out</strong>
+    Gobierno pide prestado más (déficit ↑) → Demanda de fondos prestables ↑ → Tipo de interés real sube → Inversión privada cae. El gasto público "desplaza" (crowds out) inversión privada. El efecto neto sobre el PIB es ambiguo.
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">📉 Crowding-Out Completo</div>
+      <p>Si la oferta de fondos prestables es perfectamente inelástica (el ahorro no responde al tipo de interés), cada euro de gasto público desplaza exactamente un euro de inversión privada. El multiplicador fiscal es cero.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">📈 Crowding-Out Parcial</div>
+      <p>Si el ahorro responde al tipo (curva de oferta con pendiente positiva), el tipo sube menos y el desplazamiento de inversión privada es parcial. El multiplicador fiscal es positivo pero menor que 1.</p>
+    </div>
+  </div>
+
+  <h3>El Multiplicador Fiscal</h3>
+  <div class="formula">ΔY = Multiplicador × ΔG</div>
+  <p>En presencia de crowding-out, el multiplicador es < 1. En recesión profunda (trampa de liquidez, tipos a cero), el crowding-out es menor y el multiplicador puede ser > 1.</p>
+
+  <h3>Los Estabilizadores Automáticos</h3>
+  <p>Mecanismos fiscales que actúan sin decisión discrecional: cuando la economía cae, el desempleo sube automáticamente (↑ gasto) y los ingresos fiscales caen (↓ recaudación) → el déficit actúa como amortiguador. Esto hace que el análisis del déficit deba distinguir entre <strong>déficit estructural</strong> (discrecional) y <strong>déficit cíclico</strong> (automático).</p>
+
+  <h3>El Dilema Francia</h3>
+  <table>
+    <tr><th>Opción</th><th>Beneficio</th><th>Riesgo</th></tr>
+    <tr><td>Consolidación fiscal (austeridad)</td><td>Reduce deuda, baja prima de riesgo, tipos menores</td><td>Contracción a corto plazo, multiplicador negativo</td></tr>
+    <tr><td>Estímulo fiscal (mantener déficit)</td><td>Sostiene crecimiento, suaviza ciclo</td><td>Mercados exigen prima de riesgo mayor, deuda se dispara</td></tr>
+    <tr><td>Reformas estructurales</td><td>Aumenta Y*, sostenible LP</td><td>Resultado incierto, lento</td></tr>
+  </table>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Mercado de fondos prestables: oferta (ahorro) y demanda (inversión + gobierno)</li>
+    <li>Crowding-out: mecanismo paso a paso</li>
+    <li>Multiplicador fiscal y por qué puede ser menor que 1</li>
+    <li>Estabilizadores automáticos vs. política discrecional</li>
+    <li>Déficit estructural vs. déficit cíclico</li>
+    <li>Por qué en recesión el crowding-out es menor (trampa de liquidez)</li>
+  </ul>
+</div>
+
+<!-- MACRO: MONETARIA -->
+<div id="macro3" class="section">
+  <div class="tag tag-macro">Módulo II · Sesión 8</div>
+  <h2>Política Monetaria — La Fed y el Tipo Neutral</h2>
+  <p>¿Cómo sabe la Fed si su política es expansiva o contractiva? La respuesta no es el tipo de interés nominal sino la distancia entre el tipo real y el <strong>tipo neutral r*</strong> — el tipo que ni estimula ni frena la economía.</p>
+
+  <h3>El Tipo Neutral r*</h3>
+  <div class="key-concept">
+    <strong>Tipo Neutral r* (r-star)</strong>
+    El tipo de interés real que mantiene la economía en pleno empleo con inflación estable. No es observable directamente — hay que estimarlo. Si r_política > r*, la política es contractiva. Si r_política < r*, es expansiva. La diferencia entre ambos es la postura de política monetaria.
+  </div>
+
+  <div class="chart-wrap">
+    <div class="chart-title">Postura de Política Monetaria — Simulador</div>
+    <div class="chart-sub">Ajusta el tipo de política y el tipo neutral para ver la postura</div>
+    <canvas id="fedCanvas" width="680" height="300"></canvas>
+    <div class="slider-row">
+      <span>Tipo neutral r* (%)</span>
+      <input type="range" id="rStar" min="0.5" max="5" step="0.25" value="2.5" oninput="drawFed()">
+      <span class="slider-val" id="rStarVal">2.5%</span>
+    </div>
+    <div class="slider-row">
+      <span>Tipo de política real (%)</span>
+      <input type="range" id="rPolicy" min="0" max="8" step="0.25" value="2.5" oninput="drawFed()">
+      <span class="slider-val" id="rPolicyVal">2.5%</span>
+    </div>
+    <div id="fedPosture" style="margin-top:12px;font-size:13px;font-weight:600;padding:10px 16px;border-radius:8px;text-align:center">
+      Política NEUTRAL
+    </div>
+  </div>
+
+  <h3>Instrumentos de Política Monetaria</h3>
+  <table>
+    <tr><th>Instrumento</th><th>Mecanismo</th><th>Efecto</th></tr>
+    <tr><td>Tipo de interés objetivo (fed funds rate)</td><td>BCE/Fed fija el tipo a corto plazo interbancario</td><td>Transmite a toda la curva de tipos</td></tr>
+    <tr><td>Operaciones de mercado abierto</td><td>Compra/venta de bonos del gobierno</td><td>↑ compras → ↓ tipos → ↑ AD</td></tr>
+    <tr><td>Quantitative Easing (QE)</td><td>Compra masiva de activos a largo plazo</td><td>Reduce prima de plazo, tipos LP bajan</td></tr>
+    <tr><td>Forward Guidance</td><td>Comunicación de intenciones futuras</td><td>Ancla expectativas, afecta tipos hoy</td></tr>
+  </table>
+
+  <h3>La Ecuación de Fisher y la Política Monetaria</h3>
+  <div class="formula">i = r + πᵉ → Si πᵉ sube, el banco central debe subir i para mantener r constante</div>
+  <p>En 2021–2022, la inflación subió rápidamente pero la Fed tardó en reconocerlo. Mientras tanto, con i fijo y πᵉ subiendo, el tipo real cayó (se volvió negativo) — una política extraordinariamente expansiva en un momento en que la economía se sobrecalentaba.</p>
+
+  <h3>Límites de la Política Monetaria</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">⬇️ Zero Lower Bound (ZLB)</div>
+      <p>El tipo nominal no puede bajar de cero (la gente prefiere guardar efectivo). Si r* cae mucho, la política monetaria convencional queda sin margen. Solución: QE, forward guidance, tipos negativos experimentales.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">⏱️ Rezagos de Política</div>
+      <p>La política monetaria actúa con retardo. Un subida de tipos en enero puede no enfriarse en los datos hasta 12–18 meses después. Esto dificulta calibrar la política correctamente — se corre el riesgo de sobre-corregir.</p>
+    </div>
+  </div>
+
+  <h3>Lección del Caso: ¿Qué es r* y Por Qué Importa?</h3>
+  <p>Si la Fed estima mal r*, comete errores sistemáticos. Si cree que r* = 2.5% cuando en realidad es 1%, una política a 2.5% es más contractiva de lo que parece. La incertidumbre sobre r* es uno de los desafíos más grandes de la política monetaria moderna — y el caso Fed & Neutral Rate lo ilustra con los episodios 2021–2024.</p>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Tipo neutral r*: definición, por qué no es observable, cómo se estima</li>
+    <li>Postura de política monetaria: expansiva vs. contractiva vs. neutral</li>
+    <li>Ecuación de Fisher: nominal, real, πᵉ y sus implicaciones</li>
+    <li>Instrumentos del banco central y sus mecanismos de transmisión</li>
+    <li>Zero Lower Bound: qué es y cómo responde el banco central</li>
+    <li>Rezagos de política monetaria: por qué dificultan la gestión del ciclo</li>
+    <li>Diferencia entre política monetaria y fiscal en el modelo AD-AS</li>
+  </ul>
+</div>
+
+<!-- QUIZ -->
+<div id="quiz" class="section">
+  <div class="tag tag-micro" style="margin-right:8px">Microeconomía</div>
+  <div class="tag tag-macro">Macroeconomía</div>
+  <h2>Banco de Preguntas — Examen Tipo Test</h2>
+
+  <div class="quiz-header">
+    <div class="quiz-score" id="quizScore">Score: —</div>
+    <div style="display:flex;gap:10px">
+      <button class="quiz-btn quiz-btn-secondary" onclick="shuffleQuiz()">🔀 Mezclar</button>
+      <button class="quiz-btn quiz-btn-primary" onclick="resetQuiz()">↺ Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="filter-row">
+    <button class="filter-chip active" onclick="filterQuiz('all',this)">Todas</button>
+    <button class="filter-chip" onclick="filterQuiz('micro-sd',this)">S&D Básico</button>
+    <button class="filter-chip" onclick="filterQuiz('micro-labor',this)">Mercado Laboral</button>
+    <button class="filter-chip" onclick="filterQuiz('micro-price',this)">Price Controls</button>
+    <button class="filter-chip" onclick="filterQuiz('micro-tax',this)">Impuestos</button>
+    <button class="filter-chip" onclick="filterQuiz('macro-adas',this)">AD-AS</button>
+    <button class="filter-chip" onclick="filterQuiz('macro-fiscal',this)">Política Fiscal</button>
+    <button class="filter-chip" onclick="filterQuiz('macro-monetary',this)">Política Monetaria</button>
+  </div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+  <div id="quizContainer"></div>
+</div>
+
+<script>
+/* ============================
+   NAVIGATION
+============================*/
+function showSection(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo(0,0);
+  // Init charts on demand
+  if (id === 'micro1') { initSD(); }
+  if (id === 'micro2') { initLabor(); }
+  if (id === 'micro3') { initCeiling(); }
+  if (id === 'micro4') { drawTax(); }
+  if (id === 'macro1') { initADAS(); }
+  if (id === 'macro2') { initFiscal(); }
+  if (id === 'macro3') { drawFed(); }
+  if (id === 'quiz') { renderQuiz(); }
+}
+
+/* ============================
+   CHART HELPERS
+============================*/
+const PAD = {t:30,r:40,b:50,l:60};
+function setupCanvas(id) {
+  const cv = document.getElementById(id);
+  const dpr = window.devicePixelRatio || 1;
+  const w = cv.offsetWidth || parseInt(cv.getAttribute('width'));
+  const h = parseInt(cv.getAttribute('height'));
+  cv.width = w * dpr; cv.height = h * dpr;
+  cv.style.width = w + 'px'; cv.style.height = h + 'px';
+  const ctx = cv.getContext('2d');
+  ctx.scale(dpr, dpr);
+  return {ctx, W: w, H: h};
+}
+function drawAxes(ctx, W, H, labelX, labelY) {
+  ctx.strokeStyle = '#2a3040'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(PAD.l,PAD.t); ctx.lineTo(PAD.l,H-PAD.b); ctx.lineTo(W-PAD.r,H-PAD.b); ctx.stroke();
+  ctx.fillStyle = '#5a6282'; ctx.font = '11px Sora,sans-serif';
+  ctx.textAlign = 'center'; ctx.fillText(labelX, (PAD.l+(W-PAD.r))/2, H-8);
+  ctx.save(); ctx.translate(14,(PAD.t+(H-PAD.b))/2); ctx.rotate(-Math.PI/2); ctx.fillText(labelY,0,0); ctx.restore();
+}
+function tx(x, W, xMax) { return PAD.l + (x/xMax)*(W-PAD.l-PAD.r); }
+function ty(y, H, yMax) { return H-PAD.b - (y/yMax)*(H-PAD.t-PAD.b); }
+
+/* ============================
+   S&D CHART (Sesión 1)
+============================*/
+let sdState = {dShift:0, sShift:0};
+function initSD() {
+  sdState = {dShift:0, sShift:0};
+  drawSD();
+}
+function sdShock(type) {
+  const step = 15;
+  if (type==='demandUp') sdState.dShift += step;
+  else if (type==='demandDown') sdState.dShift -= step;
+  else if (type==='supplyUp') sdState.sShift += step;
+  else if (type==='supplyDown') sdState.sShift -= step;
+  else { sdState.dShift=0; sdState.sShift=0; }
+  drawSD();
+}
+function drawSD() {
+  const {ctx,W,H} = setupCanvas('sdCanvas');
+  const yMax=120, xMax=100;
+  const tX=(x)=>tx(x,W,xMax), tY=(y)=>ty(y,H,yMax);
+  ctx.clearRect(0,0,W,H);
+  drawAxes(ctx,W,H,'Cantidad (Q)','Precio (P)');
+
+  // Ghost curves
+  const ds=sdState.dShift, ss=sdState.sShift;
+  if (Math.abs(ds)>1) {
+    ctx.setLineDash([5,5]); ctx.strokeStyle='rgba(200,168,75,.25)'; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(tX(0),tY(100)); ctx.lineTo(tX(100),tY(0)); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+  if (Math.abs(ss)>1) {
+    ctx.setLineDash([5,5]); ctx.strokeStyle='rgba(79,168,200,.25)'; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(tX(0),tY(10)); ctx.lineTo(tX(90),tY(100)); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // Demand: P = 100 - Q + dShift  → Q = 100 + dShift - P
+  // At Q=0, P=100+dShift; at P=0, Q=100+dShift
+  const dInt = 100 + ds; // y-intercept
+  ctx.strokeStyle='#c8a84b'; ctx.lineWidth=2.5; ctx.setLineDash([]);
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(Math.min(yMax,dInt))); ctx.lineTo(tX(Math.min(xMax,dInt)),tY(0)); ctx.stroke();
+  ctx.fillStyle='#c8a84b'; ctx.font='bold 12px Sora,sans-serif'; ctx.textAlign='left';
+  ctx.fillText('D', tX(Math.min(xMax-5,dInt-5)), tY(8));
+
+  // Supply: P = 10 + Q - sShift → Q = P - 10 + sShift
+  // At Q=0, P=10-sShift (min 0); goes up
+  const sInt = Math.max(0, 10 - ss);
+  ctx.strokeStyle='#4fa8c8'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(sInt)); ctx.lineTo(tX(Math.min(xMax, yMax-sInt)),tY(yMax)); ctx.stroke();
+  ctx.fillStyle='#4fa8c8'; ctx.textAlign='right';
+  ctx.fillText('S', tX(Math.min(xMax-2, yMax-sInt-2)), tY(yMax-5));
+
+  // Equilibrium: demand P=100+ds-Q, supply P=10-ss+Q → 100+ds-Q=10-ss+Q → Q=(90+ds+ss)/2
+  const Qstar = Math.max(0,Math.min(xMax,(90+ds+ss)/2));
+  const Pstar = Math.max(0,Math.min(yMax,100+ds-Qstar));
+
+  // Draw equilibrium
+  ctx.setLineDash([3,4]); ctx.strokeStyle='rgba(255,255,255,.2)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(tX(Qstar),tY(0)); ctx.lineTo(tX(Qstar),tY(Pstar)); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(Pstar)); ctx.lineTo(tX(Qstar),tY(Pstar)); ctx.stroke();
+  ctx.setLineDash([]);
+
+  ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(tX(Qstar),tY(Pstar),5,0,Math.PI*2); ctx.fill();
+
+  // Labels
+  ctx.fillStyle='rgba(255,255,255,.6)'; ctx.font='10px DM Mono,monospace'; ctx.textAlign='center';
+  ctx.fillText('Q*='+Math.round(Qstar), tX(Qstar), H-PAD.b+16);
+  ctx.textAlign='right'; ctx.fillText('P*='+Math.round(Pstar), PAD.l-4, tY(Pstar)+4);
+
+  // Arrow labels for shifts
+  if (Math.abs(ds)>1) {
+    ctx.fillStyle='#c8a84b'; ctx.font='bold 11px Sora'; ctx.textAlign='center';
+    ctx.fillText(ds>0?'D → Sube':'D → Baja', tX(50), tY(dInt-2)-8);
+  }
+  if (Math.abs(ss)>1) {
+    ctx.fillStyle='#4fa8c8'; ctx.font='bold 11px Sora'; ctx.textAlign='left';
+    ctx.fillText(ss>0?'S → Sube':'S → Baja', tX(2), tY(sInt+20));
+  }
+}
+
+/* ============================
+   LABOR MARKET (Sesión 2)
+============================*/
+let laborSc = 'mid';
+const laborScenarios = {
+  mid: { dShift:-20, sShift:10, explain:'<strong>Trabajadores de nivel medio:</strong> Tecnología actúa como <strong>sustituto</strong> → demanda cae (←). Además, desplazados de otros sectores aumentan oferta (→). Resultado: salario cae, empleo ambiguo pero salario claramente menor.' },
+  high: { dShift:25, sShift:0, explain:'<strong>Trabajadores de nivel alto:</strong> Tecnología actúa como <strong>complemento</strong> → demanda laboral sube (→). Salario y empleo aumentan. La automatización beneficia a quienes trabajan con ella.' },
+  low: { dShift:10, sShift:20, explain:'<strong>Trabajadores de nivel bajo:</strong> Difíciles de automatizar → demanda sube un poco (→). Pero los desplazados del medio redirigen su oferta aquí (→→). La oferta sube más que la demanda → salario sube poco o cae.' }
+};
+function initLabor() {
+  laborSc = 'mid';
+  drawLabor();
+}
+function laborScenario(sc, btn) {
+  laborSc = sc;
+  document.querySelectorAll('#micro2 .ctrl-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('laborExplain').innerHTML = laborScenarios[sc].explain;
+  drawLabor();
+}
+function drawLabor() {
+  const {ctx,W,H} = setupCanvas('laborCanvas');
+  const yMax=120, xMax=100;
+  const tX=(x)=>tx(x,W,xMax), tY=(y)=>ty(y,H,yMax);
+  const sc = laborScenarios[laborSc];
+  ctx.clearRect(0,0,W,H);
+  drawAxes(ctx,W,H,'Empleo (L)','Salario (w)');
+
+  // Base curves
+  ctx.strokeStyle='rgba(200,168,75,.3)'; ctx.lineWidth=1.5; ctx.setLineDash([4,4]);
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(100)); ctx.lineTo(tX(100),tY(0)); ctx.stroke();
+  ctx.strokeStyle='rgba(79,168,200,.3)';
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(10)); ctx.lineTo(tX(90),tY(100)); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // New demand (shifted by dShift)
+  const dInt2 = 100 + sc.dShift;
+  ctx.strokeStyle='#c8a84b'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(Math.min(yMax,dInt2))); ctx.lineTo(tX(Math.min(xMax,dInt2)),tY(0)); ctx.stroke();
+  ctx.fillStyle='#c8a84b'; ctx.font='bold 12px Sora'; ctx.textAlign='left'; ctx.fillText('D\'', tX(Math.min(xMax-5,dInt2-5)), tY(8));
+
+  // New supply (shifted by sShift)
+  const sInt2 = Math.max(0, 10 - sc.sShift);
+  ctx.strokeStyle='#4fa8c8'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(sInt2)); ctx.lineTo(tX(Math.min(xMax, yMax-sInt2)),tY(yMax)); ctx.stroke();
+  ctx.fillStyle='#4fa8c8'; ctx.textAlign='right'; ctx.fillText('S\'', tX(Math.min(xMax-2, yMax-sInt2-2)), tY(yMax-5));
+
+  // New equilibrium
+  const Qstar = Math.max(0,Math.min(xMax,(90+sc.dShift+sc.sShift)/2));
+  const Pstar = Math.max(0,Math.min(yMax,100+sc.dShift-Qstar));
+  const Q0=45, P0=55; // base eq
+
+  ctx.fillStyle='rgba(255,255,255,.3)'; ctx.beginPath(); ctx.arc(tX(Q0),tY(P0),4,0,Math.PI*2); ctx.fill();
+  ctx.setLineDash([3,4]); ctx.strokeStyle='rgba(255,255,255,.15)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(tX(Qstar),tY(0)); ctx.lineTo(tX(Qstar),tY(Pstar)); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(Pstar)); ctx.lineTo(tX(Qstar),tY(Pstar)); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(tX(Qstar),tY(Pstar),5,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='rgba(255,255,255,.6)'; ctx.font='10px DM Mono'; ctx.textAlign='center';
+  ctx.fillText('w*='+Math.round(Pstar), tX(Qstar), tY(Pstar)-10);
+}
+
+/* ============================
+   PRICE CEILING (Sesión 3)
+============================*/
+let ceilingMode_ = 'base';
+function initCeiling() { ceilingMode_='base'; drawCeiling(); }
+function ceilingMode(mode) {
+  ceilingMode_ = mode;
+  const explains = {
+    base: 'Equilibrio sin intervención. El precio P* y la cantidad Q* se determinan en la intersección de oferta y demanda.',
+    shock: 'El huracán genera doble shock: oferta cae (←) y demanda sube (→). El nuevo precio de equilibrio libre sería mucho más alto. Sin intervención, el mercado se limpiaría a ese precio.',
+    ceiling: 'La ley anti-price gouging fija un techo al precio pre-huracán (línea roja). Como está por debajo del nuevo equilibrio, es VINCULANTE. Genera un SHORTAGE enorme: Qd >> Qs. El exceso de demanda no se puede eliminar con el precio → colas, mercado negro, racionamiento.'
+  };
+  document.getElementById('ceilingExplain').textContent = explains[mode];
+  document.querySelectorAll('#micro3 .ctrl-btn').forEach(b=>b.classList.remove('active'));
+  event.target.classList.add('active');
+  drawCeiling();
+}
+function drawCeiling() {
+  const {ctx,W,H} = setupCanvas('ceilingCanvas');
+  const yMax=120, xMax=100;
+  const tX=(x)=>tx(x,W,xMax), tY=(y)=>ty(y,H,yMax);
+  ctx.clearRect(0,0,W,H);
+  drawAxes(ctx,W,H,'Cantidad (Q)','Precio (P)');
+
+  const mode = ceilingMode_;
+  // Base: D: P=100-Q, S: P=10+Q → eq at (45,55)
+  const dOff = mode!=='base'?20:0; // demand shifts right
+  const sOff = mode!=='base'?-20:0; // supply shifts left → sInt increases
+
+  // Ghost if shocked
+  if (mode!=='base') {
+    ctx.strokeStyle='rgba(200,168,75,.2)'; ctx.lineWidth=1.5; ctx.setLineDash([4,4]);
+    ctx.beginPath(); ctx.moveTo(tX(0),tY(100)); ctx.lineTo(tX(100),tY(0)); ctx.stroke();
+    ctx.strokeStyle='rgba(79,168,200,.2)';
+    ctx.beginPath(); ctx.moveTo(tX(0),tY(10)); ctx.lineTo(tX(90),tY(100)); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // Demand
+  const dInt = 100+dOff;
+  ctx.strokeStyle='#c8a84b'; ctx.lineWidth=2.5; ctx.setLineDash([]);
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(Math.min(yMax,dInt))); ctx.lineTo(tX(Math.min(xMax,dInt)),tY(0)); ctx.stroke();
+  ctx.fillStyle='#c8a84b'; ctx.font='bold 12px Sora'; ctx.textAlign='left'; ctx.fillText('D'+(mode!=='base'?"'":''), tX(5), tY(dInt-8));
+
+  // Supply (sOff shifts left: y-intercept rises)
+  const sInt = 10 - sOff; // sOff is negative, so sInt rises
+  ctx.strokeStyle='#4fa8c8'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(Math.min(yMax,sInt))); ctx.lineTo(tX(Math.min(xMax,yMax-sInt)),tY(yMax)); ctx.stroke();
+  ctx.fillStyle='#4fa8c8'; ctx.textAlign='right'; ctx.fillText('S'+(mode!=='base'?"'":''), tX(Math.min(xMax-2,yMax-sInt-2)), tY(yMax-5));
+
+  // Free market equilibrium: demand P=dInt-Q, supply P=sInt+Q → dInt-Q=sInt+Q → Q=(dInt-sInt)/2
+  const Qstar = (dInt-sInt)/2;
+  const Pstar = dInt-Qstar;
+
+  if (mode==='ceiling') {
+    const Pceiling = 55; // original equilibrium price
+    const QsAtCeiling = Math.max(0, Pceiling-sInt); // Q supplied at ceiling
+    const QdAtCeiling = Math.max(0, dInt-Pceiling); // Q demanded at ceiling
+
+    // Shade shortage
+    ctx.fillStyle='rgba(200,84,84,.12)';
+    ctx.fillRect(tX(QsAtCeiling), tY(Pceiling), tX(QdAtCeiling)-tX(QsAtCeiling), 2);
+    
+    // Ceiling line
+    ctx.strokeStyle='#e05555'; ctx.lineWidth=2; ctx.setLineDash([6,3]);
+    ctx.beginPath(); ctx.moveTo(PAD.l,tY(Pceiling)); ctx.lineTo(W-PAD.r,tY(Pceiling)); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle='#e05555'; ctx.font='bold 11px Sora'; ctx.textAlign='left';
+    ctx.fillText('Price Ceiling = '+Pceiling, PAD.l+4, tY(Pceiling)-6);
+    
+    // Shortage arrows
+    ctx.fillStyle='rgba(255,255,255,.5)'; ctx.fillRect(tX(QsAtCeiling), tY(Pceiling)-1, tX(QdAtCeiling)-tX(QsAtCeiling), 2);
+    ctx.fillStyle='#e05555'; ctx.font='bold 10px Sora'; ctx.textAlign='center';
+    ctx.fillText('← SHORTAGE →', (tX(QsAtCeiling)+tX(QdAtCeiling))/2, tY(Pceiling)-10);
+    
+    // Points
+    ctx.fillStyle='rgba(255,255,255,.4)'; ctx.beginPath(); ctx.arc(tX(QsAtCeiling),tY(Pceiling),4,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle='rgba(255,255,255,.4)'; ctx.beginPath(); ctx.arc(tX(QdAtCeiling),tY(Pceiling),4,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle='rgba(255,255,255,.6)'; ctx.font='10px DM Mono'; ctx.textAlign='center';
+    ctx.fillText('Qs='+Math.round(QsAtCeiling), tX(QsAtCeiling), H-PAD.b+16);
+    ctx.fillText('Qd='+Math.round(QdAtCeiling), tX(QdAtCeiling), H-PAD.b+16);
+  }
+
+  // Free eq dot (ghost in ceiling mode)
+  ctx.setLineDash([3,4]); ctx.strokeStyle='rgba(255,255,255,.15)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(tX(Qstar),tY(0)); ctx.lineTo(tX(Qstar),tY(Pstar)); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(Pstar)); ctx.lineTo(tX(Qstar),tY(Pstar)); ctx.stroke();
+  ctx.setLineDash([]);
+  const dotColor = mode==='ceiling' ? 'rgba(255,255,255,.25)' : '#fff';
+  ctx.fillStyle=dotColor; ctx.beginPath(); ctx.arc(tX(Qstar),tY(Pstar),5,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='rgba(255,255,255,.6)'; ctx.font='10px DM Mono'; ctx.textAlign='center';
+  ctx.fillText('P*='+Math.round(Pstar), tX(Qstar)+20, tY(Pstar)-6);
+}
+
+/* ============================
+   TAX CHART (Sesión 4)
+============================*/
+function drawTax() {
+  const tSlider = document.getElementById('taxSlider');
+  const edSlider = document.getElementById('elastD');
+  const esSlider = document.getElementById('elastS');
+  if (!tSlider) return;
+  const t = +tSlider.value, ed = +edSlider.value, es = +esSlider.value;
+  document.getElementById('taxVal').textContent = t;
+  const edLabels=['','muy inelástica','','inelástica','','media','','elástica','','muy elástica'];
+  document.getElementById('elastDVal').textContent = edLabels[ed]||'media';
+  document.getElementById('elastSVal').textContent = edLabels[es]||'media';
+
+  const {ctx,W,H} = setupCanvas('taxCanvas');
+  const yMax=120, xMax=100;
+  const tX=(x)=>tx(x,W,xMax), tY=(y)=>ty(y,H,yMax);
+  ctx.clearRect(0,0,W,H);
+  drawAxes(ctx,W,H,'Cantidad (Q)','Precio (P)');
+
+  // Demand slope: higher ed = flatter → at max ed=9, slope≈-0.4; at min ed=1, slope≈-4
+  const dSlope = -(0.4 + (9-ed)*0.4); // from -0.4 (elastic) to -3.6 (inelastic)
+  const sSlope = 0.4 + (es-1)*0.4;    // from 0.4 (inelastic) to 3.6 (elastic)
+  // D: P = 100 + dSlope*Q; S: P = 15 + sSlope*Q
+  // Eq without tax: 100+dSlope*Q = 15+sSlope*Q → Q=(85)/(sSlope-dSlope)
+  const Q0 = 85/(sSlope-dSlope);
+  const P0 = 15 + sSlope*Q0;
+
+  // With tax: consumer pays Pb, seller receives Ps=Pb-t
+  // Pb = 100 + dSlope*Qt; Ps = 15 + sSlope*Qt; Pb-Ps=t
+  // (100+dSlope*Qt) - (15+sSlope*Qt) = t → 85+(dSlope-sSlope)*Qt=t
+  const Qt = Math.max(0, (85-t)/(sSlope-dSlope));
+  const Pb = Math.max(0, 100 + dSlope*Qt);
+  const Ps = Math.max(0, Pb - t);
+
+  // Tax revenue rectangle
+  if (t>0 && Qt>0) {
+    ctx.fillStyle='rgba(76,200,120,.18)';
+    ctx.fillRect(tX(0), tY(Pb), tX(Qt)-tX(0), tY(Ps)-tY(Pb));
+    // DWL triangle
+    ctx.fillStyle='rgba(224,85,85,.25)';
+    ctx.beginPath();
+    ctx.moveTo(tX(Qt), tY(Pb));
+    ctx.lineTo(tX(Q0), tY(P0));
+    ctx.lineTo(tX(Qt), tY(Ps));
+    ctx.closePath(); ctx.fill();
+  }
+
+  // Ghost demand/supply (no tax)
+  ctx.strokeStyle='rgba(200,168,75,.25)'; ctx.lineWidth=1.5; ctx.setLineDash([4,4]);
+  const dEnd = Math.min(xMax, -100/dSlope);
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(100)); ctx.lineTo(tX(dEnd),tY(0)); ctx.stroke();
+  ctx.strokeStyle='rgba(79,168,200,.25)';
+  const sEnd = Math.min(xMax, (yMax-15)/sSlope);
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(15)); ctx.lineTo(tX(sEnd),tY(yMax)); ctx.stroke();
+  ctx.setLineDash([]);
+
+  // Actual curves
+  ctx.strokeStyle='#c8a84b'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(100)); ctx.lineTo(tX(dEnd),tY(0)); ctx.stroke();
+  ctx.strokeStyle='#4fa8c8'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(15)); ctx.lineTo(tX(sEnd),tY(yMax)); ctx.stroke();
+
+  // Eq no-tax
+  ctx.fillStyle='rgba(255,255,255,.25)'; ctx.beginPath(); ctx.arc(tX(Q0),tY(P0),4,0,Math.PI*2); ctx.fill();
+
+  if (t>0 && Qt>0) {
+    // Pb and Ps lines
+    ctx.strokeStyle='rgba(255,255,255,.2)'; ctx.lineWidth=1; ctx.setLineDash([3,4]);
+    ctx.beginPath(); ctx.moveTo(PAD.l,tY(Pb)); ctx.lineTo(tX(Qt),tY(Pb)); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(PAD.l,tY(Ps)); ctx.lineTo(tX(Qt),tY(Ps)); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(tX(Qt),tY(0)); ctx.lineTo(tX(Qt),tY(Ps)); ctx.stroke();
+    ctx.setLineDash([]);
+
+    // Wedge line
+    ctx.strokeStyle='rgba(255,255,255,.5)'; ctx.lineWidth=1.5;
+    ctx.beginPath(); ctx.moveTo(tX(Qt)-10,tY(Pb)); ctx.lineTo(tX(Qt)-10,tY(Ps)); ctx.stroke();
+    ctx.fillStyle='#fff'; ctx.font='bold 10px DM Mono'; ctx.textAlign='right';
+    ctx.fillText('t='+t, tX(Qt)-14, (tY(Pb)+tY(Ps))/2+4);
+
+    // Labels
+    ctx.fillStyle='rgba(255,255,255,.6)'; ctx.font='10px DM Mono'; ctx.textAlign='right';
+    ctx.fillText('Pb='+Math.round(Pb), PAD.l-4, tY(Pb)+4);
+    ctx.fillText('Ps='+Math.round(Ps), PAD.l-4, tY(Ps)+4);
+    ctx.textAlign='center'; ctx.fillText('Qt='+Math.round(Qt), tX(Qt), H-PAD.b+16);
+
+    // Incidence info
+    const buyerShare = Math.round(((Pb-P0)/t)*100);
+    const sellerShare = 100-buyerShare;
+    document.getElementById('taxInfo').innerHTML =
+      `Pb = <strong>${Math.round(Pb)}</strong> | Ps = <strong>${Math.round(Ps)}</strong> | Qt = <strong>${Math.round(Qt)}</strong><br>
+       Comprador absorbe <strong>${buyerShare}%</strong> del impuesto · Vendedor absorbe <strong>${sellerShare}%</strong><br>
+       Recaudación ≈ <strong>${Math.round(t*Qt)}</strong> · DWL ≈ <strong>${Math.round(0.5*t*(Q0-Qt))}</strong>`;
+  }
+}
+
+/* ============================
+   AD-AS (Macro Sesión 1)
+============================*/
+let adasState = {ad:0, sras:0, lras:0};
+const adasTexts = {
+  reset: 'Equilibrio inicial. AD corta SRAS en Y* (PIB potencial). La economía opera en pleno empleo con inflación estable.',
+  adUp: 'AD sube → economía en expansionary gap (Y > Y*). Presión inflacionaria. A LP: SRAS se desplazará hacia arriba (↑costes salarios) hasta volver a Y*. Resultado LP: inflación más alta, mismo Y*.',
+  adDown: 'AD cae → recessionary gap (Y < Y*). Desempleo sube. A LP: si salarios son flexibles a la baja, SRAS baja hasta equilibrar en Y*. En la práctica: lento por rigidez salarial.',
+  srasUp: 'Shock negativo de oferta (SRAS sube → costes suben). Stagflation: PIB cae Y inflación sube simultáneamente. El banco central no puede combatir ambos con un solo instrumento.',
+  lrasRight: 'Crecimiento del PIB potencial (tecnología, capital, trabajo). LRAS se desplaza a la derecha. A largo plazo, el nivel de vida sube sin presión inflacionaria.'
+};
+function initADAS() { adasState={ad:0,sras:0,lras:0}; drawADAS(); }
+function adasShock(type, btn) {
+  document.querySelectorAll('#macro1 .ctrl-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('adasExplain').textContent = adasTexts[type];
+  const step=15;
+  adasState = {ad:0, sras:0, lras:0};
+  if (type==='adUp') adasState.ad=step;
+  else if (type==='adDown') adasState.ad=-step;
+  else if (type==='srasUp') adasState.sras=step;
+  else if (type==='lrasRight') adasState.lras=step;
+  drawADAS();
+}
+function drawADAS() {
+  const {ctx,W,H} = setupCanvas('adasCanvas');
+  const yMax=120, xMax=100;
+  const tX=(x)=>tx(x,W,xMax), tY=(y)=>ty(y,H,yMax);
+  ctx.clearRect(0,0,W,H);
+  drawAxes(ctx,W,H,'PIB Real (Y)','Nivel de Precios (P)');
+
+  const {ad, sras, lras} = adasState;
+  const Y_pot = 50+lras;
+  const P_base = 60;
+  const adOff = ad, srasOff = sras;
+
+  // LRAS: vertical at Y_pot
+  ctx.strokeStyle='#4fc87a'; ctx.lineWidth=2.5; ctx.setLineDash([6,3]);
+  ctx.beginPath(); ctx.moveTo(tX(Y_pot),tY(0)); ctx.lineTo(tX(Y_pot),tY(yMax)); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle='#4fc87a'; ctx.font='bold 11px Sora'; ctx.textAlign='center';
+  ctx.fillText('LRAS', tX(Y_pot), tY(yMax)-4);
+
+  // SRAS: positive slope, shifts with srasOff (up = prices rise)
+  // P = 20 + srasOff + 0.8*Q
+  const srasStart_y = 20+srasOff;
+  const srasEnd_x = Math.min(xMax,(yMax-srasStart_y)/0.8);
+  ctx.strokeStyle='#c84f4f'; ctx.lineWidth=2.5; ctx.setLineDash([]);
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(Math.min(yMax,srasStart_y))); ctx.lineTo(tX(srasEnd_x),tY(yMax)); ctx.stroke();
+  ctx.fillStyle='#c84f4f'; ctx.textAlign='right'; ctx.fillText('SRAS', tX(srasEnd_x-2), tY(yMax-5));
+
+  // AD: negative slope, shifts with adOff
+  // P = 100 + adOff - Q
+  const adTop = 100+adOff;
+  ctx.strokeStyle='#4fa8c8'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(Math.min(yMax,adTop))); ctx.lineTo(tX(Math.min(xMax,adTop)),tY(0)); ctx.stroke();
+  ctx.fillStyle='#4fa8c8'; ctx.textAlign='left'; ctx.fillText('AD', tX(5), tY(adTop-8));
+
+  // Equilibrium: AD=SRAS: 100+adOff-Q = 20+srasOff+0.8Q → 80+adOff-srasOff=1.8Q
+  const Yeq = Math.max(0,Math.min(xMax,(80+adOff-srasOff)/1.8));
+  const Peq = Math.max(0,100+adOff-Yeq);
+
+  ctx.setLineDash([3,4]); ctx.strokeStyle='rgba(255,255,255,.15)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(tX(Yeq),tY(0)); ctx.lineTo(tX(Yeq),tY(Peq)); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(tX(0),tY(Peq)); ctx.lineTo(tX(Yeq),tY(Peq)); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(tX(Yeq),tY(Peq),5,0,Math.PI*2); ctx.fill();
+
+  // Gap indicator
+  if (Math.abs(Yeq-Y_pot)>2) {
+    ctx.fillStyle= Yeq>Y_pot ? 'rgba(200,84,84,.15)' : 'rgba(79,168,200,.15)';
+    ctx.fillRect(tX(Math.min(Yeq,Y_pot)),tY(15),Math.abs(tX(Yeq)-tX(Y_pot)),15);
+    ctx.fillStyle= Yeq>Y_pot ? '#c84f4f' : '#4fa8c8';
+    ctx.font='bold 10px Sora'; ctx.textAlign='center';
+    ctx.fillText(Yeq>Y_pot?'Expansionary Gap':'Recessionary Gap', (tX(Yeq)+tX(Y_pot))/2, tY(20)+4);
+  }
+
+  ctx.fillStyle='rgba(255,255,255,.5)'; ctx.font='10px DM Mono'; ctx.textAlign='center';
+  ctx.fillText('Y='+Math.round(Yeq), tX(Yeq), H-PAD.b+16);
+  ctx.textAlign='right'; ctx.fillText('P='+Math.round(Peq), PAD.l-4, tY(Peq)+4);
+}
+
+/* ============================
+   FISCAL / LOANABLE FUNDS (Macro S7)
+============================*/
+let fiscalState = 'base';
+const fiscalTexts = {
+  base: 'Equilibrio inicial. Tipo de interés real r* equilibra ahorro privado con inversión privada + deuda pública.',
+  deficit: '↑ Déficit público: el gobierno pide más prestado → demanda de fondos prestables sube (→). Tipo real sube. Inversión privada cae → CROWDING-OUT. Si oferta es inelástica, el tipo sube mucho.',
+  austerity: '↓ Austeridad: el gobierno pide menos prestado → demanda de fondos prestables baja (←). Tipo real cae. Inversión privada sube (crowding-in). Riesgo: contracción a corto plazo en AD.',
+  savings: '↑ Ahorro privado: más hogares ahorran → oferta de fondos sube (→). Tipo real cae. Inversión privada aumenta. Positivo para el crecimiento a largo plazo.'
+};
+function initFiscal() { fiscalState='base'; drawFiscal(); }
+function fiscalShock(sc, btn) {
+  fiscalState=sc;
+  document.querySelectorAll('#macro2 .ctrl-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('fiscalExplain').textContent = fiscalTexts[sc];
+  drawFiscal();
+}
+function drawFiscal() {
+  const {ctx,W,H} = setupCanvas('fiscalCanvas');
+  const yMax=10, xMax=100;
+  const tX=(x)=>tx(x,W,xMax), tY=(y)=>ty(y,H,yMax);
+  ctx.clearRect(0,0,W,H);
+
+  ctx.strokeStyle = '#2a3040'; ctx.lineWidth = 1.5;
+  ctx.beginPath(); ctx.moveTo(PAD.l,PAD.t); ctx.lineTo(PAD.l,H-PAD.b); ctx.lineTo(W-PAD.r,H-PAD.b); ctx.stroke();
+  ctx.fillStyle='#5a6282'; ctx.font='11px Sora,sans-serif';
+  ctx.textAlign='center'; ctx.fillText('Fondos Prestables (S, I)', (PAD.l+(W-PAD.r))/2, H-8);
+  ctx.save(); ctx.translate(14,(PAD.t+(H-PAD.b))/2); ctx.rotate(-Math.PI/2); ctx.fillText('Tipo de Interés Real (r%)',0,0); ctx.restore();
+
+  const sc = fiscalState;
+  const dOff = sc==='deficit'?20 : sc==='austerity'?-20 : 0;
+  const sOff = sc==='savings'?20 : 0;
+
+  // Supply (savings): upward sloping: r = 2 + 0.06*Q + sOff*(-0.06) → shifted right
+  // Ghost
+  if (dOff!==0||sOff!==0) {
+    ctx.strokeStyle='rgba(79,168,200,.2)'; ctx.lineWidth=1.5; ctx.setLineDash([4,4]);
+    ctx.beginPath(); ctx.moveTo(tX(20),tY(0)); ctx.lineTo(tX(60),tY(yMax)); ctx.stroke();
+    ctx.strokeStyle='rgba(200,168,75,.2)';
+    ctx.beginPath(); ctx.moveTo(tX(80),tY(0)); ctx.lineTo(tX(20),tY(yMax)); ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // New supply: shifted right by sOff*0.6
+  const sStart = 20+sOff*0.6;
+  const sEnd = 60+sOff*0.6;
+  ctx.strokeStyle='#4fa8c8'; ctx.lineWidth=2.5; ctx.setLineDash([]);
+  ctx.beginPath(); ctx.moveTo(tX(sStart),tY(0)); ctx.lineTo(tX(sEnd),tY(yMax)); ctx.stroke();
+  ctx.fillStyle='#4fa8c8'; ctx.font='bold 11px Sora'; ctx.textAlign='left';
+  ctx.fillText('S (Ahorro)', tX(sEnd+1), tY(yMax-1));
+
+  // New demand: shifted right by dOff*0.6
+  const dStart = 80+dOff*0.6;
+  const dEnd = 20+dOff*0.6;
+  ctx.strokeStyle='#c8a84b'; ctx.lineWidth=2.5;
+  ctx.beginPath(); ctx.moveTo(tX(dStart),tY(0)); ctx.lineTo(tX(dEnd),tY(yMax)); ctx.stroke();
+  ctx.fillStyle='#c8a84b'; ctx.textAlign='right';
+  ctx.fillText('D (Inversión+G)', tX(dStart-1), tY(1));
+
+  // Equilibrium: S: r = (Q-sStart)/2; D: r = (dStart-Q)/2; eq: (Q-sStart)/2=(dStart-Q)/2 → Q=(sStart+dStart)/2
+  const Qeq = (sStart+dStart)/2;
+  const Req = (Qeq-sStart)/2;
+
+  ctx.setLineDash([3,4]); ctx.strokeStyle='rgba(255,255,255,.15)'; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(tX(Qeq),tY(0)); ctx.lineTo(tX(Qeq),tY(Req)); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(PAD.l,tY(Req)); ctx.lineTo(tX(Qeq),tY(Req)); ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.fillStyle='#fff'; ctx.beginPath(); ctx.arc(tX(Qeq),tY(Req),5,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='rgba(255,255,255,.6)'; ctx.font='10px DM Mono';
+  ctx.textAlign='right'; ctx.fillText('r*='+Req.toFixed(1)+'%', PAD.l-4, tY(Req)+4);
+}
+
+/* ============================
+   FED / NEUTRAL RATE (Macro S8)
+============================*/
+function drawFed() {
+  const rStar = +(document.getElementById('rStar')?.value||2.5);
+  const rPol = +(document.getElementById('rPolicy')?.value||2.5);
+  document.getElementById('rStarVal').textContent = rStar.toFixed(2)+'%';
+  document.getElementById('rPolicyVal').textContent = rPol.toFixed(2)+'%';
+
+  const {ctx,W,H} = setupCanvas('fedCanvas');
+  ctx.clearRect(0,0,W,H);
+  const midY=H/2;
+
+  // Draw number line
+  ctx.strokeStyle='#2a3040'; ctx.lineWidth=2;
+  ctx.beginPath(); ctx.moveTo(PAD.l,midY); ctx.lineTo(W-PAD.r,midY); ctx.stroke();
+
+  const minR=0, maxR=8;
+  const rToX = (r) => PAD.l + ((r-minR)/(maxR-minR))*(W-PAD.l-PAD.r);
+
+  // Ticks
+  for (let r=0; r<=8; r++) {
+    const x=rToX(r);
+    ctx.strokeStyle='#2a3040'; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(x,midY-5); ctx.lineTo(x,midY+5); ctx.stroke();
+    ctx.fillStyle='#5a6282'; ctx.font='10px DM Mono'; ctx.textAlign='center';
+    ctx.fillText(r+'%', x, midY+18);
+  }
+
+  // Labels
+  ctx.fillStyle='#5a6282'; ctx.font='11px Sora'; ctx.textAlign='left';
+  ctx.fillText('Contractiva', PAD.l, PAD.t+12);
+  ctx.textAlign='right'; ctx.fillText('Expansiva', W-PAD.r, PAD.t+12);
+  ctx.textAlign='center'; ctx.fillText('Neutral', rToX(rStar), PAD.t+12);
+
+  // r* vertical
+  ctx.strokeStyle='#4fc87a'; ctx.lineWidth=2.5; ctx.setLineDash([]);
+  ctx.beginPath(); ctx.moveTo(rToX(rStar),PAD.t+20); ctx.lineTo(rToX(rStar),H-PAD.b); ctx.stroke();
+  ctx.fillStyle='#4fc87a'; ctx.font='bold 11px Sora'; ctx.textAlign='center';
+  ctx.fillText('r* = '+rStar.toFixed(2)+'%', rToX(rStar), H-PAD.b+14);
+
+  // Policy rate
+  const px = rToX(rPol);
+  const diff = rPol-rStar;
+  const posture = Math.abs(diff)<0.1 ? 'NEUTRAL' : diff>0 ? 'CONTRACTIVA' : 'EXPANSIVA';
+  const postureColor = Math.abs(diff)<0.1 ? '#c8a84b' : diff>0 ? '#c84f4f' : '#4fa8c8';
+
+  // Shade region
+  if (Math.abs(diff)>0.05) {
+    ctx.fillStyle = diff>0 ? 'rgba(200,84,84,.12)' : 'rgba(79,168,200,.12)';
+    const x1=Math.min(rToX(rStar),px), x2=Math.max(rToX(rStar),px);
+    ctx.fillRect(x1, midY-20, x2-x1, 40);
+  }
+
+  ctx.fillStyle=postureColor; ctx.beginPath(); ctx.arc(px,midY,9,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='#000'; ctx.font='bold 8px Sora'; ctx.textAlign='center'; ctx.fillText('r', px, midY+3);
+  ctx.fillStyle=postureColor; ctx.font='bold 12px Sora'; ctx.textAlign='center';
+  ctx.fillText('r_política = '+rPol.toFixed(2)+'%', px, midY-18);
+
+  const postEl = document.getElementById('fedPosture');
+  postEl.textContent = 'Política ' + posture + (Math.abs(diff)>0.05 ? ' (gap: '+(diff>0?'+':'')+diff.toFixed(2)+'%)' : '');
+  postEl.style.background = diff>0?'rgba(200,84,84,.12)': diff<0?'rgba(79,168,200,.12)':'rgba(200,168,75,.12)';
+  postEl.style.border = '1px solid '+(diff>0?'rgba(200,84,84,.3)':diff<0?'rgba(79,168,200,.3)':'rgba(200,168,75,.3)');
+  postEl.style.color = postureColor;
+}
+
+/* ============================
+   QUIZ ENGINE
+============================*/
+const ALL_QUESTIONS = [
+  // MICRO: S&D
+  {cat:'micro-sd', q:'¿Qué ocurre con la curva de demanda cuando aumenta el precio de un bien sustituto?', opts:['Se desplaza a la izquierda','Se desplaza a la derecha','Se produce un movimiento a lo largo de la curva','No cambia'], ans:1, ex:'Un bien sustituto más caro hace que los consumidores demanden más del bien original → la curva de demanda se desplaza a la derecha.'},
+  {cat:'micro-sd', q:'¿Cuál de los siguientes es un desplazador de la curva de oferta?', opts:['El precio del bien en cuestión','La renta de los consumidores','El coste de los inputs de producción','Las preferencias de los consumidores'], ans:2, ex:'Los shifters de oferta incluyen: coste de inputs, tecnología, número de productores. El precio solo causa movimiento a lo largo de la curva.'},
+  {cat:'micro-sd', q:'Si la oferta cae y la demanda sube simultáneamente, ¿qué ocurre con el precio de equilibrio?', opts:['Sube sin ambigüedad','Baja sin ambigüedad','El efecto sobre el precio es ambiguo','No cambia'], ans:0, ex:'Ambos shocks presionan el precio al alza: oferta cae (presión alcista) y demanda sube (presión alcista). El precio sube con certeza.'},
+  {cat:'micro-sd', q:'El Consumer Surplus (excedente del consumidor) es...', opts:['El área por debajo del precio de equilibrio y sobre la curva de demanda','El área por encima del precio de equilibrio y bajo la curva de demanda','La diferencia entre el coste de producción y el precio de venta','El área debajo de la curva de oferta'], ans:1, ex:'El CS es lo que el consumidor estaba dispuesto a pagar menos lo que realmente paga. En el gráfico: triángulo sobre el precio de equilibrio, bajo la curva de demanda.'},
+  {cat:'micro-sd', q:'Una curva de demanda con pendiente muy plana (casi horizontal) indica...', opts:['Demanda muy inelástica','Demanda muy elástica','Demanda unitaria','Ninguna de las anteriores'], ans:1, ex:'Pendiente casi horizontal = pequeño cambio de precio genera gran cambio en cantidad → demanda muy elástica.'},
+  {cat:'micro-sd', q:'¿Cuál de los siguientes factores NO incrementa la elasticidad-precio de la demanda?', opts:['Mayor disponibilidad de sustitutos','Horizonte temporal más largo','Ser un bien de primera necesidad','Definir el bien de forma específica'], ans:2, ex:'Los bienes de primera necesidad suelen ser inelásticos porque los consumidores no pueden prescindir de ellos aunque suba el precio.'},
+  {cat:'micro-sd', q:'En el modelo de mercado competitivo, el bienestar total se maximiza en el equilibrio porque...', opts:['El precio es el más bajo posible','Todas las unidades donde WTP > coste marginal se intercambian','El gobierno no interviene','No existen externalidades'], ans:1, ex:'El equilibrio produce exactamente la cantidad donde WTP = coste marginal. Todas las unidades con valor positivo neto se intercambian → bienestar total máximo.'},
+  {cat:'micro-sd', q:'Si el precio de los complementarios cae, ¿qué ocurre con la demanda del bien principal?', opts:['Cae','Sube','No cambia','Depende de la elasticidad'], ans:1, ex:'Si los complementarios son más baratos, los consumidores consumen más de ambos → demanda del bien principal sube.'},
+  {cat:'micro-sd', q:'Un mercado eficiente no necesita intervención cuando...', opts:['Existen externalidades positivas','No hay bienes públicos puros, ni externalidades, ni poder de mercado','Los precios son altos','Existe asimetría de información'], ans:1, ex:'El argumento de eficiencia de mercado falla ante: externalidades, bienes públicos, poder de mercado, asimetrías de información.'},
+  {cat:'micro-sd', q:'¿Qué distingue un movimiento a lo largo de la curva de demanda de un desplazamiento de la curva?', opts:['El movimiento ocurre cuando cambia la renta; el desplazamiento cuando cambia el precio','El movimiento ocurre cuando cambia el precio del bien; el desplazamiento cuando cambia cualquier otro factor','No hay diferencia, son equivalentes','El movimiento siempre es mayor que el desplazamiento'], ans:1, ex:'Distinción crítica del curso: el precio del propio bien → movimiento a lo largo de la curva. Cualquier otro factor (renta, sustitutos, etc.) → desplazamiento de la curva entera.'},
+
+  // MICRO: LABOR
+  {cat:'micro-labor', q:'La Routinization Hypothesis predice que la tecnología sustituye principalmente trabajos...', opts:['De alta cualificación abstracta','De baja cualificación en servicios personales','De cualificación media con tareas rutinarias','De alta cualificación manual'], ans:2, ex:'Los ordenadores automatizan tareas rutinarias y codificables → empleos de nivel medio (operadores, administrativos, contabilidad).'},
+  {cat:'micro-labor', q:'En el mercado laboral, ¿qué representa el "precio" en el modelo S&D?', opts:['El empleo','El PIB','El salario','La productividad'], ans:2, ex:'Salario = precio del trabajo; Empleo = cantidad. Las empresas demandan trabajo; los trabajadores lo ofrecen.'},
+  {cat:'micro-labor', q:'Si la tecnología actúa como complemento del trabajador de alto nivel, ¿qué ocurre con su curva de demanda laboral?', opts:['Se desplaza a la izquierda','Se desplaza a la derecha','Aumenta su pendiente','No cambia'], ans:1, ex:'Complemento significa que la tecnología hace al trabajador más productivo → las empresas demandan más de ese tipo de trabajo → curva de demanda laboral desplaza a la derecha → salario y empleo suben.'},
+  {cat:'micro-labor', q:'¿Qué es la polarización salarial según el caso de Automatización?', opts:['Los salarios altos caen y los bajos suben','Los salarios del nivel medio crecen más que los extremos','Los salarios de los niveles alto y bajo crecen relativamente más que los del medio','Solo suben los salarios de los trabajadores del sector tech'], ans:2, ex:'Polarización: el medio se "vacía". Arriba (complemento con tech) crece. Abajo (difícil de automatizar) crece modestamente. Medio (rutinario, sustituto de tech) se estanca o cae.'},
+  {cat:'micro-labor', q:'El ratio 90/50 mide...', opts:['El salario del percentil 90 dividido por el del percentil 10','El salario del percentil 90 dividido por el salario mediano','La brecha entre el 90% más rico y el 50% más pobre','La tasa de empleo de los trabajadores del percentil 90'], ans:1, ex:'90/50 = salario percentil 90 / salario mediano (percentil 50). Mide la desigualdad en la mitad superior de la distribución.'},
+  {cat:'micro-labor', q:'¿Por qué los desplazados del nivel medio tienden a recolocarse en empleos de nivel bajo en lugar de alto?', opts:['Porque los empleos de nivel alto no existen','Porque prefieren los empleos de servicios','Porque la recualificación hacia el nivel alto es costosa y lenta','Porque los empleos de nivel bajo pagan más'], ans:2, ex:'Recualificarse hacia empleos abstractos de nivel alto requiere educación y tiempo. La recolocación en servicios de nivel bajo es más inmediata y accesible.'},
+  {cat:'micro-labor', q:'El efecto escala de la automatización implica que...', opts:['La automatización siempre destruye más empleo del que crea','Al bajar costes, las empresas producen más y pueden demandar más trabajadores complementarios','Los trabajadores de nivel bajo son los más afectados negativamente','La tecnología solo beneficia a las empresas, no a los trabajadores'], ans:1, ex:'Efecto escala: la automatización reduce costes → las empresas son más competitivas y producen más → necesitan más trabajadores complementarios (programadores, analistas, gestores).'},
+  {cat:'micro-labor', q:'En el período 1988–2008, el ratio 50/10 en EEUU...', opts:['Creció fuertemente, indicando mayor desigualdad en la parte baja','Cayó, indicando que los de abajo mejoraron más que el medio','Se estancó o redujo levemente','Se comportó igual que en 1974–1988'], ans:2, ex:'La polarización de 1988–2008 se caracteriza por: 90/50 sigue subiendo (desigualdad alta) pero 50/10 deja de crecer (los bajos dejan de quedar más atrás que el medio).'},
+
+  // MICRO: PRICE CONTROLS
+  {cat:'micro-price', q:'¿Cuándo es un price ceiling "vinculante" (binding)?', opts:['Cuando está por encima del precio de equilibrio','Cuando está exactamente en el precio de equilibrio','Cuando está por debajo del precio de equilibrio','Siempre que lo establezca el gobierno'], ans:2, ex:'Un techo de precio solo tiene efecto real cuando el precio máximo legal está por debajo del precio que el mercado establecería libremente.'},
+  {cat:'micro-price', q:'En el caso Hurricane Sandy, ¿cuál fue el efecto sobre el mercado de gasolina?', opts:['Solo bajó la oferta','Solo subió la demanda','Bajó la oferta y subió la demanda simultáneamente','El mercado se equilibró sin problemas'], ans:2, ex:'Doble shock: oferta cayó (gasolineras sin electricidad, cadenas de suministro rotas) y demanda subió (acaparamiento por pánico). Ambos presionaron el precio al alza.'},
+  {cat:'micro-price', q:'Un price ceiling vinculante genera...', opts:['Exceso de oferta (surplus)','Exceso de demanda (shortage)','Equilibrio eficiente','Mayor bienestar para todos'], ans:1, ex:'Con el precio por debajo del equilibrio: Qd > Qs → exceso de demanda → shortage. El bien se agota rápidamente y hay colas.'},
+  {cat:'micro-price', q:'¿Cuál de los siguientes es un mecanismo de racionamiento alternativo cuando hay un price ceiling vinculante?', opts:['Mayor precio','Colas y tiempo de espera','Aumento de producción','Reducción de demanda'], ans:1, ex:'Cuando el precio no puede subir para equilibrar el mercado, otros mecanismos toman su lugar: colas (tiempo), favoritismo, lotería, mercado negro.'},
+  {cat:'micro-price', q:'El mayor problema del racionamiento por colas (tiempo) comparado con el racionamiento por precio es que...', opts:['El tiempo tiene coste sin generar ingresos para nadie','Las colas son más equitativas','El precio discrimina más que las colas','Las colas eliminan el exceso de demanda más eficientemente'], ans:0, ex:'El tiempo invertido en colas tiene coste para el consumidor pero no se transfiere a ningún vendedor → destrucción pura de valor, sin redistribución.'},
+  {cat:'micro-price', q:'¿Por qué un price ceiling transitorio (emergencia) es más defendible económicamente que uno permanente?', opts:['Porque en emergencias la demanda es siempre inelástica','Porque a corto plazo la oferta es inelástica, limitando el daño en la cantidad ofrecida','Porque el gobierno puede compensar a los productores','Porque la gente acepta mejor los precios bajos en emergencias'], ans:1, ex:'Con oferta inelástica a CP, aunque el precio esté por debajo del equilibrio, los productores no pueden reducir mucho su producción → el shortage es menor. A LP la oferta es más elástica y el daño se amplifica.'},
+  {cat:'micro-price', q:'Un price floor (suelo de precio) vinculante genera...', opts:['Exceso de demanda','Exceso de oferta','Equilibrio eficiente','Reducción del precio de mercado'], ans:1, ex:'Price floor por encima del equilibrio: Qs > Qd → exceso de oferta. Ejemplo: salario mínimo por encima del salario de equilibrio → desempleo.'},
+  {cat:'micro-price', q:'Las leyes anti-price gouging en Nueva Jersey durante Sandy criminalicaron al emprendedor que traía gasolina del upstate. Desde la perspectiva del modelo S&D, esto fue...', opts:['Correcto, porque protegió a los consumidores vulnerables','Ineficiente, porque eliminó el incentivo de precio que atraía nueva oferta','Indiferente para el resultado del mercado','Positivo para la oferta de gasolina'], ans:1, ex:'El precio alto era exactamente la señal que atraía nueva oferta al mercado. Al criminalizarlo, se eliminó el incentivo y la escasez se prolongó más tiempo.'},
+  {cat:'micro-price', q:'¿Cuál es la distinción normativa central en el debate sobre price controls?', opts:['Oferta vs. demanda','Eficiencia vs. equidad','Corto plazo vs. largo plazo','Micro vs. macro'], ans:1, ex:'Los price controls pueden mejorar la equidad (acceso para quienes tienen menos dinero) a costa de eficiencia (destrucción de valor, DWL, shortage). Son objetivos distintos que a menudo se contraponen.'},
+
+  // MICRO: TAXES
+  {cat:'micro-tax', q:'La incidencia económica de un impuesto depende de...', opts:['A quién se le cobra legalmente el impuesto','La elasticidad relativa de oferta y demanda','El partido político en el gobierno','El tamaño del mercado'], ans:1, ex:'La incidencia económica (quién realmente paga) es independiente de quién lo ingresa a Hacienda. Depende de quién puede "escapar" del mercado — determinado por las elasticidades.'},
+  {cat:'micro-tax', q:'Si la demanda es perfectamente inelástica, ¿quién soporta el 100% del impuesto?', opts:['El vendedor','El comprador','Se reparte 50-50','Depende de la oferta'], ans:1, ex:'Demanda perfectamente inelástica significa que los compradores no pueden reducir su cantidad comprada aunque suba el precio → soportan el 100% del impuesto.'},
+  {cat:'micro-tax', q:'¿Qué es el Deadweight Loss (DWL) de un impuesto?', opts:['La recaudación total del gobierno','La pérdida de excedente de los consumidores que se transfiere al gobierno','Transacciones mutuamente beneficiosas que dejan de ocurrir por el impuesto','El excedente del productor que se destruye'], ans:2, ex:'El DWL es la pérdida de bienestar total que no recupera nadie: transacciones que habrían generado valor conjunto pero que el impuesto hace no rentables.'},
+  {cat:'micro-tax', q:'La cuña fiscal (tax wedge) es...', opts:['El importe del impuesto que paga el comprador','La diferencia entre el precio del comprador (Pb) y el precio del vendedor (Ps)','La recaudación total del gobierno','El DWL dividido por la cantidad intercambiada'], ans:1, ex:'La cuña = Pb - Ps = t (el importe del impuesto). El comprador paga Pb, el vendedor recibe Ps, la diferencia va al gobierno.'},
+  {cat:'micro-tax', q:'¿Cómo afecta un mayor impuesto al DWL?', opts:['El DWL crece linealmente con t','El DWL crece con el cuadrado de t','El DWL decrece porque la recaudación aumenta','El DWL no depende del importe del impuesto'], ans:1, ex:'DWL = ½ × t × ΔQ. Como ΔQ también crece con t, el DWL crece aproximadamente con t². Duplicar el impuesto cuadruplica el DWL.'},
+  {cat:'micro-tax', q:'¿Por qué se grava con impuestos más altos a bienes inelásticos como el tabaco o la gasolina?', opts:['Porque son bienes de lujo','Porque generan alta recaudación con poco DWL','Porque los consumidores de estos bienes son más ricos','Por razones históricas sin justificación económica'], ans:1, ex:'Con demanda inelástica: el impuesto causa poca reducción de cantidad → DWL pequeño. Al mismo tiempo, la recaudación (t × Qt) es alta porque Qt no cae mucho.'},
+  {cat:'micro-tax', q:'Si la oferta es más elástica que la demanda, ¿quién soporta mayor parte del impuesto?', opts:['El vendedor, porque tiene más elasticidad','El comprador, porque tiene menos elasticidad','Se reparte por igual','El gobierno'], ans:1, ex:'La parte más inelástica no puede escapar del mercado → absorbe más del impuesto. Si oferta más elástica, la demanda es relativamente más inelástica → compradores soportan más.'},
+  {cat:'micro-tax', q:'Un impuesto Pigouviano sobre una externalidad negativa...', opts:['Siempre genera DWL adicional','Puede reducir el DWL al corregir la sobreproducción generada por la externalidad','No tiene efectos sobre la eficiencia','Solo transfiere riqueza al gobierno'], ans:1, ex:'Si hay externalidad negativa, el mercado produce en exceso (no internaliza el coste social). El impuesto Pigouviano reduce la cantidad hacia el óptimo social → puede reducir el DWL total.'},
+  {cat:'micro-tax', q:'¿Qué ocurre con la cantidad intercambiada cuando se impone un impuesto?', opts:['Aumenta','Cae','No cambia','Depende de quién paga el impuesto legalmente'], ans:1, ex:'Con el impuesto, el precio del comprador sube y el precio del vendedor baja → la cantidad demandada cae y la ofrecida también → la cantidad transaccionada cae por debajo del equilibrio libre.'},
+
+  // MACRO: AD-AS
+  {cat:'macro-adas', q:'¿Por qué la curva AD tiene pendiente negativa en el gráfico P-Y?', opts:['Porque cuando los precios suben, los consumidores compran menos siempre','Porque precios más altos reducen el poder adquisitivo (efecto riqueza) y las exportaciones netas','Porque el gobierno recauda más cuando los precios suben','Porque la oferta siempre determina la demanda'], ans:1, ex:'AD tiene pendiente negativa por: efecto riqueza real (precios altos reducen poder adquisitivo), efecto tipo de interés (precios altos → más dinero demandado → tipos suben → I cae), y efecto comercio exterior.'},
+  {cat:'macro-adas', q:'¿Qué es el PIB potencial (Y*)?', opts:['El PIB máximo que puede alcanzar la economía en una emergencia','El PIB cuando todos los recursos se usan sin generar inflación sostenida','El PIB del año con mayor crecimiento histórico','El PIB nominal corregido por inflación'], ans:1, ex:'Y* (PIB potencial) es el nivel de producción consistente con pleno empleo y tasa de inflación estable. Representa la capacidad productiva normal de la economía.'},
+  {cat:'macro-adas', q:'Un recessionary gap ocurre cuando...', opts:['Y > Y*, la economía produce por encima del potencial','Y < Y*, la economía produce por debajo del potencial','La inflación supera el objetivo del banco central','El desempleo está por debajo de la tasa natural'], ans:1, ex:'Recessionary gap: la economía produce menos que su potencial → recursos infrautilizados → desempleo por encima de la tasa natural.'},
+  {cat:'macro-adas', q:'Un shock de oferta negativo (ej. subida del precio del petróleo) desplaza la curva SRAS...', opts:['Hacia la derecha, bajando los precios','Hacia la izquierda/arriba, subiendo los precios y reduciendo el PIB','Hacia abajo, aumentando el PIB','No afecta a la SRAS'], ans:1, ex:'Shock negativo de oferta → costes de producción suben → a cualquier nivel de Y, los productores exigen precios más altos → SRAS se desplaza hacia arriba. Resultado: mayor P y menor Y (stagflation).'},
+  {cat:'macro-adas', q:'La diferencia entre PIB nominal y PIB real es...', opts:['El PIB real incluye inflación; el nominal no','El PIB nominal incluye cambios de precios; el real solo cambios de cantidades','El PIB real siempre es mayor que el nominal','No hay diferencia práctica'], ans:1, ex:'PIB nominal = precios actuales × cantidades actuales. PIB real = precios de un año base × cantidades actuales. Solo el real mide el crecimiento "verdadero" de producción.'},
+  {cat:'macro-adas', q:'¿Por qué la rigidez salarial a la baja justifica la intervención de política económica?', opts:['Porque los salarios nunca deberían bajar','Porque sin ella el ajuste automático en recesión es muy lento','Porque la política monetaria siempre es efectiva','Porque la LRAS es horizontal'], ans:1, ex:'Si los salarios son rígidos a la baja, el ajuste automático desde una recesión (SRAS bajando) tarda mucho tiempo. La intervención (política fiscal/monetaria) puede acelerar la vuelta a Y*.'},
+  {cat:'macro-adas', q:'La Ecuación de Fisher establece que...', opts:['PIB real = PIB nominal - inflación','r = i - πᵉ (tipo real = nominal menos inflación esperada)','El ahorro siempre iguala a la inversión','Los tipos de interés no afectan al consumo'], ans:1, ex:'r = i - πᵉ. El tipo de interés real es lo que importa para las decisiones de inversión y consumo. Si la inflación sube sin que suba el tipo nominal, el tipo real cae → política monetaria más expansiva de lo que parece.'},
+  {cat:'macro-adas', q:'¿Cuál de los siguientes desplaza la curva AD hacia la derecha?', opts:['Aumento del gasto público (G)','Reducción del consumo privado (C)','Contracción monetaria (subida de tipos)','Reducción de las exportaciones'], ans:0, ex:'AD = C + I + G + NX. Cualquier aumento en sus componentes desplaza AD a la derecha. Política fiscal expansiva (↑G), monetaria expansiva (↓r → ↑I), ↑consumo, ↑exportaciones.'},
+  {cat:'macro-adas', q:'A largo plazo, después de un shock de demanda positivo sin intervención de política, ¿qué ocurre?', opts:['Y permanece por encima de Y*','La SRAS sube (salarios y costes aumentan) y Y vuelve a Y* con más inflación','La LRAS se desplaza a la derecha','El banco central baja tipos para mantener el crecimiento'], ans:1, ex:'Expansionary gap → mercado laboral tensionado → salarios suben → costes de producción suben → SRAS sube → P sube y Y cae de vuelta a Y*. Resultado: inflación más alta, mismo PIB potencial.'},
+
+  // MACRO: FISCAL
+  {cat:'macro-fiscal', q:'En el mercado de fondos prestables, ¿qué representa la curva de oferta?', opts:['La inversión privada de las empresas','El ahorro de los hogares y empresas','El déficit público','La deuda externa'], ans:1, ex:'Oferta de fondos prestables = ahorro privado (hogares que no gastan toda su renta). Demanda = inversión privada + necesidades de financiación del gobierno.'},
+  {cat:'macro-fiscal', q:'El crowding-out se produce cuando...', opts:['La inversión privada desplaza al gasto público','El mayor déficit público eleva el tipo de interés y reduce la inversión privada','Los consumidores aumentan su ahorro ante mayor gasto público','La inflación destruye el ahorro privado'], ans:1, ex:'Mayor déficit → gobierno demanda más fondos prestables → tipo de interés real sube → inversión privada más cara → cae. El gasto público "expulsa" inversión privada.'},
+  {cat:'macro-fiscal', q:'Los estabilizadores automáticos son mecanismos fiscales que...', opts:['Requieren votación en el Parlamento para activarse','Actúan contracíclicamente sin decisión discrecional del gobierno','Siempre generan superávit en expansión','Solo funcionan en países con alta deuda pública'], ans:1, ex:'Estabilizadores automáticos (prestaciones por desempleo, progresividad fiscal) se activan automáticamente: recesión → ↑gasto en subsidios + ↓recaudación → impulso automático sin necesidad de legislación nueva.'},
+  {cat:'macro-fiscal', q:'El déficit estructural se diferencia del déficit cíclico en que...', opts:['El estructural es mayor en recesión','El estructural persiste incluso en condiciones de pleno empleo','El cíclico es mayor en expansión','No hay diferencia práctica'], ans:1, ex:'Déficit cíclico = causado por el ciclo económico (automático). Déficit estructural = el que permanece si la economía estuviera en Y* → refleja las decisiones discrecionales de política fiscal.'},
+  {cat:'macro-fiscal', q:'Si el crowding-out es completo (oferta de fondos prestables perfectamente inelástica), el multiplicador fiscal es...', opts:['Mayor que 1','Igual a 1','Igual a 0','Negativo'], ans:2, ex:'Crowding-out completo: cada euro de gasto público desplaza exactamente un euro de inversión privada → efecto neto sobre AD = 0 → multiplicador = 0.'},
+  {cat:'macro-fiscal', q:'¿En qué situación el crowding-out es menor y el multiplicador fiscal mayor?', opts:['En pleno empleo con inflación alta','En recesión profunda con tipos de interés cercanos a cero (trampa de liquidez)','Con superávit público elevado','Con déficit por cuenta corriente alto'], ans:1, ex:'En trampa de liquidez (tipos ≈ 0), el banco central no puede/no subirá tipos aunque aumente el déficit → tipo de interés no sube → no hay crowding-out → multiplicador fiscal es máximo.'},
+  {cat:'macro-fiscal', q:'El dilema fiscal de Francia en 2023-24 es un ejemplo de...', opts:['Trampa de liquidez','Tensión entre consolidación fiscal (credibilidad de deuda) y mantenimiento del crecimiento a corto plazo','Inflación por demanda excesiva','Exceso de ahorro privado'], ans:1, ex:'Francia: deuda/PIB >110%, déficit >6%, presión de mercados. Consolidar reduce la deuda pero puede provocar recesión. Mantener el déficit sostiene el crecimiento pero puede hacer insostenible la deuda.'},
+
+  // MACRO: MONETARY
+  {cat:'macro-monetary', q:'El tipo neutral r* es aquel al que...', opts:['La inflación es exactamente 2%','La economía crece a su tasa máxima potencial','La política monetaria ni estimula ni frena la economía — es neutral','El banco central no puede bajar más los tipos'], ans:2, ex:'r* es el tipo de interés real consistente con pleno empleo e inflación estable. Si r_política = r*, la política es neutral. Por encima → contractiva; por debajo → expansiva.'},
+  {cat:'macro-monetary', q:'Si la inflación esperada sube del 2% al 4% pero el tipo nominal sigue en 3%, el tipo real...', opts:['Sube del 1% al 3%','Baja del 1% al -1%','No cambia, sigue en 3%','Depende de la política del banco central'], ans:1, ex:'r = i - πᵉ = 3% - 4% = -1%. Con tipos nominales fijos y expectativas de inflación más altas, el tipo real cae → política monetaria implícitamente más expansiva.'},
+  {cat:'macro-monetary', q:'El Zero Lower Bound (ZLB) es...', opts:['El nivel de desempleo mínimo posible','La incapacidad del tipo de interés nominal de bajar por debajo de cero','El nivel mínimo del PIB en recesión','El límite inferior del tipo de inflación objetivo'], ans:1, ex:'El tipo nominal no puede (fácilmente) ser negativo: la gente prefiere guardar efectivo a pagar por depositar. Esto limita la política monetaria convencional.'},
+  {cat:'macro-monetary', q:'¿Qué es el Quantitative Easing (QE)?', opts:['Una subida de tipos de interés de emergencia','Compras masivas de activos a largo plazo por el banco central para reducir tipos a largo plazo','Un aumento del gasto público del gobierno','Una reducción de los requerimientos de reservas bancarias'], ans:1, ex:'QE: el banco central compra bonos a largo plazo → precio de bonos sube → rentabilidad (tipo) baja → tipos a largo plazo caen → incentivo a invertir y consumir.'},
+  {cat:'macro-monetary', q:'Un error en la estimación de r* puede llevar al banco central a...', opts:['Tomar decisiones de política perfectamente calibradas','Ser sistemáticamente demasiado expansivo o contractivo sin saberlo','Ignorar la inflación','Fijar el tipo nominal demasiado alto siempre'], ans:1, ex:'Si r* real es 1% pero el banco central cree que es 2.5%, una política al 2.5% parece neutral pero en realidad es contractiva. El error en r* genera errores sistemáticos de política.'},
+  {cat:'macro-monetary', q:'Los rezagos de la política monetaria implican que...', opts:['La política monetaria actúa instantáneamente en el PIB y la inflación','Las subidas de tipos de hoy afectan a la economía con 12-18 meses de retraso','Solo afectan a la inflación, no al PIB','El banco central siempre llega a tiempo para estabilizar el ciclo'], ans:1, ex:'Los rezagos son largos e inciertos (12-18 meses típicamente). El banco central opera "a ciegas" sobre el futuro, lo que puede llevar a sobre-correcciones en el ciclo.'},
+  {cat:'macro-monetary', q:'La diferencia entre política monetaria y fiscal en el marco AD-AS es que...', opts:['La política monetaria actúa sobre la LRAS; la fiscal sobre la SRAS','La política monetaria desplaza AD vía tipos de interés; la fiscal la desplaza vía G y T directamente','Son idénticas en sus efectos','Solo la política fiscal puede combatir la inflación'], ans:1, ex:'Política monetaria: tipos de interés → I (inversión) → AD. Política fiscal: gasto público (G) o impuestos (T) → C o G → AD directamente. Ambas desplazan AD pero por mecanismos distintos.'}
+];
+
+let currentFilter = 'all';
+let answered = {};
+let displayedQs = [];
+
+function filterQuiz(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-chip').forEach(c=>c.classList.remove('active'));
+  btn.classList.add('active');
+  answered = {};
+  renderQuiz();
+}
+function shuffleQuiz() {
+  answered = {};
+  const arr = [...displayedQs];
+  for (let i=arr.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; }
+  displayedQs = arr;
+  renderQuiz(true);
+}
+function resetQuiz() {
+  answered = {};
+  renderQuiz();
+}
+function renderQuiz(useExisting) {
+  if (!useExisting) {
+    displayedQs = currentFilter==='all' ? [...ALL_QUESTIONS] : ALL_QUESTIONS.filter(q=>q.cat===currentFilter);
+  }
+  const container = document.getElementById('quizContainer');
+  container.innerHTML = '';
+  displayedQs.forEach((q,i) => {
+    const div = document.createElement('div');
+    div.className = 'q-block' + (answered[i]!==undefined ? (answered[i]===q.ans?' correct':' wrong') : '');
+    div.id = 'q'+i;
+    div.innerHTML = `<div class="q-num">PREGUNTA ${i+1} / ${displayedQs.length} · ${catLabel(q.cat)}</div>
+      <div class="q-text">${q.q}</div>
+      <div class="q-options">${q.opts.map((o,j)=>`<div class="q-opt ${answered[i]!==undefined?(j===q.ans?'correct-ans':j===answered[i]?'wrong-ans':''):''}" onclick="answerQ(${i},${j})">${String.fromCharCode(65+j)}. ${o}</div>`).join('')}</div>
+      <div class="q-explain ${answered[i]!==undefined?'show':''}" id="explain-${i}">${q.ex}</div>`;
+    container.appendChild(div);
+  });
+  updateScore();
+}
+function catLabel(cat) {
+  const map={
+    'micro-sd':'S&D Básico','micro-labor':'Mercado Laboral','micro-price':'Price Controls',
+    'micro-tax':'Impuestos','macro-adas':'AD-AS','macro-fiscal':'Política Fiscal','macro-monetary':'Política Monetaria'
+  };
+  return map[cat]||cat;
+}
+function answerQ(qIdx, optIdx) {
+  if (answered[qIdx]!==undefined) return;
+  answered[qIdx]=optIdx;
+  const q=displayedQs[qIdx];
+  const block=document.getElementById('q'+qIdx);
+  block.classList.add(optIdx===q.ans?'correct':'wrong');
+  block.querySelectorAll('.q-opt').forEach((el,j)=>{
+    if(j===q.ans) el.classList.add('correct-ans');
+    else if(j===optIdx) el.classList.add('wrong-ans');
+  });
+  document.getElementById('explain-'+qIdx).classList.add('show');
+  updateScore();
+}
+function updateScore() {
+  const total=displayedQs.length;
+  const done=Object.keys(answered).length;
+  const correct=Object.keys(answered).filter(i=>answered[i]===displayedQs[i].ans).length;
+  document.getElementById('quizScore').textContent = done===0 ? 'Score: —' : `Score: ${correct}/${done} (${Math.round(correct/done*100)}%)`;
+  document.getElementById('progressFill').style.width=(done/total*100)+'%';
+}
+
+// Init
+document.addEventListener('DOMContentLoaded',()=>{
+  initSD();
+  initLabor();
+  initCeiling();
+  drawTax();
+  initADAS();
+  initFiscal();
+  drawFed();
+  renderQuiz();
+  window.addEventListener('resize',()=>{
+    const active=document.querySelector('.section.active')?.id;
+    if(active==='micro1') drawSD();
+    if(active==='micro2') drawLabor();
+    if(active==='micro3') drawCeiling();
+    if(active==='micro4') drawTax();
+    if(active==='macro1') drawADAS();
+    if(active==='macro2') drawFiscal();
+    if(active==='macro3') drawFed();
+  });
+});
+</script>
+</body>
+</html>
