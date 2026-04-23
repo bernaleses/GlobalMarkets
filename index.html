@@ -150,6 +150,10 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
   <button class="nav-tab" onclick="showSection('macro1',this)">Macro · AD-AS</button>
   <button class="nav-tab" onclick="showSection('macro2',this)">Macro · Fiscal</button>
   <button class="nav-tab" onclick="showSection('macro3',this)">Macro · Monetaria</button>
+  <button class="nav-tab" onclick="showSection('intfin1',this)">IntFin · Conceptos</button>
+  <button class="nav-tab" onclick="showSection('intfin2',this)">IntFin · Chile</button>
+  <button class="nav-tab" onclick="showSection('intfin3',this)">IntFin · Noruega</button>
+  <button class="nav-tab" onclick="showSection('intfin4',this)">IntFin · Argentina</button>
   <button class="nav-tab" onclick="showSection('quiz',this)">📝 Test</button>
 </nav>
 
@@ -219,39 +223,49 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
   <h2>Mercados Competitivos</h2>
   <p>El modelo central del curso. Compradores y vendedores interactuando en un mercado donde ninguno tiene poder sobre el precio. Aprenderemos a predecir cómo cambia el equilibrio ante cualquier shock.</p>
 
+  <div class="key-concept">
+    <strong>¿Por qué este modelo importa?</strong>
+    El modelo de oferta y demanda es el lenguaje de toda la economía. No importa si estamos hablando de gasolina, trabajo, divisas o bonos del Estado — en todos los casos hay un precio que equilibra lo que se quiere comprar con lo que se quiere vender. Dominar este modelo es dominar el 80% del curso.
+  </div>
+
   <h3>El Modelo: Oferta y Demanda</h3>
   <div class="grid2">
     <div class="card">
       <div class="card-title">📉 Curva de Demanda</div>
-      <p>Muestra cuánto están dispuestos a <strong>comprar</strong> los consumidores a cada precio. Pendiente negativa (Ley de la Demanda). Representa también la <strong>willingness to pay</strong>.</p>
-      <p><strong>Precio sube → movimiento a lo largo.</strong><br>Cualquier otro factor → desplazamiento de la curva.</p>
+      <p>Muestra cuánto están dispuestos a <strong>comprar</strong> los consumidores a cada precio, <em>ceteris paribus</em> (todo lo demás constante). Pendiente negativa: a mayor precio, menor cantidad demandada.</p>
+      <p>La curva de demanda es también la curva de <strong>willingness to pay (WTP)</strong> — el punto más alto refleja al consumidor dispuesto a pagar más; conforme bajas, encuentras consumidores menos dispuestos a pagar. Cuando el precio sube, algunos consumidores ya no están dispuestos a pagar ese precio y salen del mercado.</p>
+      <p><strong style="color:var(--accent)">Regla crítica:</strong> El precio del bien → movimiento <em>a lo largo</em> de la curva. Cualquier otro factor → <em>desplazamiento</em> de la curva entera.</p>
       <h3 style="margin-top:12px">Shifters de Demanda</h3>
       <ul>
-        <li>Renta (bienes normales: +renta → +demanda)</li>
-        <li>Precio de sustitutos (↑ sustituto → ↑ demanda del bien)</li>
-        <li>Precio de complementarios (↑ complementario → ↓ demanda)</li>
-        <li>Expectativas de precio futuro más alto</li>
-        <li>Preferencias / publicidad</li>
+        <li><strong>Renta:</strong> bienes normales (+renta → +D); bienes inferiores (+renta → −D)</li>
+        <li><strong>Precio de sustitutos:</strong> si el sustituto sube de precio → D del bien sube</li>
+        <li><strong>Precio de complementarios:</strong> si el complementario sube → D del bien baja</li>
+        <li><strong>Expectativas de precio futuro:</strong> si espero que suba mañana, compro hoy → D sube</li>
+        <li><strong>Preferencias / publicidad / moda</strong></li>
+        <li><strong>Número de compradores</strong></li>
       </ul>
     </div>
     <div class="card">
       <div class="card-title">📈 Curva de Oferta</div>
-      <p>Muestra cuánto están dispuestos a <strong>vender</strong> los productores a cada precio. Pendiente positiva. Refleja también el <strong>coste marginal</strong> de producción.</p>
-      <p><strong>Precio sube → movimiento a lo largo.</strong><br>Cualquier otro factor → desplazamiento de la curva.</p>
+      <p>Muestra cuánto están dispuestos a <strong>vender</strong> los productores a cada precio, <em>ceteris paribus</em>. Pendiente positiva: a mayor precio, mayor cantidad ofrecida. Refleja también el <strong>coste marginal</strong> — los productores venden siempre que el precio cubra su coste de producción.</p>
+      <p>¿Por qué tiene pendiente positiva? Porque producir más generalmente cuesta más (rendimientos decrecientes). Los productores solo están dispuestos a producir esa unidad extra si el precio sube lo suficiente para cubrir el coste adicional.</p>
+      <p><strong style="color:var(--accent2)">Misma regla:</strong> El precio del bien → movimiento <em>a lo largo</em>. Cualquier otro factor → desplazamiento.</p>
       <h3 style="margin-top:12px">Shifters de Oferta</h3>
       <ul>
-        <li>Coste de inputs (↑ coste → ↓ oferta)</li>
-        <li>Tecnología (mejor tecnología → ↑ oferta)</li>
-        <li>Número de productores</li>
-        <li>Expectativas de precio futuro</li>
-        <li>Regulación / impuestos</li>
+        <li><strong>Coste de inputs:</strong> si los inputs suben (petróleo, salarios) → O cae</li>
+        <li><strong>Tecnología:</strong> mejor tecnología → mayor productividad → O sube</li>
+        <li><strong>Número de productores:</strong> más productores → O sube</li>
+        <li><strong>Expectativas de precio futuro:</strong> si espero más precio mañana, retengo stock → O baja hoy</li>
+        <li><strong>Impuestos/regulación:</strong> suben costes → O baja</li>
       </ul>
     </div>
   </div>
 
+  <h3>El Equilibrio y los 3 Pasos para Analizar un Shock</h3>
+  <p>El equilibrio es el precio donde la cantidad demandada igual a la cantidad ofrecida. A ese precio el mercado se "vacía" — no hay excedente ni escasez. Es el único precio estable: si el precio está por encima del equilibrio, los vendedores tienen excedente y bajan el precio; si está por debajo, hay escasez y el precio sube.</p>
   <div class="key-concept">
-    <strong>Regla de los 3 pasos para analizar un shock</strong>
-    1. ¿Afecta al comprador (demanda) o al vendedor (oferta)? · 2. ¿En qué dirección se desplaza la curva? · 3. ¿Cómo cambian P* y Q* en el nuevo equilibrio?
+    <strong>Los 3 pasos — aplica siempre este proceso</strong>
+    <strong>1.</strong> ¿El shock afecta a compradores (demanda) o a vendedores (oferta)? · <strong>2.</strong> ¿En qué dirección se desplaza esa curva? (¿Hacia qué lado quiere operar el mercado ahora?) · <strong>3.</strong> ¿Cómo cambia P* y Q* en el nuevo equilibrio? (Traza el nuevo punto de intersección)
   </div>
 
   <div class="chart-wrap">
@@ -311,64 +325,90 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
 <div id="micro2" class="section">
   <div class="tag tag-micro">Módulo I · Sesión 2</div>
   <h2>Automatización y Polarización del Empleo</h2>
-  <p>Aplicación del modelo S&D al mercado laboral. El reencuadre clave: <strong>Salario = Precio del trabajo; Empleo = Cantidad.</strong> Las empresas demandan trabajo, las personas lo ofrecen.</p>
+  <p>El caso aplica el modelo S&D al <strong>mercado laboral</strong>. El reencuadre es sencillo pero poderoso: el <strong>salario es el precio del trabajo</strong> y el <strong>empleo es la cantidad</strong>. Las empresas demandan trabajo porque les permite producir; los trabajadores lo ofrecen a cambio de salario. Cualquier cosa que afecte a esa demanda u oferta mueve el salario de equilibrio.</p>
 
-  <h3>El Patrón de Desigualdad</h3>
+  <div class="key-concept">
+    <strong>El mercado laboral como S&D</strong>
+    Curva de demanda de trabajo: cuántos trabajadores quiere contratar una empresa a cada nivel de salario. Pendiente negativa — a mayor salario, la empresa contrata menos (el trabajo es más caro). Shifters: productividad, precio del output, coste de tecnología alternativa. Curva de oferta de trabajo: cuántas personas quieren trabajar a cada salario. Pendiente positiva — a mayor salario, más gente quiere trabajar.
+  </div>
+
+  <h3>El Patrón de Desigualdad Salarial en EE.UU.</h3>
   <div class="grid2">
     <div class="card">
-      <div class="card-title">📊 1974–1988: Desigualdad Uniforme</div>
-      <p>La desigualdad crece en <em>toda</em> la distribución. Tanto el ratio 90/50 como el 50/10 suben. El crecimiento real de salarios es positivo arriba, débil en el medio, negativo abajo.</p>
-      <p style="color:var(--muted);font-size:12px">La distribución se <strong>estira uniformemente</strong> hacia arriba.</p>
+      <div class="card-title">📊 1974–1988: Desigualdad uniforme</div>
+      <p>La desigualdad aumenta en <em>toda</em> la distribución. El ratio 90/50 sube (los de arriba se alejan del medio) <strong>y</strong> el 50/10 también sube (el medio se aleja de los de abajo). El crecimiento de salarios reales es positivo arriba, débil en el medio, negativo abajo.</p>
+      <p style="font-size:12px;color:var(--muted)">La distribución se <strong>estira uniformemente</strong> hacia arriba. La desigualdad crece en ambas mitades.</p>
     </div>
     <div class="card">
       <div class="card-title">📊 1988–2008: Polarización</div>
-      <p>El 90/50 sigue subiendo, pero el 50/10 <strong>deja de subir</strong>. Los salarios bajos crecen modestamente mientras el medio se estanca. La desigualdad se concentra en la parte superior.</p>
-      <p style="color:var(--muted);font-size:12px">La distribución se <strong>"vacía" en el medio</strong>. Arriba crece, abajo crece modestamente, el medio se queda atrás.</p>
+      <p>El patrón cambia cualitativamente. El 90/50 <strong>sigue subiendo</strong>, pero el 50/10 <strong>deja de crecer o se estrecha</strong>. Los salarios bajos dejan de caer y crecen modestamente. Los del medio se estancan. La desigualdad se concentra en la mitad superior.</p>
+      <p style="font-size:12px;color:var(--muted)">La distribución se <strong>"vacía en el medio"</strong>. No es que los de abajo mejoren por arriba — es que los de arriba se alejan más, y los del medio se quedan atrás de todos.</p>
     </div>
   </div>
 
-  <div class="key-concept">
-    <strong>Routinization Hypothesis</strong>
-    Los ordenadores y robots sustituyen tareas <em>rutinarias y codificables</em> — precisamente las del nivel medio (operadores, administrativos, contabilidad, ensamblaje). Los trabajadores de nivel alto (creatividad, gestión, análisis) y bajo (servicios en persona, limpieza) son más difíciles de automatizar.
+  <h3>La Routinization Hypothesis — El Motor del Cambio</h3>
+  <p>La hipótesis es simple: los ordenadores y robots son buenos en tareas <strong>rutinarias y codificables</strong> — tareas que pueden describirse como un conjunto de instrucciones repetibles. ¿Qué tipo de empleos son así? Exactamente los de nivel medio: operadores de maquinaria, trabajadores de ensamblaje, contables, administrativos, procesadores de datos. Son tareas que tienen un procedimiento claro y repetible.</p>
+
+  <div class="grid3">
+    <div class="card">
+      <div class="card-title">⚙️ Trabajos RUTINARIOS</div>
+      <p>Pueden describirse como reglas o algoritmos. La tecnología los <strong>sustituye directamente</strong>. Ejemplos: operador de tornos CNC, agente de viajes, cajero bancario, mecanógrafo, tramitador de nóminas.</p>
+      <p style="font-size:12px;color:var(--accent3)">Resultado: demanda laboral cae → salarios caen</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🧠 Trabajos ABSTRACTOS</div>
+      <p>Requieren juicio, creatividad, resolución de problemas no estructurados. La tecnología los <strong>complementa</strong> — el ordenador hace el análisis rutinario, el humano toma las decisiones. Ejemplos: abogado, cirujano, director creativo, estratega.</p>
+      <p style="font-size:12px;color:var(--accent4)">Resultado: productividad sube → demanda laboral sube → salarios suben</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🤝 Trabajos MANUALES NO RUTINARIOS</div>
+      <p>Requieren adaptación física a entornos impredecibles. Difíciles de automatizar con la tecnología actual. Ejemplos: fontanero, peluquero, cuidador de ancianos, conductor, limpiador. Pero reciben oferta extra de los desplazados del medio.</p>
+      <p style="font-size:12px;color:var(--accent)">Resultado: ambiguo — demanda sube pero también la oferta</p>
+    </div>
   </div>
 
-  <h3>Efecto sobre los Tres Segmentos de Trabajadores</h3>
+  <h3>Efecto sobre los Tres Segmentos — Gráfico Interactivo</h3>
   <div class="chart-wrap">
-    <div class="chart-title">Mercado Laboral: Impacto de la Automatización</div>
-    <div class="chart-sub">Selecciona el segmento salarial para ver el efecto en el mercado de trabajo</div>
+    <div class="chart-title">Mercado Laboral: Impacto de la Automatización por Segmento</div>
+    <div class="chart-sub">Selecciona el tipo de trabajador para ver qué le pasa a su curva de demanda y oferta</div>
     <canvas id="laborCanvas" width="680" height="360"></canvas>
     <div class="chart-controls">
-      <button class="ctrl-btn active" onclick="laborScenario('mid',this)">Trabajadores Medio</button>
-      <button class="ctrl-btn" onclick="laborScenario('high',this)">Trabajadores Alto</button>
-      <button class="ctrl-btn" onclick="laborScenario('low',this)">Trabajadores Bajo</button>
+      <button class="ctrl-btn active" onclick="laborScenario('mid',this)">Trabajadores Medio (rutinario)</button>
+      <button class="ctrl-btn" onclick="laborScenario('high',this)">Trabajadores Alto (abstracto)</button>
+      <button class="ctrl-btn" onclick="laborScenario('low',this)">Trabajadores Bajo (manual)</button>
     </div>
     <div id="laborExplain" style="margin-top:12px;font-size:12.5px;color:var(--muted);padding:10px 14px;background:var(--surface);border-radius:6px;border-left:2px solid var(--accent2)">
       Tecnología actúa como <strong>sustituto</strong> de trabajadores rutinarios. La demanda de trabajo medio cae → curva de demanda se desplaza a la izquierda → salario y empleo caen.
     </div>
   </div>
 
-  <h3>El Efecto Escala</h3>
-  <p>La automatización no solo destruye empleos — también los crea. Al reducir costes, las empresas producen más y necesitan más trabajadores complementarios (ej. programadores, analistas). Para los trabajadores de nivel alto, la tecnología actúa como <strong>complemento</strong>, desplazando su curva de demanda a la derecha.</p>
+  <h3>El Efecto Escala — Por Qué la Automatización También Crea Empleo</h3>
+  <p>La Routinization Hypothesis no predice que toda la economía pierda empleos. Al automatizar, las empresas reducen costes y se vuelven más productivas. Eso tiene dos efectos positivos: primero, las empresas que son más eficientes crecen y necesitan más trabajadores en roles complementarios (efecto escala). Segundo, los precios más bajos de los bienes dan más poder adquisitivo a los consumidores, que gastan en otros sectores generando empleo allí.</p>
 
-  <h3>¿Por qué los Desplazados del Medio van hacia Abajo?</h3>
-  <p>Cuando los trabajadores de nivel medio son desplazados, tienen dos opciones: recualificarse hacia tareas de alto nivel (costoso, requiere tiempo) o redirigirse a empleos de nivel bajo (accesibles de inmediato). La mayoría toma el camino de menor resistencia → la oferta de trabajo bajo aumenta → esto <strong>presiona los salarios bajos a la baja</strong>, aunque la demanda de esos trabajos también suba.</p>
+  <h3>¿Por Qué los Desplazados del Medio van Hacia Abajo y No Hacia Arriba?</h3>
+  <p>Esta es la pregunta más importante del caso. Un trabajador de nivel medio desplazado tiene dos caminos: recualificarse hacia trabajos abstractos de nivel alto (ingeniero, analista) o recolocarse en trabajos manuales de nivel bajo. La recualificación requiere años de educación, es costosa e incierta. El trabajo de servicio en persona es accesible de inmediato. El resultado predecible: la mayoría toma el camino de menor resistencia. Esto aumenta la oferta en el segmento bajo, presionando esos salarios, mientras los salarios abstractos siguen subiendo porque la oferta no llega.</p>
+
+  <div class="key-concept">
+    <strong>La Trampa del Examen — Sustituto vs. Complemento</strong>
+    Sustituto tecnológico: la tecnología <em>reemplaza</em> al trabajador — hace el mismo trabajo. La demanda laboral cae. Complemento tecnológico: la tecnología hace más productivo al trabajador — ambos son necesarios. La demanda laboral sube. La misma tecnología puede ser sustituta de unos y complemento de otros. El ordenador sustituye al mecanógrafo (escribir es rutinario) y complementa al analista financiero (el análisis lo hace el software, el juicio lo pone el humano).
+  </div>
 
   <table>
-    <tr><th>Segmento</th><th>Efecto tecnológico</th><th>Resultado en S&D laboral</th><th>Salario</th></tr>
-    <tr><td>Alto (abstracto / gestor)</td><td>Complemento → ↑ demanda</td><td>Demanda laboral desplaza →→ derecha</td><td>↑↑</td></tr>
-    <tr><td>Medio (rutinario)</td><td>Sustituto → ↓ demanda</td><td>Demanda laboral desplaza ←← izquierda</td><td>↓↓</td></tr>
-    <tr><td>Bajo (servicio en persona)</td><td>Difícil automatizar + oferta extra del medio</td><td>Demanda ↑ pero también oferta ↑</td><td>↑ modesto</td></tr>
+    <tr><th>Segmento</th><th>Relación con tecnología</th><th>Desplazamiento D laboral</th><th>Desplazamiento S laboral</th><th>Efecto en salario</th></tr>
+    <tr><td>Alto (abstracto)</td><td>Complemento</td><td>D → derecha ↑</td><td>Sin cambio</td><td>↑↑ Sube mucho</td></tr>
+    <tr><td>Medio (rutinario)</td><td>Sustituto</td><td>D ← izquierda ↓</td><td>S → derecha (desplazados del sector)</td><td>↓↓ Cae mucho</td></tr>
+    <tr><td>Bajo (manual)</td><td>Difícil de automatizar</td><td>D → derecha ↑ (pequeño)</td><td>S → derecha ↑↑ (desplazados del medio)</td><td>↑ Sube poco</td></tr>
   </table>
 
   <div class="divider"></div>
   <h3>Para el Examen</h3>
   <ul>
-    <li>Routinization Hypothesis: qué predice y por qué</li>
-    <li>Ratios 90/50 y 50/10: cómo se comportaron en cada período y qué significa</li>
-    <li>Tecnología como sustituto vs. complemento del trabajo (efecto sobre demanda laboral)</li>
-    <li>El efecto escala: por qué la automatización también crea empleo</li>
-    <li>Por qué los desplazados del medio no van hacia arriba sino hacia abajo</li>
-    <li>Conexión con el modelo S&D básico: salario = precio, empleo = cantidad</li>
+    <li>Routinization Hypothesis: qué predice exactamente (qué tareas automatiza la tecnología y cuáles no)</li>
+    <li>Sustituto vs. complemento tecnológico: definición precisa y efecto en la demanda laboral</li>
+    <li>Los ratios 90/50 y 50/10: qué miden y cómo se comportaron en cada período</li>
+    <li>Efecto escala: por qué la automatización también crea demanda de trabajo</li>
+    <li>Por qué los desplazados del medio van hacia abajo (coste de recualificación)</li>
+    <li>Conexión con S&D: salario = precio, empleo = cantidad, D laboral = decisión de la empresa, S laboral = decisión del trabajador</li>
   </ul>
 </div>
 
@@ -376,93 +416,85 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
 <div id="micro3" class="section">
   <div class="tag tag-micro">Módulo I · Sesión 3</div>
   <h2>Controles de Precio — Hurricane Sandy</h2>
-  <p>El caso más rico en debate ético del módulo. La pregunta central es incómoda: ¿debería haberse permitido que el precio de la gasolina subiera libremente durante un desastre natural? El modelo S&D da una respuesta clara; la política y la ética complican el cuadro.</p>
+  <p>El caso más rico en debate ético del módulo. La pregunta central es moralmente incómoda: ¿debería haberse permitido que el precio de la gasolina subiera libremente durante un desastre natural? El modelo S&D da una respuesta clara sobre eficiencia; la política y la ética complican el cuadro al introducir la equidad.</p>
 
-  <h3>El Doble Shock del Huracán</h3>
+  <div class="key-concept">
+    <strong>¿Qué son los controles de precio?</strong>
+    Intervenciones legales que fijan un límite al precio que puede cobrar un vendedor (techo / price ceiling) o al precio mínimo que debe recibir (suelo / price floor). La idea es proteger a compradores (techos) o a vendedores (suelos) del "capricho" del mercado. El problema: al impedir que el precio equilibre el mercado, generan escasez o excedentes.
+  </div>
+
+  <h3>El Doble Shock del Huracán Sandy</h3>
   <div class="grid2">
     <div class="card">
       <div class="card-title">⬇️ Shock de Oferta Negativo</div>
-      <p>Gasolineras sin electricidad para bombear. Cadenas de suministro cortadas. Regulaciones que impedían comprar a proveedores de otros estados.</p>
-      <p><strong>Curva de oferta se desplaza a la izquierda</strong> → menos gasolina disponible a cualquier precio.</p>
+      <p>Gasolineras sin electricidad (el petróleo estaba en el subsuelo pero no podían bombearlo). Cadenas de suministro rotas. Regulaciones estatales que impedían comprar gasolina de proveedores de otros estados. La curva de oferta se desplaza a la <strong>izquierda</strong>: menos gasolina disponible a cualquier precio.</p>
     </div>
     <div class="card">
       <div class="card-title">⬆️ Shock de Demanda Positivo</div>
-      <p>Pánico generalizado. Gente llenando bidones preventivamente. El miedo a quedarse sin gasolina genera demanda extra.</p>
-      <p><strong>Curva de demanda se desplaza a la derecha</strong> → más demanda a cualquier precio.</p>
+      <p>Pánico generalizado. Gente llenando bidones de 20 litros preventivamente aunque no los necesitara. El miedo a quedarse sin gasolina genera una demanda artificial muy por encima del consumo normal. La curva de demanda se desplaza a la <strong>derecha</strong>: más demanda a cualquier precio.</p>
     </div>
   </div>
-  <p>Ambos shocks presionan el precio al alza. El precio de equilibrio libre habría subido muy por encima del precio pre-huracán. Craigslist llegó a $18–20/galón.</p>
+  <p>Ambos shocks actúan en la misma dirección sobre el precio: <strong>presión alcista muy fuerte</strong>. Sin intervención, el precio habría subido hasta el nuevo equilibrio (quizás $15–20/galón), enviando señales cruciales: a los consumidores (usa solo lo estrictamente necesario) y a los productores de fuera (aquí hay una oportunidad de lucro enorme, trae gasolina).</p>
 
-  <h3>Price Ceiling — Techo de Precio</h3>
+  <h3>Price Ceiling: Qué Es y Por Qué Genera Shortage</h3>
+  <p>Un price ceiling fija un precio máximo legal por debajo del cual se puede cobrar. Es <strong>vinculante</strong> (tiene efecto real) solo si ese precio máximo está por debajo del precio de equilibrio libre. En Sandy, las leyes anti-price gouging de Nueva Jersey fijaron efectivamente el precio al nivel pre-huracán (~$3.50/galón), cuando el equilibrio libre habría sido mucho más alto.</p>
+  <p>La consecuencia es mecánica: al precio del techo, la cantidad demandada supera a la cantidad ofrecida. Hay más gente queriendo comprar que gasolina disponible para vender. <strong>Shortage = exceso de demanda = escasez.</strong></p>
+
   <div class="chart-wrap">
-    <div class="chart-title">Price Ceiling — Modelo Interactivo</div>
-    <div class="chart-sub">Activa el techo de precio y observa el shortage generado</div>
+    <div class="chart-title">Price Ceiling — Sandy: Equilibrio → Shock → Intervención</div>
+    <div class="chart-sub">Sigue la secuencia para ver cómo el techo de precio crea el shortage</div>
     <canvas id="ceilingCanvas" width="680" height="380"></canvas>
     <div class="chart-controls">
-      <button class="ctrl-btn active" onclick="setCeiling('base',this)">Equilibrio base</button>
-      <button class="ctrl-btn" onclick="setCeiling('shock',this)">Shock huracán (S↓ D↑)</button>
-      <button class="ctrl-btn" onclick="setCeiling('ceiling',this)">+ Price Ceiling</button>
+      <button class="ctrl-btn active" onclick="setCeiling('base',this)">1. Equilibrio base</button>
+      <button class="ctrl-btn" onclick="setCeiling('shock',this)">2. Doble shock Sandy</button>
+      <button class="ctrl-btn" onclick="setCeiling('ceiling',this)">3. + Price Ceiling</button>
     </div>
     <div id="ceilingExplain" style="margin-top:12px;font-size:12.5px;color:var(--muted);padding:10px 14px;background:var(--surface);border-radius:6px;border-left:2px solid var(--accent3)">
-      Equilibrio sin intervención. El precio P* y la cantidad Q* se determinan en la intersección de oferta y demanda.
+      Equilibrio libre. El precio P* y la cantidad Q* se determinan en la intersección de oferta y demanda.
     </div>
   </div>
 
-  <div class="key-concept">
-    <strong>Price Ceiling Vinculante</strong>
-    Un techo de precio solo tiene efecto si está <em>por debajo</em> del precio de equilibrio. En ese caso genera <strong>exceso de demanda</strong> (shortage): a ese precio la gente quiere más de lo que los vendedores están dispuestos a ofrecer.
-  </div>
-
-  <h3>¿Qué Sustituye al Precio como Mecanismo de Racionamiento?</h3>
-  <table>
-    <tr><th>Mecanismo</th><th>Descripción</th><th>Problema</th></tr>
-    <tr><td>Colas (tiempo)</td><td>Quien más espera consigue el bien</td><td>Destruye valor — el tiempo tiene coste pero no se transfiere a nadie</td></tr>
-    <tr><td>Favoritismo / contactos</td><td>El vendedor elige a quién vender</td><td>Asignación ineficiente e inequitativa</td></tr>
-    <tr><td>Lotería</td><td>Acceso aleatorio</td><td>No va a quien más lo valora</td></tr>
-    <tr><td>Mercado negro</td><td>Precio libre en canal ilegal</td><td>Sin protección al consumidor, precio puede ser aún más alto</td></tr>
-  </table>
-
-  <h3>Las 4 Ineficiencias de un Price Ceiling Vinculante</h3>
-  <ol>
-    <li><strong>Desperdicio de recursos:</strong> El tiempo de cola tiene coste pero no genera ingreso para nadie — destrucción pura de valor.</li>
-    <li><strong>Asignación ineficiente:</strong> El bien no va a quien más lo valora, sino a quien llega antes o conoce al vendedor.</li>
-    <li><strong>Pérdida de ganancias del intercambio:</strong> Transacciones mutuamente beneficiosas que no ocurren por falta de oferta (DWL).</li>
-    <li><strong>Calidad reducida:</strong> Con precio fijo, los vendedores tienen menos incentivo a mantener calidad.</li>
-  </ol>
-
-  <h3>El Papel de la Elasticidad de Oferta</h3>
+  <h3>Las 4 Ineficiencias del Price Ceiling Vinculante</h3>
   <div class="grid2">
     <div class="card">
-      <div class="card-title">⚡ Oferta Inelástica (corto plazo)</div>
-      <p>El price ceiling causa mucho menos daño en oferta: aunque el precio sea bajo, los productores no pueden reducir mucho su producción de inmediato. El shortage existe pero es moderado.</p>
-      <p style="font-size:12px;color:var(--muted)">Argumento <em>a favor</em> del price ceiling transitorio durante emergencias.</p>
+      <div class="card-title">⏱️ 1. Desperdicio de recursos (colas)</div>
+      <p>Cuando el precio no puede equilibrar el mercado, lo hacen las <strong>colas</strong>. Quien llega antes consigue la gasolina. El tiempo invertido esperando tiene un coste real para el consumidor, pero <strong>no genera ningún ingreso para el vendedor</strong>. Es destrucción pura de valor — diferente a un impuesto donde al menos hay recaudación.</p>
     </div>
     <div class="card">
-      <div class="card-title">📉 Oferta Elástica (largo plazo)</div>
-      <p>El price ceiling causa enorme daño. Los productores salen del mercado o reducen inversión → la oferta cae → el shortage se agrava con el tiempo.</p>
-      <p style="font-size:12px;color:var(--muted)">Argumento <em>en contra</em> del price ceiling permanente.</p>
+      <div class="card-title">🎯 2. Asignación ineficiente</div>
+      <p>La gasolina no va a quien más la valora, sino a quien llega antes, tiene más tiempo libre para esperar, o conoce al dueño de la gasolinera. Un médico que necesita gasolina para llegar al hospital puede quedarse sin ella, mientras alguien que solo quería llenar un bidón preventivo la consigue. El precio resuelve esto de forma automática — el que más la valora la paga.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">📉 3. Pérdida de ganancias del intercambio (DWL)</div>
+      <p>Con el techo de precio, hay transacciones que habrían beneficiado a ambas partes y que no ocurren. Un vendedor dispuesto a vender a $8 y un comprador dispuesto a pagar $12 no llegan a intercambiar porque la ley dice que el precio no puede superar $3.50. Esa ganancia conjunta de $4 desaparece — nadie la recibe. Es el deadweight loss del price ceiling.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🔒 4. Calidad reducida y mercado negro</div>
+      <p>Con precio fijo, los vendedores no tienen incentivo a mantener calidad (no pueden cobrar más por gasolina mejor). Y cuando la brecha entre el precio legal y el precio de equilibrio es muy grande, emerge el <strong>mercado negro</strong>: en Sandy, Craigslist anunciaba gasolina a $18-20/galón. El ceiling no elimina el precio alto — solo lo desplaza a canales ilegales, sin protección para el comprador.</p>
     </div>
   </div>
 
-  <h3>Price Floor — Suelo de Precio</h3>
+  <h3>¿Cuándo Es Más o Menos Dañino el Price Ceiling?</h3>
+  <p>El daño del ceiling depende de la <strong>elasticidad de la oferta</strong>. A corto plazo, la oferta de gasolina es muy inelástica — aunque el precio caiga, los vendedores no pueden reducir mucho su producción (tienen contratos, stocks, infraestructura fija). En ese caso, el shortage no se amplía tanto. Argumento para un ceiling <em>transitorio</em> durante la emergencia. Pero a largo plazo, la oferta es elástica: si el precio está fijo bajo, nadie invierte en ampliar capacidad, el suministro se reduce, el shortage se cronifica. Argumento <em>contra</em> un ceiling permanente.</p>
+
+  <h3>Price Floor — El Otro Lado</h3>
   <div class="key-concept">
-    <strong>Price Floor Vinculante</strong>
-    Actúa al revés: un precio mínimo <em>por encima</em> del equilibrio genera <strong>exceso de oferta</strong> (surplus). Ejemplo clásico: el salario mínimo genera desempleo en el mercado laboral si está por encima del salario de equilibrio.
+    <strong>Price Floor Vinculante = Exceso de Oferta (Surplus)</strong>
+    Un suelo de precio fija un mínimo por encima del equilibrio. Al precio mínimo legal, los vendedores quieren vender más de lo que los compradores quieren comprar → surplus. El caso más conocido: el <strong>salario mínimo</strong>. Si el salario mínimo está por encima del salario de equilibrio, las empresas demandan menos trabajadores de lo que la gente quiere trabajar → desempleo. La diferencia con el debate: ¿es ese desempleo grande o pequeño? Depende de la elasticidad de la demanda de trabajo.
   </div>
 
-  <h3>El Debate Normativo</h3>
-  <p>El precio libre asigna eficientemente pero puede excluir a quienes más lo necesitan. El price ceiling protege el acceso equitativo pero genera ineficiencia. La clave está en la distinción entre <strong>eficiencia</strong> (maximizar el tamaño del pastel) y <strong>equidad</strong> (cómo se reparte). Son objetivos distintos que a menudo se contraponen.</p>
+  <h3>El Debate Normativo: Eficiencia vs. Equidad</h3>
+  <p>El precio libre maximiza la eficiencia (mayor bienestar total) pero puede excluir a quienes más necesitan el bien pero no tienen dinero para pagarlo. El price ceiling redistribuye el acceso pero destruye eficiencia. Estos son dos objetivos distintos que a menudo se contraponen. El modelo no dice cuál es "mejor" — eso es una decisión de valores. Lo que sí dice el modelo es cuál es el <em>coste</em> de elegir uno sobre el otro.</p>
 
   <div class="divider"></div>
   <h3>Para el Examen</h3>
   <ul>
-    <li>Definición de price ceiling y cuándo es vinculante</li>
-    <li>Por qué un price ceiling vinculante genera shortage (exceso de demanda)</li>
-    <li>Las 4 ineficiencias de un price ceiling vinculante</li>
-    <li>Mecanismos alternativos de racionamiento cuando el precio no puede hacerlo</li>
-    <li>Price floor: definición, vinculante, genera excess supply. Aplicación: salario mínimo</li>
-    <li>Papel de la elasticidad de oferta: price ceilings transitorios vs. permanentes</li>
-    <li>La distinción normativa eficiencia vs. equidad</li>
+    <li>Price ceiling vinculante: definición, condición de vinculación (P_ceiling < P*), consecuencia (shortage)</li>
+    <li>Las 4 ineficiencias: desperdicio de recursos, asignación ineficiente, DWL, calidad reducida / mercado negro</li>
+    <li>Mecanismos alternativos de racionamiento: colas, favoritismo, lotería, mercado negro — y su coste</li>
+    <li>Elasticidad de oferta y el daño del ceiling: corto plazo (inelástica → daño menor) vs. largo plazo (elástica → daño grande)</li>
+    <li>Price floor vinculante: condición (P_floor > P*), consecuencia (surplus), aplicación al salario mínimo</li>
+    <li>La distinción eficiencia vs. equidad: qué dice el modelo y qué queda fuera de él</li>
   </ul>
 </div>
 
@@ -560,87 +592,106 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
 <div id="macro1" class="section">
   <div class="tag tag-macro">Módulo II · Sesiones 5–6</div>
   <h2>Macroeconomía — Marco AD-AS</h2>
-  <p>El modelo central de la macroeconomía. Extensión del modelo S&D al nivel agregado de la economía. En lugar de un mercado individual, estudiamos el nivel de producción y precios de toda la economía.</p>
+  <p>El modelo central de la macroeconomía. Es la extensión del S&D al nivel de toda la economía: en lugar de un mercado de gasolina o de trabajo, estudiamos el mercado agregado de bienes y servicios — toda la producción del país a la vez.</p>
 
-  <h3>Los 4 Termómetros de la Economía</h3>
+  <div class="key-concept">
+    <strong>¿Por qué un modelo agregado?</strong>
+    En microeconomía estudiamos un mercado en aislamiento. Pero a veces todos los mercados se mueven juntos — una recesión afecta a casi todas las industrias simultáneamente. El marco AD-AS captura esa dinámica global: qué determina el nivel total de producción (PIB real) y el nivel general de precios (inflación), y cómo las políticas fiscal y monetaria pueden influir en ellos.
+  </div>
+
+  <h3>Medición: Los 4 Termómetros de la Economía</h3>
   <div class="grid2">
     <div class="card">
-      <div class="card-title">📊 Variables Clave</div>
+      <div class="card-title">📊 Las Variables Macro Clave</div>
       <table>
-        <tr><th>Variable</th><th>Qué mide</th></tr>
-        <tr><td>PIB Real</td><td>Producción agregada (sin efecto precios)</td></tr>
-        <tr><td>Inflación</td><td>Variación del nivel general de precios</td></tr>
-        <tr><td>Desempleo</td><td>Recursos laborales sin usar</td></tr>
-        <tr><td>Tipo de interés real</td><td>Coste "verdadero" de endeudarse</td></tr>
+        <tr><th>Variable</th><th>Qué mide</th><th>Por qué importa</th></tr>
+        <tr><td>PIB Real</td><td>Producción total (a precios constantes)</td><td>Ciclo económico, tamaño mercado</td></tr>
+        <tr><td>Inflación (π)</td><td>Variación del nivel general de precios</td><td>Contratos, costes, poder adquisitivo</td></tr>
+        <tr><td>Desempleo (u)</td><td>% activos sin trabajo</td><td>Presión salarial, bienestar social</td></tr>
+        <tr><td>Tipo interés real (r)</td><td>Coste real de endeudarse</td><td>Decisiones de inversión y consumo</td></tr>
       </table>
     </div>
     <div class="card">
-      <div class="card-title">⚠️ Nominal vs. Real</div>
-      <p><strong>PIB nominal</strong> = precio × cantidad (ambas cambian)</p>
-      <p><strong>PIB real</strong> = precio fijo × cantidad (solo producción)</p>
-      <div class="formula">r = i − πᵉ (Ecuación de Fisher)</div>
-      <p style="font-size:12px;color:var(--muted)">Los agentes toman decisiones en términos <em>reales</em>, aunque el mundo les hable en nominales.</p>
+      <div class="card-title">⚠️ Nominal vs. Real — La Distinción Más Importante</div>
+      <p>Los agentes toman decisiones en términos <strong>reales</strong>, aunque el mundo les presente cifras nominales. Un salario nominal de 30.000€ no dice nada si no sabes qué se puede comprar con él.</p>
+      <div class="formula">PIB real = PIB nominal / deflactor de precios</div>
+      <div class="formula">r = i − πᵉ &nbsp;&nbsp; (Ecuación de Fisher)</div>
+      <p style="font-size:12px;color:var(--muted);margin-top:8px">Si la inflación esperada sube del 2% al 4% pero el tipo nominal no cambia, el tipo real cae — la política monetaria se vuelve implícitamente más expansiva sin que nadie haya tomado ninguna decisión.</p>
     </div>
   </div>
 
-  <h3>El Marco AD-AS</h3>
+  <h3>Las Tres Curvas — Por Qué Tienen la Forma que Tienen</h3>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-title">🔵 AD — Demanda Agregada: ¿Por qué tiene pendiente negativa?</div>
+    <p>La curva AD muestra, para cada nivel de precios, cuánta producción quiere comprar el sector privado (C + I), el gobierno (G) y el sector exterior (NX). Tiene pendiente negativa por <strong>tres efectos</strong>:</p>
+    <ul>
+      <li><strong>Efecto riqueza real:</strong> si los precios suben, el dinero que tienes en el banco vale menos en términos reales → te sientes más pobre → consumes menos (C↓)</li>
+      <li><strong>Efecto tipo de interés:</strong> precios más altos → más dinero necesario para las transacciones → mayor demanda de dinero → tipos de interés suben → inversión cae (I↓)</li>
+      <li><strong>Efecto comercio exterior:</strong> precios domésticos más altos → exportaciones más caras para extranjeros → exportaciones bajan, importaciones suben (NX↓)</li>
+    </ul>
+    <p style="margin-top:8px"><strong>Shifters de AD</strong> — qué desplaza la curva entera: política fiscal expansiva (↑G o ↓T → AD↑), política monetaria expansiva (↓r → ↑I → AD↑), ↑riqueza privada, ↑exportaciones, mejora de expectativas.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-title">🔴 SRAS — Oferta Agregada a Corto Plazo: ¿Por qué tiene pendiente positiva?</div>
+    <p>La curva SRAS muestra, para cada nivel de precios, cuánto están dispuestas a producir las empresas. La tiene pendiente positiva porque los <strong>salarios son rígidos a corto plazo</strong> (contratos firmados, negociación colectiva anual). Si los precios de los bienes suben pero los salarios no se ajustan inmediatamente, los márgenes de las empresas mejoran → es rentable producir más → la oferta aumenta. La clave es que los salarios no siguen el precio inmediatamente.</p>
+    <p style="margin-top:8px"><strong>Shifters de SRAS</strong> — qué desplaza hacia arriba (SRAS sube = costes más altos = menos oferta a mismo precio): ↑salarios nominales, ↑precio inputs (petróleo, materias primas), ↑expectativas de inflación, shocks de oferta negativos (guerra, pandemia). Hacia abajo: ↓costes, mejoras de productividad.</p>
+  </div>
+
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-title">🟢 LRAS — Oferta Agregada a Largo Plazo: ¿Por qué es vertical?</div>
+    <p>A largo plazo, los salarios son completamente flexibles — se ajustan a cualquier nivel de precios. Por tanto, el nivel de producción no depende del nivel de precios: la economía siempre produce en Y* (PIB potencial). Y* está determinado por factores reales: capital acumulado, tecnología, tamaño de la fuerza laboral, instituciones. No por el nivel de precios.</p>
+    <p style="margin-top:8px"><strong>Shifters de LRAS:</strong> solo cambia si cambia Y*. Crecimiento → LRAS a la derecha. Destrucción de capital, emigración masiva, colapso institucional → LRAS a la izquierda.</p>
+  </div>
+
   <div class="chart-wrap">
     <div class="chart-title">Modelo AD-AS Interactivo</div>
-    <div class="chart-sub">Simula shocks de demanda, oferta a corto y largo plazo</div>
+    <div class="chart-sub">Simula shocks y observa el equilibrio a corto y largo plazo</div>
     <canvas id="adasCanvas" width="680" height="400"></canvas>
     <div class="chart-controls">
       <button class="ctrl-btn active" onclick="adasShock('reset',this)">Equilibrio base</button>
       <button class="ctrl-btn" onclick="adasShock('adUp',this)">▲ AD sube (estímulo)</button>
       <button class="ctrl-btn" onclick="adasShock('adDown',this)">▼ AD baja (recesión)</button>
-      <button class="ctrl-btn" onclick="adasShock('srasUp',this)">▼ SRAS sube (stagflation)</button>
+      <button class="ctrl-btn" onclick="adasShock('srasUp',this)">▲ SRAS sube (stagflation)</button>
       <button class="ctrl-btn" onclick="adasShock('lrasRight',this)">→ LRAS crece (tech)</button>
     </div>
     <div id="adasExplain" style="margin-top:12px;font-size:12.5px;color:var(--muted);padding:10px 14px;background:var(--surface);border-radius:6px;border-left:2px solid var(--accent2)">
-      Equilibrio inicial. AD corta SRAS en Y* (PIB potencial). La economía opera en pleno empleo.
+      Equilibrio inicial en Y* (PIB potencial). AD corta SRAS exactamente en la LRAS.
     </div>
     <div class="legend">
-      <div class="leg"><div class="leg-line" style="background:#4fa8c8"></div>AD — Demanda Agregada</div>
-      <div class="leg"><div class="leg-line" style="background:#c84f4f"></div>SRAS — Oferta Agregada CP</div>
-      <div class="leg"><div class="leg-line" style="background:#4fc87a;width:2px;height:14px;border-radius:0;border-right:2px dashed #4fc87a;width:0"></div>LRAS — Oferta Agregada LP</div>
+      <div class="leg"><div class="leg-line" style="background:#4fa8c8"></div>AD</div>
+      <div class="leg"><div class="leg-line" style="background:#c84f4f"></div>SRAS</div>
+      <div class="leg"><div class="leg-line" style="background:#4fc87a"></div>LRAS (vertical = Y*)</div>
     </div>
   </div>
 
-  <h3>Las Tres Curvas</h3>
-  <div class="grid3">
-    <div class="card">
-      <div class="card-title">🔵 AD — Demanda Agregada</div>
-      <p>Pendiente negativa (en gráfico P-Y). Componentes: <strong>C + I + G + NX</strong>. Se desplaza con: política fiscal, monetaria, expectativas, comercio exterior.</p>
-    </div>
-    <div class="card">
-      <div class="card-title">🔴 SRAS — Oferta CP</div>
-      <p>Pendiente positiva. Se desplaza con: costes de inputs, expectativas de inflación, shocks de oferta. A mayor P esperado, mayor P actual exigido.</p>
-    </div>
-    <div class="card">
-      <div class="card-title">🟢 LRAS — Oferta LP</div>
-      <p>Vertical en Y*. Representa el PIB potencial — los recursos disponibles. No depende del nivel de precios. Sólo crece con: tecnología, capital, trabajo, instituciones.</p>
-    </div>
-  </div>
-
-  <h3>El Ajuste Automático</h3>
+  <h3>Los Gaps y el Ajuste Automático</h3>
   <table>
-    <tr><th>Situación</th><th>Gap</th><th>Presión</th><th>Ajuste SRAS</th><th>Resultado LP</th></tr>
-    <tr><td>AD↑, Y > Y*</td><td>Expansionary</td><td>Salarios y precios suben</td><td>SRAS se desplaza ↑</td><td>P sube, Y vuelve a Y*</td></tr>
-    <tr><td>AD↓, Y < Y*</td><td>Recessionary</td><td>Desempleo → salarios bajan</td><td>SRAS se desplaza ↓</td><td>P baja, Y vuelve a Y*</td></tr>
+    <tr><th>Situación</th><th>Gap</th><th>Señal en mercado laboral</th><th>Ajuste SRAS (largo plazo)</th><th>Resultado final</th></tr>
+    <tr><td>Y > Y* (AD subió)</td><td>Expansionary gap</td><td>Desempleo < tasa natural → salarios suben</td><td>SRAS ↑ (costes suben)</td><td>P sube, Y vuelve a Y*. Solo inflación.</td></tr>
+    <tr><td>Y < Y* (AD bajó)</td><td>Recessionary gap</td><td>Desempleo > tasa natural → salarios bajan</td><td>SRAS ↓ (costes bajan)</td><td>P baja, Y vuelve a Y*. Pero lento.</td></tr>
   </table>
 
   <div class="key-concept">
-    <strong>Rigidez Salarial — Por Qué el Ajuste es Asimétrico</strong>
-    Los salarios son más rígidos a la baja que al alza. Contratos, moral, poder sindical. Resultado: la economía sale de las recesiones más lento que de las expansiones. Justificación para la política de estabilización.
+    <strong>La Rigidez Salarial y Por Qué Importa Tanto</strong>
+    En teoría, el ajuste automático desde una recesión debería funcionar: desempleo sube → trabajadores aceptan salarios más bajos → costes caen → SRAS baja → economía vuelve a Y*. En la práctica, los salarios son muy rígidos a la baja. ¿Por qué? Contratos multianuales firmados. Salario mínimo legal. Moral (los trabajadores sienten que es "injusto" cobrar menos). Poder sindical. Resultado: el ajuste automático en recesión puede tardar años — España tardó casi una década en recuperarse de 2008. <strong>Eso es la justificación para la política de estabilización: acelerar lo que el mercado haría muy lentamente.</strong>
   </div>
+
+  <h3>Stagflation — El Peor Escenario</h3>
+  <p>Un shock negativo de oferta (petróleo, guerra, pandemia) desplaza la SRAS hacia arriba. Resultado: el PIB cae (recesión) Y los precios suben (inflación) al mismo tiempo. Es el peor escenario de política económica porque los instrumentos normales no sirven: si el banco central sube tipos para combatir la inflación, agrava la recesión; si los baja para estimular el PIB, agrava la inflación. Fue el dilema de los años 70 con el shock del petróleo de la OPEP.</p>
 
   <div class="divider"></div>
   <h3>Para el Examen</h3>
   <ul>
-    <li>Nominal vs. real: PIB, salarios, tipos de interés (Ecuación de Fisher)</li>
-    <li>Las tres curvas AD, SRAS, LRAS: forma, shifters, lógica</li>
-    <li>Recessionary gap vs. expansionary gap: cómo identificarlos y qué pasa en LP</li>
-    <li>El ajuste automático: mecanismo y por qué puede ser lento</li>
-    <li>Por qué la rigidez salarial justifica la intervención de política económica</li>
+    <li>Los 3 efectos que explican la pendiente negativa de AD (riqueza real, tipo de interés, comercio exterior)</li>
+    <li>Por qué SRAS tiene pendiente positiva (rigidez salarial a CP)</li>
+    <li>Por qué LRAS es vertical (salarios flexibles a LP, Y* no depende del nivel de precios)</li>
+    <li>Shifters de cada curva: qué los desplaza y en qué dirección</li>
+    <li>Recessionary gap vs. expansionary gap: identificación y mecanismo de ajuste automático</li>
+    <li>Rigidez salarial: por qué existe y por qué hace lento el ajuste desde recesiones</li>
+    <li>Stagflation: qué la causa (shock negativo de oferta) y por qué es tan difícil de combatir</li>
+    <li>Ecuación de Fisher: r = i − πᵉ y sus implicaciones para la política monetaria</li>
   </ul>
 </div>
 
@@ -782,6 +833,346 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
   </ul>
 </div>
 
+<!-- MÓDULO III: FINANZAS INTERNACIONALES — CONCEPTOS -->
+<div id="intfin1" class="section">
+  <div class="tag" style="background:rgba(79,200,122,.1);color:#4fc87a;border:1px solid rgba(79,200,122,.25)">Módulo III · Conceptos Base</div>
+  <h2>Finanzas Internacionales — Marco Conceptual</h2>
+  <p>El Módulo III abre la economía al mundo. Ya no somos una isla — los bienes, los capitales y las personas se mueven entre países. Esto añade un nuevo mercado fundamental: el <strong>mercado de divisas</strong>, donde se determina el tipo de cambio.</p>
+
+  <div class="key-concept">
+    <strong>La pregunta central del módulo</strong>
+    ¿Cómo se relacionan los flujos de bienes (exportaciones, importaciones) con los flujos de capital (inversión extranjera, deuda)? Y ¿qué papel juega el tipo de cambio como precio que equilibra ambos lados?
+  </div>
+
+  <h3>La Balanza de Pagos</h3>
+  <p>Todo intercambio económico entre un país y el resto del mundo queda registrado en la <strong>balanza de pagos</strong>. Se divide en dos grandes cuentas que siempre suman cero.</p>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">📦 Cuenta Corriente (CA)</div>
+      <p>Registra los flujos de <strong>bienes y servicios</strong> (exportaciones menos importaciones), más las rentas de los factores (intereses, dividendos recibidos del exterior) y las transferencias corrientes.</p>
+      <p><strong>CA > 0</strong> = superávit: el país exporta más de lo que importa. Está "prestando" al resto del mundo.</p>
+      <p><strong>CA < 0</strong> = déficit: el país importa más de lo que exporta. Está "pidiendo prestado" al resto del mundo.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">💰 Cuenta Financiera (FA)</div>
+      <p>Registra los flujos de <strong>activos financieros</strong> — compra y venta de acciones, bonos, inmuebles, inversión directa, reservas del banco central.</p>
+      <p><strong>FA > 0</strong> = capital inflow: los extranjeros compran más activos domésticos de los que los residentes compran en el exterior. "Entra" dinero.</p>
+      <p><strong>FA < 0</strong> = capital outflow: los residentes compran más activos en el exterior de los que los extranjeros compran aquí.</p>
+    </div>
+  </div>
+
+  <div class="formula">CA + FA = 0 &nbsp;&nbsp;→&nbsp;&nbsp; CA = −FA</div>
+  <p>Esta identidad es contable, no una teoría — es siempre verdadera. Si un país tiene déficit corriente (importa más de lo que exporta), por definición está recibiendo capital del exterior (FA > 0). Cada flujo de bienes tiene su espejo en un flujo financiero.</p>
+
+  <div class="key-concept">
+    <strong>La intuición detrás de CA = S − I</strong>
+    Si un país ahorra más de lo que invierte doméstica­mente, el exceso de ahorro "sale" al exterior en forma de activos (capital outflow → CA superávit). Si invierte más de lo que ahorra, necesita financiación del exterior (capital inflow → CA déficit). La balanza corriente no es más que el exceso o déficit de ahorro sobre inversión a nivel nacional.
+  </div>
+
+  <h3>El Tipo de Cambio</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">📊 Nominal vs. Real</div>
+      <p><strong>Tipo de cambio nominal (E):</strong> el precio de la moneda extranjera en términos de la doméstica. Por convención del curso: <em>E = pesos por dólar</em>. E↑ = depreciación (el peso vale menos); E↓ = apreciación.</p>
+      <p><strong>Tipo de cambio real (RER):</strong> mide el precio relativo de los bienes extranjeros vs domésticos, teniendo en cuenta los niveles de precios de ambos países.</p>
+      <div class="formula">RER = E × P* / P</div>
+      <p style="font-size:12px;color:var(--muted)">RER↑ = los bienes extranjeros son relativamente más caros → las exportaciones del país son más competitivas.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">⚖️ Regímenes Cambiarios</div>
+      <p><strong>Tipo flexible:</strong> el banco central no interviene. El mercado determina E libremente. Ajustes se dan vía precio (cambio en E). Ejemplo: Chile, Reino Unido, zona euro.</p>
+      <p><strong>Tipo fijo:</strong> el banco central se compromete a mantener E a un nivel determinado. Para ello compra/vende divisas. El ajuste se da vía cantidad de dinero y precios internos. Ejemplo: Argentina 1991–2001, Hong Kong.</p>
+      <p><strong>Intermedio / bandas / crawling peg:</strong> variantes entre ambos extremos.</p>
+    </div>
+  </div>
+
+  <h3>El Mercado de Divisas — S&D Aplicado</h3>
+  <p>El tipo de cambio es el precio que equilibra la oferta y la demanda de divisas. El modelo es exactamente el mismo que en Micro — misma lógica, nuevo mercado.</p>
+
+  <div class="chart-wrap">
+    <div class="chart-title">Mercado de Divisas — Modelo Interactivo</div>
+    <div class="chart-sub">Simula shocks que desplazan oferta o demanda de divisas (USD)</div>
+    <canvas id="fxCanvas" width="680" height="380"></canvas>
+    <div class="chart-controls">
+      <button class="ctrl-btn active" onclick="fxShock('base',this)">Equilibrio base</button>
+      <button class="ctrl-btn" onclick="fxShock('capitalOut',this)">↑ Capital outflow (riesgo↑)</button>
+      <button class="ctrl-btn" onclick="fxShock('capitalIn',this)">↑ Capital inflow (inversión↑)</button>
+      <button class="ctrl-btn" onclick="fxShock('exportBoom',this)">↑ Exportaciones (commodity↑)</button>
+      <button class="ctrl-btn" onclick="fxShock('importBoom',this)">↑ Importaciones (consumo↑)</button>
+    </div>
+    <div id="fxExplain" style="margin-top:12px;font-size:12.5px;color:var(--muted);padding:10px 14px;background:var(--surface);border-radius:6px;border-left:2px solid #4fc87a">
+      Equilibrio inicial. Oferta de USD (exportadores + capital inflow) = Demanda de USD (importadores + capital outflow). El tipo de cambio E equilibra ambos lados.
+    </div>
+    <div class="legend">
+      <div class="leg"><div class="leg-line" style="background:var(--supply)"></div>Oferta de divisas (exportadores + capital inflow)</div>
+      <div class="leg"><div class="leg-line" style="background:var(--demand)"></div>Demanda de divisas (importadores + capital outflow)</div>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>¿Quién oferta divisas?</th><th>¿Quién demanda divisas?</th></tr>
+    <tr><td>Exportadores que convierten USD → pesos</td><td>Importadores que convierten pesos → USD</td></tr>
+    <tr><td>Inversores extranjeros que entran al país (capital inflow)</td><td>Residentes que invierten en el exterior (capital outflow)</td></tr>
+    <tr><td>Banco central vendiendo reservas (en régimen fijo)</td><td>Banco central comprando reservas (en régimen fijo)</td></tr>
+    <tr><td>Turistas que gastan en el país</td><td>Turistas del país que viajan al exterior</td></tr>
+  </table>
+
+  <h3>El Mecanismo de Ajuste Internacional</h3>
+  <p>En régimen flexible, los desequilibrios se corrigen vía tipo de cambio. Si hay un déficit corriente (importa más de lo que exporta), los importadores demandan más divisas que los exportadores ofrecen → E sube (moneda se deprecia) → los bienes domésticos se abaratan relativamente → las exportaciones suben y las importaciones bajan → el déficit se corrige automáticamente. <strong>El tipo de cambio real es el precio que equilibra el sector exterior.</strong></p>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Cuenta corriente (CA): qué incluye, qué significa un déficit/superávit</li>
+    <li>Cuenta financiera (FA): qué incluye, capital inflow vs outflow</li>
+    <li>Identidad CA + FA = 0: por qué siempre se cumple y qué implica</li>
+    <li>CA = S − I: la conexión entre ahorro/inversión y el sector exterior</li>
+    <li>Tipo de cambio nominal vs. real: definición, fórmula RER, dirección de efectos</li>
+    <li>Depreciación vs. apreciación: cuándo ocurre cada una y por qué</li>
+    <li>Regímenes cambiarios: flexible vs. fijo, mecanismo de ajuste en cada caso</li>
+  </ul>
+</div>
+
+<!-- MÓDULO III: CASO CHILE -->
+<div id="intfin2" class="section">
+  <div class="tag" style="background:rgba(79,200,122,.1);color:#4fc87a;border:1px solid rgba(79,200,122,.25)">Módulo III · Caso Chile</div>
+  <h2>El Peso Chileno y el Estallido Social (2019)</h2>
+  <p>En octubre de 2019, Chile —una economía pequeña, abierta al capital, con tipo de cambio flexible— fue sacudida por la peor crisis social desde la vuelta a la democracia en 1989. Todo comenzó con un alza de 30 pesos en el metro de Santiago (~USD 0.04), pero debajo ardían años de desigualdad e injusticias sistémicas. El caso nos pregunta: <strong>¿qué le pasó al tipo de cambio y por qué?</strong></p>
+
+  <h3>Los Hechos</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">📉 EMBI Spread (Riesgo País)</div>
+      <p>El spread de Chile saltó de <strong>131 pb</strong> (septiembre 2019) a <strong>146 pb</strong> (noviembre 2019). Lo relevante no es el nivel absoluto — Chile seguía siendo mucho menos riesgoso que Latinoamérica (~500 pb de media) — sino el <strong>movimiento relativo</strong>: mientras el resto del mundo se mantenía estable, Chile subió. Señal de un shock idiosincrático, no global.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">💱 Tipo de Cambio Nominal</div>
+      <p>El peso se depreció bruscamente. El 21 de octubre de 2019 ya marcaba <strong>721 pesos/USD</strong>, acelerándose desde ~700 pre-estallido, y continuó subiendo en los meses siguientes. Usando la convención E = unidades de moneda doméstica por USD: <strong>E subió → el peso se depreció</strong>.</p>
+    </div>
+  </div>
+
+  <h3>El Mecanismo — 3 Pasos</h3>
+  <div class="key-concept">
+    <strong>Paso 1 → Shock político: ↑ Riesgo País</strong>
+    El Estallido generó incertidumbre política severa: riesgo de cambios constitucionales, inestabilidad institucional, posibilidad de políticas redistributivas abruptas. El <em>country risk</em> de Chile subió — los inversores exigen mayor retorno para mantener activos chilenos.
+  </div>
+  <div class="key-concept" style="border-left-color:var(--accent2)">
+    <strong>Paso 2 → ↑ Riesgo País → ↓ Retornos ajustados por riesgo → Capital outflow</strong>
+    Los inversores (domésticos y extranjeros) comparan retornos ajustados por riesgo entre países. Con el riesgo de Chile más alto, los retornos ajustados caen relativamente. La respuesta: <strong>vender activos chilenos y mover el dinero al exterior</strong>. Capital outflow.
+  </div>
+  <div class="key-concept" style="border-left-color:var(--accent3)">
+    <strong>Paso 3 → Capital outflow → Demanda de USD ↑ / Oferta de USD ↓ → Depreciación</strong>
+    En el mercado FX: los que salen de Chile venden pesos y compran dólares (demanda de USD sube). Los inversores extranjeros que retiran fondos dejan de ofrecer divisas (oferta de USD baja). Ambos efectos presionan E al alza: <strong>el peso se deprecia</strong>.
+  </div>
+
+  <table>
+    <tr><th>Variable</th><th>Dirección</th><th>Mecanismo</th></tr>
+    <tr><td>Riesgo país (EMBI)</td><td>↑ Sube</td><td>Incertidumbre política post-estallido</td></tr>
+    <tr><td>Retornos ajustados por riesgo</td><td>↓ Caen</td><td>Mismo retorno nominal, más riesgo</td></tr>
+    <tr><td>Flujos de capital</td><td>Capital outflow</td><td>Inversores venden activos chilenos</td></tr>
+    <tr><td>Demanda de USD</td><td>↑ Sube (D→ derecha)</td><td>Todos convierten pesos → USD</td></tr>
+    <tr><td>Oferta de USD</td><td>↓ Baja (S← izquierda)</td><td>Inversores extranjeros dejan de entrar</td></tr>
+    <tr><td>Tipo de cambio E</td><td>↑ E sube</td><td>Depreciación del peso</td></tr>
+  </table>
+
+  <h3>¿Qué Habría Pasado con Régimen Fijo?</h3>
+  <p>Con tipo de cambio fijo, el banco central hubiera tenido que <strong>vender reservas de USD</strong> para satisfacer la demanda extra de divisas y mantener E constante. Esto contrae la base monetaria (menos pesos en circulación), sube los tipos de interés domésticos y puede agravar la recesión. Si las reservas se agotan, el régimen fijo colapsa (crisis cambiaria). Chile con régimen flexible dejó que E subiera — el ajuste se dio vía precio, no vía reservas.</p>
+
+  <div class="key-concept">
+    <strong>Lección del caso: la ventaja del tipo flexible en crisis</strong>
+    En una crisis política, el tipo flexible actúa como "amortiguador automático". La depreciación abarata las exportaciones chilenas (mejor competitividad), encarece las importaciones (reduce el déficit corriente) y no consume reservas. El coste es la inflación importada y la volatilidad, pero el sistema se ajusta sin crisis de divisas.
+  </div>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Country risk (EMBI spread): qué mide y por qué afecta al tipo de cambio</li>
+    <li>El mecanismo completo: riesgo → retornos → flujos de capital → mercado FX → tipo de cambio</li>
+    <li>Capital outflow: en qué dirección desplaza la oferta y demanda de divisas</li>
+    <li>Diferencia de ajuste entre régimen flexible vs. fijo ante una crisis de confianza</li>
+    <li>Por qué en régimen flexible el tipo de cambio actúa como amortiguador</li>
+    <li>%ΔRER ≈ %ΔE + inflación externa − inflación doméstica: cómo se transmite la depreciación al tipo real</li>
+  </ul>
+</div>
+
+<!-- MÓDULO III: CASO NORUEGA -->
+<div id="intfin3" class="section">
+  <div class="tag" style="background:rgba(79,200,122,.1);color:#4fc87a;border:1px solid rgba(79,200,122,.25)">Módulo III · Caso Noruega</div>
+  <h2>Noruega y el Petróleo — Riqueza, Dutch Disease y el Fondo Soberano</h2>
+  <p>En 1969, Noruega descubre el campo petrolífero Ekofisk en el Mar del Norte. De repente, un país pescador y maderero de 4 millones de habitantes tiene acceso a una riqueza natural enorme. El caso nos pregunta: <strong>¿qué pasa con la balanza de pagos y el tipo de cambio cuando un país descubre un recurso natural?</strong> Y ¿por qué Noruega invierte sus ingresos en el exterior en lugar de gastarlos en casa?</p>
+
+  <h3>Las Dos Fases de la Riqueza Petrolera</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">⛏️ Fase 1: Inversión (1970s)</div>
+      <p>Para desarrollar el campo, Noruega necesita importar tecnología, plataformas y equipamiento que no produce internamente. Las importaciones suben y las exportaciones de petróleo aún no fluyen. Resultado:</p>
+      <ul>
+        <li><strong>CA < 0</strong> (déficit corriente)</li>
+        <li><strong>FA > 0</strong> (capital inflow — financiación extranjera)</li>
+        <li>Mayor demanda de USD → corona se <strong>deprecia</strong></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">🛢️ Fase 2: Producción y Ahorro (1980s–hoy)</div>
+      <p>El petróleo fluye. Las exportaciones suben masivamente. Noruega decide no gastar todo en casa sino invertir el exceso en el exterior. Resultado:</p>
+      <ul>
+        <li><strong>CA > 0</strong> (superávit corriente)</li>
+        <li><strong>FA < 0</strong> (capital outflow — ahorro en exterior)</li>
+        <li>Mayor oferta de USD → corona se <strong>aprecia</strong> (si no se esteriliza)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>La Dutch Disease — El Mayor Riesgo</h3>
+  <div class="key-concept">
+    <strong>¿Qué es la Dutch Disease (Enfermedad Holandesa)?</strong>
+    Cuando un país descubre un recurso natural valioso y los ingresos fluyen hacia casa, la moneda se <strong>aprecia</strong>. Esa apreciación hace que todos los demás bienes exportables sean más caros para los compradores extranjeros → las exportaciones de pesca, manufactura, turismo pierden competitividad. Los trabajadores migran al sector del recurso natural porque paga más. Si algún día el recurso se agota, el resto de la economía exportadora ha sido destruida. El nombre viene de los Países Bajos, que en los años 60 descubrieron gas natural y vieron colapsar su industria manufacturera.
+  </div>
+
+  <h3>La Solución Noruega: El Fondo Soberano</h3>
+  <p>Noruega creó el <strong>Government Pension Fund Global</strong> — el mayor fondo soberano del mundo (~1.7 billones de USD). En lugar de gastar los ingresos petroleros internamente, los invierte en acciones y bonos globales. Esto tiene cuatro efectos:</p>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">✅ Esterilización cambiaria</div>
+      <p>Al convertir las coronas a divisas extranjeras y sacarlas del país, Noruega reduce la presión apreciadora sobre la corona. El tipo de cambio no se dispara, la competitividad del resto de sectores se preserva. <strong>Evita la Dutch Disease.</strong></p>
+    </div>
+    <div class="card">
+      <div class="card-title">📅 Suavización intertemporal</div>
+      <p>El petróleo es finito. En lugar de gastar toda la riqueza hoy, Noruega la distribuye a lo largo del tiempo (incluidas generaciones futuras). Es el principio del consumo intertemporal aplicado a nivel país: no te gastes el bonus de una vez, inviértelo.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🌍 Diversificación</div>
+      <p>Los activos noruegos (acciones de empresas energéticas, inmuebles, etc.) están correlacionados con el precio del petróleo. Si el precio del petróleo cae, la economía ya sufre. Invertir globalmente rompe esa correlación.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🔗 CA = S − I</div>
+      <p>El superávit corriente de Noruega refleja que el país ahorra más de lo que invierte doméstica­mente. El fondo soberano IS el ahorro. La corona sale → CA > 0 → FA < 0. La identidad se cumple perfectamente.</p>
+    </div>
+  </div>
+
+  <h3>La Conexión con el Modelo Fundamental</h3>
+  <table>
+    <tr><th>Micro (S&D básico)</th><th>Finanzas Internacionales</th></tr>
+    <tr><td>Precio de equilibrio</td><td>Tipo de cambio real (RER)</td></tr>
+    <tr><td>Exceso de demanda</td><td>Déficit corriente (importa más de lo que exporta)</td></tr>
+    <tr><td>Exceso de oferta</td><td>Superávit corriente (exporta más de lo que importa)</td></tr>
+    <tr><td>Mercado de un bien</td><td>Mercado de capitales + bienes (economía abierta)</td></tr>
+    <tr><td>Shifters de demanda</td><td>Riesgo país, diferencial de tipos, expectativas</td></tr>
+  </table>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Las dos fases de Noruega: inversión (CA déficit) y producción/ahorro (CA superávit)</li>
+    <li>Dutch Disease: mecanismo completo (recurso → ingresos → apreciación → pérdida competitividad otros sectores)</li>
+    <li>Por qué Noruega invierte en el exterior y no en casa (4 razones: esterilización, intertemporalidad, diversificación, CA = S−I)</li>
+    <li>Capital outflow ↔ superávit corriente: la identidad y su intuición</li>
+    <li>Consumo intertemporal: el principio macro de no gastar todo el ingreso cuando se recibe</li>
+    <li>Fondo soberano como mecanismo de esterilización cambiaria</li>
+  </ul>
+</div>
+
+<!-- MÓDULO III: CASO ARGENTINA -->
+<div id="intfin4" class="section">
+  <div class="tag" style="background:rgba(79,200,122,.1);color:#4fc87a;border:1px solid rgba(79,200,122,.25)">Módulo III · Caso Argentina</div>
+  <h2>Argentina y el Dólar — La Trampa del Tipo de Cambio Fijo</h2>
+  <p>Argentina es el caso de libro de texto de lo que puede salir mal cuando un país adopta un tipo de cambio fijo sin los fundamentos macroeconómicos necesarios para sostenerlo. La Convertibilidad (1991–2001) fijó el peso al dólar a paridad 1:1. Duró una década, fue elogiada internacionalmente, y luego colapsó en una de las mayores crisis económicas de la historia moderna. ¿Por qué?</p>
+
+  <div class="key-concept">
+    <strong>La Pregunta Central</strong>
+    ¿Cuándo tiene sentido adoptar un tipo de cambio fijo? ¿Qué condiciones debe cumplir una economía para que sea sostenible? ¿Y qué ocurre cuando esas condiciones dejan de cumplirse?
+  </div>
+
+  <h3>La Lógica de la Convertibilidad (1991)</h3>
+  <p>Argentina en 1990 tenía una hiperinflación del 3.000% anual. Los ciudadanos habían perdido toda confianza en el peso — nadie quería ahorrar en pesos. El plan Cavallo de 1991 fue radical: fijar el peso al dólar en paridad 1:1, con respaldo legal (cualquiera podía convertir pesos a dólares al banco central). El objetivo era simple: <strong>importar la credibilidad del dólar para anclar las expectativas de inflación</strong>. Funcionó durante casi una década.</p>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">✅ Ventajas del Tipo Fijo (1991–1997)</div>
+      <ul>
+        <li>Inflación cayó rápidamente del 3.000% al 3%</li>
+        <li>Credibilidad restaurada → inversión extranjera entró</li>
+        <li>Capital inflow → crecimiento del PIB</li>
+        <li>Préstamos posibles en pesos (antes imposibles)</li>
+        <li>Integración con mercados internacionales</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">❌ El Coste Oculto: Sin Política Monetaria</div>
+      <p>Al fijar E, Argentina <strong>renunció a su política monetaria</strong>. El banco central ya no podía bajar tipos para estimular la economía ni devaluar para recuperar competitividad. Cuando la economía necesitara ajuste, tendría que hacerlo vía <strong>deflación interna</strong> (bajar precios y salarios) — mucho más lento y doloroso que una devaluación.</p>
+    </div>
+  </div>
+
+  <h3>Por Qué el Régimen Se Volvió Insostenible (1998–2001)</h3>
+  <p>Tres shocks combinados destruyeron la competitividad argentina bajo el tipo fijo:</p>
+
+  <div class="grid3">
+    <div class="card">
+      <div class="card-title">💱 1. Apreciación real del USD</div>
+      <p>En los años 90, el dólar se apreció frente a todas las monedas mundiales (boom tecnológico). Como el peso estaba fijo al dólar, el peso también se apreció. Las exportaciones argentinas se encarecieron para el mundo entero.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">🇧🇷 2. Devaluación brasileña (1999)</div>
+      <p>Brasil, el mayor socio comercial de Argentina, devaluó el real un 40%. De repente los productos brasileños eran 40% más baratos que los argentinos. Argentina perdió competitividad de golpe frente a su principal vecino.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">📉 3. Crisis asiática → ↑ risk premium</div>
+      <p>Las crisis asiática (1997) y rusa (1998) generaron flight-to-safety global: los inversores salieron de mercados emergentes, incluyendo Argentina. El riesgo país argentino subió, los tipos de interés subieron, la inversión cayó.</p>
+    </div>
+  </div>
+
+  <h3>La Mecánica de la Crisis Cambiaria</h3>
+  <div class="key-concept">
+    <strong>El Mecanismo de Colapso — Paso a Paso</strong>
+    1. Los tres shocks crean un recessionary gap: la economía cae por debajo de Y*. 2. En régimen flexible → devaluación recuperaría competitividad. En régimen fijo → no se puede. 3. El ajuste debe ser vía deflación interna: bajar salarios y precios para recuperar competitividad. Pero los salarios son rígidos → el proceso es lento, doloroso, con desempleo masivo. 4. El desempleo sube (22% en 2001). 5. Los inversores ven que el tipo fijo es insostenible → especulan contra el peso: venden pesos y compran dólares. 6. El banco central pierde reservas intentando sostener la paridad. 7. Cuando las reservas se agotan → el régimen colapsa. 8. Devaluación masiva (de 1 a ~3 pesos/dólar en semanas). 9. Los deudores en dólares (familias, empresas, bancos con deudas en USD) ven triplicado su deuda en pesos → crisis financiera sistémica.
+  </div>
+
+  <h3>El Trilema de Mundell-Fleming</h3>
+  <p>Argentina ilustra perfectamente el <strong>trilema de política económica en economías abiertas</strong>: un país solo puede tener dos de estas tres cosas simultáneamente. Nunca las tres a la vez.</p>
+
+  <div class="grid3">
+    <div class="card">
+      <div class="card-title">1. Tipo de cambio fijo</div>
+      <p>Estabilidad cambiaria. Útil para anclar inflación y facilitar comercio.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">2. Libre movilidad de capitales</div>
+      <p>Los capitales pueden entrar y salir libremente. Atrae inversión, facilita financiación.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">3. Política monetaria autónoma</div>
+      <p>El banco central puede fijar el tipo de interés doméstico libremente para gestionar el ciclo.</p>
+    </div>
+  </div>
+
+  <table>
+    <tr><th>País / Sistema</th><th>Elige</th><th>Sacrifica</th></tr>
+    <tr><td>Argentina 1991 (Convertibilidad)</td><td>Tipo fijo + libre capital</td><td>Política monetaria autónoma</td></tr>
+    <tr><td>China (período 2000s)</td><td>Tipo fijo + política monetaria</td><td>Libre movilidad de capitales (controles)</td></tr>
+    <tr><td>Chile, UK, zona euro exterior</td><td>Política monetaria + libre capital</td><td>Tipo fijo (moneda flotante)</td></tr>
+    <tr><td>Zona Euro</td><td>Tipo fijo entre miembros + libre capital</td><td>Política monetaria autónoma (la tiene el BCE)</td></tr>
+  </table>
+
+  <div class="key-concept">
+    <strong>La Lección de Argentina</strong>
+    Un tipo de cambio fijo puede funcionar si los fundamentos son sólidos y los socios comerciales mantienen competitividad relativa. Pero cuando esas condiciones fallan, la rigidez del régimen convierte lo que habría sido una recesión manejable en una crisis catastrófica. La devaluación al final llegó de todas formas — solo que tarde, desordenada, y con mucho más daño acumulado.
+  </div>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Por qué Argentina adoptó la Convertibilidad: credibilidad antiinflacionaria, importar disciplina del dólar</li>
+    <li>El coste de un tipo fijo: renuncia a la política monetaria, ajuste solo vía deflación interna</li>
+    <li>Los tres shocks que destruyeron la competitividad: apreciación USD, devaluación brasileña, crisis emergentes</li>
+    <li>Mecánica de la crisis cambiaria: pérdida de reservas → colapso del régimen → devaluación desordenada</li>
+    <li>El Trilema de Mundell-Fleming: los tres vértices y por qué solo se pueden elegir dos</li>
+    <li>Diferencia entre ajuste con tipo flexible (devaluación rápida) vs. fijo (deflación lenta y dolorosa)</li>
+    <li>Por qué una crisis de deuda en moneda extranjera es más destructiva que en moneda local</li>
+  </ul>
+</div>
+
 <!-- QUIZ -->
 <div id="quiz" class="section">
   <div class="tag tag-micro" style="margin-right:8px">Microeconomía</div>
@@ -805,6 +1196,8 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
     <button class="filter-chip" onclick="filterQuiz('macro-adas',this)">AD-AS</button>
     <button class="filter-chip" onclick="filterQuiz('macro-fiscal',this)">Política Fiscal</button>
     <button class="filter-chip" onclick="filterQuiz('macro-monetary',this)">Política Monetaria</button>
+    <button class="filter-chip" onclick="filterQuiz('intfin',this)">Fin. Internacional</button>
+    <button class="filter-chip" onclick="filterQuiz('argentina',this)">Argentina</button>
   </div>
 
   <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
@@ -830,6 +1223,7 @@ function showSection(id, btn) {
   if (id === 'macro1') { initADAS(); }
   if (id === 'macro2') { initFiscal(); }
   if (id === 'macro3') { drawFed(); }
+  if (id === 'intfin1') { initFX(); }
   if (id === 'quiz') { renderQuiz(); }
 }
 
@@ -1701,7 +2095,8 @@ function renderQuiz(useExisting) {
 function catLabel(cat) {
   const map={
     'micro-sd':'S&D Básico','micro-labor':'Mercado Laboral','micro-price':'Price Controls',
-    'micro-tax':'Impuestos','macro-adas':'AD-AS','macro-fiscal':'Política Fiscal','macro-monetary':'Política Monetaria'
+    'micro-tax':'Impuestos','macro-adas':'AD-AS','macro-fiscal':'Política Fiscal',
+    'macro-monetary':'Política Monetaria','intfin':'Finanzas Internacionales','argentina':'Argentina & Tipo Fijo'
   };
   return map[cat]||cat;
 }
@@ -1729,9 +2124,6 @@ function updateScore() {
 // Init — only draw the initially visible section (home), others lazy-init on tab click
 document.addEventListener('DOMContentLoaded',()=>{
   renderQuiz();
-  // Lazy init: charts only draw when their section becomes active (via showSection)
-  // But pre-render micro1 since it's likely the first chart tab clicked:
-  // (no-op if not yet visible — makeChart handles gracefully via fixed width attr)
   window.addEventListener('resize',()=>{
     const active=document.querySelector('.section.active')?.id;
     if(active==='micro1') drawSD();
@@ -1741,8 +2133,119 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(active==='macro1') drawADAS();
     if(active==='macro2') drawFiscal();
     if(active==='macro3') drawFed();
+    if(active==='intfin1') drawFX();
   });
 });
+
+/* ============================
+   FX MARKET CHART (Módulo III)
+   Oferta de USD (exportadores + capital inflow): upward sloping in E-Q space
+     — higher E means more pesos per USD → more attractive to offer USD
+   Demanda de USD (importadores + capital outflow): downward sloping
+     — higher E means imports are more expensive → demand fewer USD
+   Base: D: E = 800 - 4Q,  S: E = 400 + 4Q  → Eq: Q=50, E=600
+============================*/
+let fxState = 'base';
+const fxTexts = {
+  base: 'Equilibrio inicial. Oferta de divisas (exportadores + capital inflow) = Demanda de divisas (importadores + capital outflow). E* = tipo de cambio de equilibrio.',
+  capitalOut: 'Capital outflow (riesgo país sube, como en Chile 2019): los inversores venden activos domésticos → necesitan USD → demanda de USD sube (D→). Al mismo tiempo, inversores extranjeros dejan de entrar → oferta de USD baja (S←). Ambos efectos: E* sube → la moneda se DEPRECIA.',
+  capitalIn: 'Capital inflow (inversión extranjera directa, boom financiero): llegan divisas del exterior → oferta de USD sube (S→). E* baja → la moneda se APRECIA. Peligro: si es excesivo puede generar burbuja y Dutch Disease.',
+  exportBoom: 'Boom exportador (precio del commodity sube — petróleo, cobre): los exportadores convierten más USD → oferta de USD sube (S→). E* baja → moneda se APRECIA. Positivo para importadores, negativo para competitividad de otros exportadores.',
+  importBoom: 'Auge de importaciones (boom de consumo, gasto público alto): los importadores necesitan más USD → demanda de USD sube (D→). E* sube → moneda se DEPRECIA. Refleja déficit corriente creciente.'
+};
+function initFX() { fxState='base'; drawFX(); }
+function fxShock(sc, btn) {
+  fxState = sc;
+  document.querySelectorAll('#intfin1 .ctrl-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('fxExplain').textContent = fxTexts[sc];
+  drawFX();
+}
+function drawFX() {
+  const XM = 100, YM = 1000; // E (pesos/USD) on Y axis
+  const c = makeChart('fxCanvas');
+  if (!c) return;
+  const {ctx} = c;
+  ctx.clearRect(0,0,c.W,c.H);
+  drawAxes(c, XM, YM, 'Cantidad de USD', 'Tipo de Cambio E (pesos/USD)', [20,40,60,80], [200,400,600,800,1000]);
+
+  // Base: Demand E = 800 - 4Q (downward), Supply E = 400 + 4Q (upward)
+  // Eq: 800-4Q = 400+4Q → 8Q=400 → Q=50, E=600
+  const sc = fxState;
+  const dOff = sc==='capitalOut'?120 : sc==='importBoom'?120 : 0;
+  const sOff = sc==='capitalOut'?-120 : sc==='capitalIn'?120 : sc==='exportBoom'?120 : 0;
+
+  // Ghost base curves when shifted
+  if (dOff!==0||sOff!==0) {
+    drawLine(c, XM, YM, 0, 800, 200, 0, 'rgba(200,168,75,.2)', 1.5, [5,5]);
+    drawLine(c, XM, YM, 0, 400, 150, 1000, 'rgba(79,168,200,.2)', 1.5, [5,5]);
+  }
+
+  // New demand: E = (800+dOff) - 4Q
+  const dA = 800 + dOff;
+  drawLine(c, XM, YM, 0, dA, dA/4, 0, '#c8a84b', 2.8);
+  curveLabel(c, XM, YM, 2, Math.min(YM*0.95, dA-20), dOff===0?'D (Demanda USD)':"D' (↑)", '#c8a84b', 'left');
+
+  // New supply: E = (400+sOff) + 4Q  — but supply slopes UP in this FX model
+  // Wait — actually supply of USD: at higher E, exporters are more willing to offer USD (more pesos for them)
+  // S: E = (400 - sOff_supply) + 4Q  where sOff>0 means supply shifts right (intercept drops)
+  // Redefine: sB = 400 - sOff (positive sOff = supply increases = curve shifts right)
+  const sB = 400 - sOff;
+  drawLine(c, XM, YM, 0, sB, (1000-sB)/4, 1000, '#4fa8c8', 2.8);
+  curveLabel(c, XM, YM, Math.min(XM-2, (1000-sB)/4-2), 990, sOff===0?'S (Oferta USD)':"S' (↑)", '#4fa8c8', 'right');
+
+  // Equilibrium: dA - 4Qe = sB + 4Qe → Qe = (dA-sB)/8
+  const Qe = (dA - sB) / 8;
+  const Ee = dA - 4*Qe;
+
+  if (Qe > 0 && Qe < XM && Ee > 0 && Ee < YM) {
+    drawEquilibrium(c, XM, YM, Qe, Ee, '#ffffff');
+    ctx.fillStyle='rgba(255,255,255,.55)'; ctx.font='bold 10px DM Mono';
+    ctx.textAlign='right'; ctx.fillText('E*='+Math.round(Ee), c.P.l-5, c.cy(Ee,YM)+4);
+    ctx.textAlign='center'; ctx.fillText('Q*='+Math.round(Qe), c.cx(Qe,XM), c.H-c.P.b+14);
+
+    // Apreciación/depreciación label
+    const baseE = 600;
+    if (Math.abs(Ee-baseE)>10) {
+      const dep = Ee > baseE;
+      ctx.fillStyle = dep ? '#c84f4f' : '#4fc87a';
+      ctx.font='bold 11px Sora'; ctx.textAlign='left';
+      ctx.fillText(dep ? '↑ Depreciación' : '↓ Apreciación', c.P.l+8, c.P.t+16);
+    }
+  }
+}
+
+/* ============================
+   INTERNATIONAL FINANCE QUIZ QUESTIONS
+============================*/
+const INTFIN_QUESTIONS = [
+  {cat:'intfin', q:'La identidad CA + FA = 0 implica que...', opts:['Un país siempre tiene déficit corriente si tiene deuda externa','Si hay déficit en cuenta corriente, debe haber capital inflow (FA > 0) por el mismo monto','La balanza de pagos siempre está en superávit','Las exportaciones siempre igualan a las importaciones'], ans:1, ex:'CA + FA = 0 es una identidad contable. Un déficit corriente (CA < 0) significa que el país importa más de lo que exporta, y eso se financia necesariamente con capital inflow del exterior (FA > 0).'},
+  {cat:'intfin', q:'¿Qué significa que el tipo de cambio nominal E suba (de 700 a 750 pesos/dólar)?', opts:['La moneda doméstica se aprecia','La moneda doméstica se deprecia','Las exportaciones se encarecen para los compradores extranjeros','El tipo de interés real sube'], ans:1, ex:'E = pesos por dólar. Si E sube, cada dólar vale más pesos → el peso es menos valioso → depreciación. Los bienes domésticos se abaratan para los extranjeros → las exportaciones se vuelven más competitivas.'},
+  {cat:'intfin', q:'En el mercado de divisas, ¿quién oferta divisas extranjeras (USD)?', opts:['Los importadores que necesitan pagar en USD','Los residentes que invierten en el exterior','Los exportadores que convierten sus ingresos en USD a pesos','El gobierno cuando financia déficit fiscal'], ans:2, ex:'Los exportadores reciben USD por sus ventas y los convierten a moneda local → ofertan USD en el mercado FX. También oferta: capital inflow (inversores extranjeros que entran al país).'},
+  {cat:'intfin', q:'Un aumento del riesgo país (country risk) genera, en una economía con tipo de cambio flexible...', opts:['Apreciación de la moneda','Depreciación de la moneda y reducción de reservas','Depreciación de la moneda sin afectar las reservas','Apreciación y aumento del déficit corriente'], ans:2, ex:'Mayor riesgo → capital outflow → demanda de divisas sube y oferta baja → E sube (depreciación). En régimen flexible, el banco central no interviene → las reservas no cambian. El ajuste es vía precio.'},
+  {cat:'intfin', q:'La relación CA = S − I significa que...', opts:['El déficit corriente siempre iguala al déficit fiscal','Un país con más ahorro que inversión doméstica tendrá superávit corriente','La inversión extranjera directa siempre genera déficit corriente','El ahorro público es igual a la inversión privada'], ans:1, ex:'CA = S − I: si el ahorro doméstico (S) supera la inversión doméstica (I), el exceso "sale" al exterior en forma de activos financieros → capital outflow → CA > 0 (superávit corriente). Noruega es el ejemplo perfecto.'},
+  {cat:'intfin', q:'La Dutch Disease (Enfermedad Holandesa) describe...', opts:['Un colapso de la moneda tras descubrir un recurso natural','La apreciación de la moneda tras un boom exportador que destruye competitividad de otros sectores','El agotamiento de las reservas de divisas','La deflación generada por importar bienes baratos'], ans:1, ex:'El boom exportador (petróleo, gas) genera superávit corriente y apreciación cambiaria. Esa apreciación encarece las exportaciones de todos los demás sectores (pesca, manufactura) → pierden competitividad → pueden desaparecer. Cuando el recurso natural se agote, no queda base exportadora.'},
+  {cat:'intfin', q:'¿Por qué el fondo soberano noruego invierte mayoritariamente en activos del exterior y no en Noruega?', opts:['Porque los activos noruegos tienen menor rentabilidad','Para evitar la apreciación excesiva de la corona y diversificar el riesgo','Porque la ley noruega lo prohíbe','Para mantener el déficit corriente bajo'], ans:1, ex:'Invertir los ingresos petroleros en el exterior evita que esos fondos presionen la demanda doméstica → menos apreciación → menos Dutch Disease. Además diversifica el riesgo (los activos noruegos están correlacionados con el petróleo).'},
+  {cat:'intfin', q:'En el caso del Estallido Social chileno (octubre 2019), el mecanismo que conectó la crisis política con la depreciación del peso fue...', opts:['El banco central bajó los tipos de interés','Mayor riesgo país → capital outflow → demanda de USD sube → E sube','El déficit fiscal disparó la deuda pública','Las exportaciones de cobre cayeron bruscamente'], ans:1, ex:'Mecanismo: shock político → riesgo país sube → retornos ajustados por riesgo de activos chilenos caen → capital outflow → demanda de USD sube / oferta de USD baja → E sube (depreciación del peso).'},
+  {cat:'intfin', q:'¿Cuál es la diferencia clave en el mecanismo de ajuste entre regímenes flexible y fijo ante un capital outflow?', opts:['En régimen flexible el banco central interviene; en fijo no','En régimen fijo el ajuste es vía precio; en flexible vía cantidad','En régimen flexible el tipo de cambio sube (depreciación); en fijo el banco central vende reservas para sostener E','No hay diferencia, ambos mecanismos son idénticos'], ans:2, ex:'Régimen flexible: E sube automáticamente (ajuste vía precio, sin pérdida de reservas). Régimen fijo: el banco central vende sus reservas de USD para mantener E constante. Si las reservas se agotan, el régimen colapsa en crisis cambiaria.'},
+  {cat:'intfin', q:'Si el tipo de cambio nominal sube un 10% y la inflación doméstica es 5% mientras la externa es 2%, ¿qué ocurre con el tipo de cambio real (RER)?', opts:['RER cae un 7%','RER sube un 7% aproximadamente','RER no cambia porque la inflación compensa','RER sube un 15%'], ans:1, ex:'%ΔRER ≈ %ΔE + π* − π = +10% + 2% − 5% = +7%. RER sube → los bienes domésticos se abaratan relativamente → mejora la competitividad exportadora a pesar de que parte del efecto se compensa por la inflación doméstica.'},
+  {cat:'intfin', q:'En la fase de inversión inicial del desarrollo petrolero noruego (años 70), ¿qué signo tenía la cuenta corriente?', opts:['CA > 0, porque Noruega exportaba petróleo','CA < 0, porque importaba tecnología y equipamiento para desarrollar el campo','CA = 0, porque era un régimen de tipo de cambio fijo','CA < 0 solo si el gobierno tenía déficit fiscal'], ans:1, ex:'En la fase de inversión, Noruega importa masivamente (plataformas, tecnología offshore, equipamiento) antes de que el petróleo fluya → importaciones > exportaciones → CA < 0. Esta fase se financia con capital inflow (FA > 0).'},
+  {cat:'intfin', q:'El principio de suavización intertemporal del consumo aplicado a un país implica que...', opts:['Un país debe maximizar su consumo actual sin importar el futuro','Un país con altos ingresos temporales (petróleo) debería ahorrar parte para distribuir el consumo a lo largo del tiempo','Los países ricos siempre tienen superávit corriente','La política fiscal no afecta a la balanza corriente'], ans:1, ex:'Igual que un individuo no gasta todo su bonus de una vez, un país con ingresos temporales (recurso finito) debería ahorrar para las generaciones futuras y para cuando el recurso se agote. Esto justifica el superávit corriente de Noruega y su fondo soberano.'}
+];
+
+// Add intfin questions to main array
+ALL_QUESTIONS.push(...INTFIN_QUESTIONS);
+
+const ARGENTINA_QUESTIONS = [
+  {cat:'argentina', q:'¿Cuál fue el objetivo principal de la Convertibilidad argentina de 1991?', opts:['Aumentar las exportaciones','Eliminar la deuda externa','Acabar con la hiperinflación anclando el peso al dólar 1:1','Atraer inversión extranjera directa en manufactura'], ans:2, ex:'Argentina sufría hiperinflación del 3.000% anual. La Convertibilidad fijó el peso al dólar 1:1 para importar la credibilidad del dólar y anclar las expectativas inflacionarias. Funcionó en ese sentido: la inflación cayó drásticamente.'},
+  {cat:'argentina', q:'¿Qué política económica sacrificó Argentina al adoptar la Convertibilidad?', opts:['La política fiscal','La política comercial','La política monetaria autónoma','Los controles de capital'], ans:2, ex:'Con tipo fijo, el banco central ya no puede fijar libremente el tipo de interés doméstico ni devaluar la moneda. Argentina renunció a su política monetaria autónoma — cuando la economía necesitó ajuste, solo pudo ajustar vía deflación interna (bajar precios y salarios), proceso lento y doloroso.'},
+  {cat:'argentina', q:'El Trilema de Mundell-Fleming establece que un país no puede tener simultáneamente...', opts:['Inflación baja, pleno empleo y crecimiento alto','Tipo de cambio fijo, libre movilidad de capitales y política monetaria autónoma','Superávit fiscal, superávit corriente y crecimiento positivo','Bajo desempleo, baja inflación y tipo de cambio estable'], ans:1, ex:'El trilema dice que solo pueden coexistir dos de estos tres elementos: tipo fijo + libre capital + política monetaria autónoma. Argentina eligió tipo fijo + libre capital → renunció a la política monetaria. Es una restricción fundamental de la economía abierta.'},
+  {cat:'argentina', q:'¿Cuál de los siguientes shocks NO contribuyó al colapso de la Convertibilidad?', opts:['La apreciación del dólar en los años 90','La devaluación del real brasileño en 1999','Un aumento masivo de las exportaciones argentinas','Las crisis asiática y rusa que elevaron el riesgo de mercados emergentes'], ans:2, ex:'Las exportaciones argentinas no aumentaron — de hecho cayeron porque Argentina perdió competitividad. Los tres shocks que destruyeron la Convertibilidad fueron: apreciación del USD (que llevó al peso consigo), devaluación del real (que hizo los productos brasileños 40% más baratos) y el flight-to-safety post-crisis asiática/rusa.'},
+  {cat:'argentina', q:'En una economía con tipo de cambio fijo, ¿cómo se ajusta ante un shock negativo de demanda?', opts:['El banco central devalúa la moneda para recuperar competitividad','El ajuste ocurre vía deflación interna: bajan los precios y salarios domésticos','El gobierno aumenta el gasto para compensar automáticamente','El tipo de cambio se aprecia para atraer capital inflow'], ans:1, ex:'Con tipo fijo no hay devaluación posible. El ajuste debe ocurrir "internamente": los precios y salarios domésticos bajan hasta que la economía recupera competitividad. Esto es mucho más lento y doloroso que una devaluación, especialmente porque los salarios son rígidos a la baja.'},
+  {cat:'argentina', q:'¿Por qué el colapso del tipo fijo argentino fue especialmente destructivo para las familias y empresas?', opts:['Porque la devaluación generó hiperinflación inmediata','Porque muchas deudas estaban denominadas en dólares, y al devaluar, esas deudas se triplicaron en pesos','Porque el banco central subió drásticamente los tipos de interés','Porque las exportaciones cayeron por el tipo de cambio más fuerte'], ans:1, ex:'Con la paridad 1:1, muchos agentes habían contraído deudas en dólares (parecía equivalente). Al colapsar el régimen y pasar el tipo a ~3 pesos/dólar, las deudas en dólares se triplicaron en términos de pesos. Esto generó quiebras masivas de familias, empresas y bancos — una crisis financiera sistémica encima de la cambiaria.'},
+  {cat:'argentina', q:'¿Qué diferencia hay en el mecanismo de ajuste entre Chile (régimen flexible) y la Argentina de la Convertibilidad ante un shock de capital outflow?', opts:['En ambos casos el banco central interviene vendiendo reservas','En Chile el tipo de cambio sube (depreciación) sin pérdida de reservas; en Argentina el banco central vende reservas para sostener la paridad','No hay diferencia — ambos ajustan vía precio','En Chile el banco central también fija el tipo de cambio pero de forma más gradual'], ans:1, ex:'Régimen flexible (Chile): E sube automáticamente → ajuste vía precio, sin pérdida de reservas. Régimen fijo (Argentina): el banco central vende USD de sus reservas para mantener E constante. Si el capital outflow es masivo y persistente, las reservas se agotan y el régimen colapsa.'}
+];
+ALL_QUESTIONS.push(...ARGENTINA_QUESTIONS);
 </script>
 </body>
 </html>
