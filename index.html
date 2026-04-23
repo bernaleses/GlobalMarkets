@@ -840,8 +840,13 @@ function showSection(id, btn) {
 function makeChart(id) {
   const cv = document.getElementById(id);
   if (!cv) return null;
-  const W = parseInt(cv.getAttribute('width'));
-  const H = parseInt(cv.getAttribute('height'));
+  // Cache original CSS dimensions on first call — prevents dpr from compounding on every redraw
+  if (!cv.dataset.origW) {
+    cv.dataset.origW = cv.getAttribute('width');
+    cv.dataset.origH = cv.getAttribute('height');
+  }
+  const W = parseInt(cv.dataset.origW);
+  const H = parseInt(cv.dataset.origH);
   const dpr = window.devicePixelRatio || 1;
   cv.width  = W * dpr;
   cv.height = H * dpr;
