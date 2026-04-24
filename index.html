@@ -148,6 +148,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
   <button class="nav-tab" onclick="showSection('micro3',this)">S3 · Price Controls</button>
   <button class="nav-tab" onclick="showSection('micro4',this)">S4 · Impuestos</button>
   <button class="nav-tab" onclick="showSection('macro1',this)">Macro · AD-AS</button>
+  <button class="nav-tab" onclick="showSection('macro1b',this)">S6 · US Economy</button>
   <button class="nav-tab" onclick="showSection('macro2',this)">Macro · Fiscal</button>
   <button class="nav-tab" onclick="showSection('macro3',this)">Macro · Monetaria</button>
   <button class="nav-tab" onclick="showSection('quiz',this)">📝 Test</button>
@@ -696,6 +697,87 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
   </ul>
 </div>
 
+<!-- SESIÓN 6: US ECONOMY 2025 -->
+<div id="macro1b" class="section">
+  <div class="tag tag-macro">Módulo II · Sesión 6</div>
+  <h2>¿Cómo Desafió la Economía Estadounidense las Expectativas en 2025?</h2>
+  <p>El caso aplica el marco AD-AS a la economía real del momento. El puzzle: a principios de 2025 todos los economistas pronosticaban recesión. En su lugar, el PIB creció al 4,3% anualizado en Q3. ¿Qué salió mal en el pronóstico? La respuesta nos enseña a usar AD-AS para leer la coyuntura.</p>
+
+  <div class="key-concept">
+    <strong>El punto de partida — early 2025</strong>
+    La economía partía de un expansionary gap leve: PIB real ligeramente por encima del potencial, inflación al 3% (por encima del objetivo del 2% de la Fed), mercados en máximos históricos. Herramienta de diagnóstico: Y > Y* → SRAS con presión al alza → la economía debería estar auto-corrigiéndose. La pregunta es: ¿cuánto dura el boom?
+  </div>
+
+  <h3>El Shock del 3 de Abril — "Liberation Day"</h3>
+  <p>Trump anuncia aranceles generalizados sobre importaciones. Los mercados colapsan: S&P 500 cae un 15% en días, el VIX supera 50 (solo visto en 2008 y COVID). Las probabilidades de recesión saltan del 22% al 45%. En el marco AD-AS:</p>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">📉 Canal 1 — Aranceles como shock de oferta</div>
+      <p>Los aranceles encarecen los inputs importados → costes de producción suben → <strong>SRAS se desplaza a la izquierda</strong>. Efecto directo: presión inflacionaria y reducción del output. Similar a un shock del petróleo, pero originado en política comercial.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">📉 Canal 2 — Incertidumbre como shock de demanda</div>
+      <p>La incertidumbre sobre política comercial frena la inversión empresarial (I↓) y el consumo de bienes duraderos (C↓) → <strong>AD se desplaza a la izquierda</strong>. Las empresas retrasan capex; los hogares posticipan decisiones grandes.</p>
+    </div>
+  </div>
+  <p>Ambos shocks presionan el PIB a la baja. El pronóstico de recesión era razonable. Sin embargo, dos fuerzas compensadoras resultaron ser mucho más grandes de lo esperado.</p>
+
+  <h3>Las Dos Fuerzas Compensadoras</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">🤖 1. Inversión en IA — $344bn en capex</div>
+      <p>Las grandes tecnológicas (Microsoft, Google, Meta, Amazon) gastaron <strong>$344 mil millones en capex</strong> — equivalente al 1,1% del PIB — principalmente en data centers e infraestructura de IA. En el modelo AD-AS: I↑ → <strong>AD se desplaza a la derecha</strong> con enorme magnitud. Este fue el gran error del pronóstico: nadie anticipó la escala del capex en IA.</p>
+      <p style="font-size:12px;color:var(--muted)">En el mercado de fondos prestables: demanda de fondos ↑ → r* sube → crowding-out parcial de otra inversión, pero el efecto neto fue positivo.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">💰 2. Efecto Riqueza — mercados y consumo</div>
+      <p>Tras la caída inicial, los mercados se recuperaron. Los hogares más ricos (que tienen más activos financieros) se sintieron más ricos → consumo sube. El consumo privado creció al <strong>3,5% anualizado en Q3</strong>. En AD-AS: C↑ → <strong>AD se desplaza a la derecha</strong>. El efecto riqueza fue el segundo motor del crecimiento.</p>
+      <p style="font-size:12px;color:var(--muted)">Nota: el efecto riqueza beneficia desproporcionadamente a quienes tienen más activos → crecimiento desigual.</p>
+    </div>
+  </div>
+
+  <h3>El Resultado: Expansionary Gap, No Recesión</h3>
+  <p>El efecto combinado: los shocks negativos (aranceles, incertidumbre) fueron superados por los positivos (IA capex, efecto riqueza). La AD neta se desplazó a la <strong>derecha</strong>. Con un SRAS que también se movió (costes de aranceles), el resultado fue: PIB sube, inflación también sube — exactamente lo que vimos.</p>
+
+  <table>
+    <tr><th>Shock</th><th>Curva afectada</th><th>Dirección</th><th>Efecto sobre Y</th></tr>
+    <tr><td>Aranceles (costes de inputs)</td><td>SRAS</td><td>← izquierda</td><td>↓</td></tr>
+    <tr><td>Incertidumbre comercial</td><td>AD</td><td>← izquierda</td><td>↓</td></tr>
+    <tr><td>Capex en IA ($344bn)</td><td>AD</td><td>→ derecha</td><td>↑↑</td></tr>
+    <tr><td>Efecto riqueza (consumo +3.5%)</td><td>AD</td><td>→ derecha</td><td>↑</td></tr>
+    <tr><td><strong>Resultado neto</strong></td><td></td><td></td><td><strong>↑ PIB +4.3%</strong></td></tr>
+  </table>
+
+  <h3>¿Es Sostenible? Las Bases Frágiles</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">⚠️ Señales de Fragilidad</div>
+      <ul>
+        <li>Tasa de ahorro de hogares en mínimos desde 2022</li>
+        <li>Salarios reales estancados — consumo financiado con menos ahorro, no más renta</li>
+        <li>Mercado laboral enfriándose</li>
+        <li>El capex en IA es concentrado (pocas empresas) y puede reducirse</li>
+        <li>Los aranceles aún no han transmitido toda su presión inflacionaria</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card-title">🎯 La Lección para el Examen</div>
+      <p>El caso ilustra que <strong>el análisis AD-AS siempre requiere identificar TODOS los shocks simultáneos</strong>. El error de pronóstico vino de infravalorar la magnitud del capex en IA. La economía no funciona con un shock a la vez — la habilidad está en sumar correctamente efectos que van en direcciones opuestas y determinar cuál domina.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+  <h3>Para el Examen</h3>
+  <ul>
+    <li>Los aranceles como <strong>doble shock</strong>: afectan a SRAS (costes de inputs) y a AD (incertidumbre → ↓I y ↓C)</li>
+    <li>Por qué el pronóstico de recesión fue incorrecto: subestimación del capex en IA como componente de inversión (I en AD = C+I+G+NX)</li>
+    <li>El efecto riqueza: canal por el que los mercados financieros afectan al consumo y a AD</li>
+    <li>Aplicación del marco "dos shocks simultáneos": cuando los shocks van en sentidos opuestos, el resultado en Y y P puede ser ambiguo — depende de las magnitudes relativas</li>
+    <li>Señales de insostenibilidad: ahorro bajo + salarios reales estancados = consumo frágil</li>
+    <li>Conexión con el mercado de fondos prestables: capex en IA masivo → demanda de fondos sube → r* sube → presión sobre el resto de la inversión</li>
+  </ul>
+</div>
+
 <!-- MACRO: FISCAL -->
 <div id="macro2" class="section">
   <div class="tag tag-macro">Módulo II · Sesión 7</div>
@@ -750,15 +832,54 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
     <tr><td>Reformas estructurales</td><td>Aumenta Y*, sostenible LP</td><td>Resultado incierto, lento</td></tr>
   </table>
 
+  <h3>La Dinámica de Deuda — La TN "Government Budget"</h3>
+  <p>La ecuación del presupuesto del gobierno es:</p>
+  <div class="formula">G_t + Tr_t + i·B_{t-1} = T_t + ΔB_t</div>
+  <p>Donde G = gasto público, Tr = transferencias, i·B = intereses sobre deuda, T = recaudación, ΔB = nueva deuda emitida. El <strong>déficit primario</strong> = G + Tr − T (sin intereses). El <strong>déficit total</strong> = déficit primario + i·B.</p>
+
+  <div class="key-concept">
+    <strong>La Condición i &gt; g — El Corazón del Problema Francés</strong>
+    La deuda/PIB evoluciona según: Δ(D/Y) = (i − g) × D/Y − superávit_primario/Y. Cuando el tipo de interés real (i) supera la tasa de crecimiento del PIB (g), la deuda/PIB crece automáticamente aunque el gobierno tenga equilibrio primario. Para estabilizar la deuda/PIB se necesita: <strong>superávit primario/Y = (i − g) × D/Y</strong>. Con i − g &gt; 0 y D/Y alto (Francia: 114%), el superávit primario necesario es enorme políticamente.
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">🇫🇷 Los Números de Francia</div>
+      <table style="font-size:12px">
+        <tr><th>Variable</th><th>Valor 2025</th></tr>
+        <tr><td>Deuda/PIB</td><td>~114%</td></tr>
+        <tr><td>Déficit total/PIB</td><td>~5.4%</td></tr>
+        <tr><td>Crecimiento PIB real</td><td>~1% anual</td></tr>
+        <tr><td>Spread vs. Alemania</td><td>Supera el de Grecia</td></tr>
+        <tr><td>Presión fiscal total</td><td>51% del PIB</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-title">🔄 El Ciclo Vicioso de Deuda Soberana</div>
+      <p style="font-size:12px">Déficit alto → mercados piden mayor rentabilidad → tipos de interés suben → intereses de deuda aumentan → déficit sube más → los mercados se asustan más → tipos suben más. Este espiral es exactamente lo que vivió Grecia 2010-12. Los "bond vigilantes" aceleran el ciclo.</p>
+    </div>
+  </div>
+
+  <h3>Las Tres Salidas Políticamente Tóxicas</h3>
+  <table>
+    <tr><th>Opción</th><th>Efecto económico</th><th>Obstáculo político</th></tr>
+    <tr><td>Recortar G y Tr (austeridad)</td><td>AD↓ → recesión CP; deuda/PIB mejora LP</td><td>Protestas masivas, gilets jaunes 2.0</td></tr>
+    <tr><td>Subir impuestos T</td><td>AD↓ → recesión; competitividad cae</td><td>Francia ya recauda 51% PIB — el más alto de Europa</td></tr>
+    <tr><td>Reformas estructurales (trabajar más)</td><td>Y* sube → g sube → deuda/PIB mejora LP</td><td>84% de la población rechaza trabajar más años</td></tr>
+  </table>
+
   <div class="divider"></div>
   <h3>Para el Examen</h3>
   <ul>
-    <li>Mercado de fondos prestables: oferta (ahorro) y demanda (inversión + gobierno)</li>
-    <li>Crowding-out: mecanismo paso a paso</li>
-    <li>Multiplicador fiscal y por qué puede ser menor que 1</li>
+    <li>La ecuación presupuestaria: déficit primario vs. déficit total (con intereses)</li>
+    <li>La condición i &gt; g: por qué genera dinámica explosiva de deuda y cómo se estabiliza</li>
+    <li>Superávit primario necesario: fórmula = (i−g) × D/Y — cuánto más necesita Francia que Alemania y por qué</li>
+    <li>Mercado de fondos prestables: crowding-out, efecto del déficit sobre r*</li>
+    <li>Multiplicador fiscal y por qué puede ser menor que 1 (crowding-out)</li>
     <li>Estabilizadores automáticos vs. política discrecional</li>
-    <li>Déficit estructural vs. déficit cíclico</li>
-    <li>Por qué en recesión el crowding-out es menor (trampa de liquidez)</li>
+    <li>Déficit estructural vs. cíclico</li>
+    <li>El ciclo vicioso de deuda soberana: mecanismo completo</li>
+    <li>Por qué en trampa de liquidez el multiplicador es mayor (zero lower bound)</li>
   </ul>
 </div>
 
@@ -821,16 +942,39 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
   <h3>Lección del Caso: ¿Qué es r* y Por Qué Importa?</h3>
   <p>Si la Fed estima mal r*, comete errores sistemáticos. Si cree que r* = 2.5% cuando en realidad es 1%, una política a 2.5% es más contractiva de lo que parece. La incertidumbre sobre r* es uno de los desafíos más grandes de la política monetaria moderna — y el caso Fed & Neutral Rate lo ilustra con los episodios 2021–2024.</p>
 
+  <h3>La Regla de Taylor y el Inflation Targeting</h3>
+  <p>¿Cómo decide un banco central en la práctica qué tipo fijar? La <strong>Regla de Taylor</strong> es la heurística más usada: el tipo de política debe responder a dos desviaciones simultáneamente.</p>
+  <div class="formula">i = r* + πᵉ + α(π − π*) + β(Y − Y*)/Y*</div>
+  <p>Donde: <strong>π*</strong> = objetivo de inflación (normalmente 2%), <strong>Y*</strong> = PIB potencial, <strong>α y β</strong> = pesos que el BC asigna a cada desviación. Si la inflación supera el objetivo → el BC sube tipos. Si el PIB cae por debajo del potencial → el BC baja tipos.</p>
+
+  <div class="key-concept">
+    <strong>Inflation Targeting — El Régimen Dominante</strong>
+    La mayoría de bancos centrales modernos operan bajo inflation targeting: se comprometen públicamente a un objetivo de inflación (Fed: 2%, BCE: 2%) y ajustan el tipo de política para alcanzarlo. La credibilidad es clave — si los agentes creen que el BC siempre defenderá el 2%, las expectativas de inflación se anclan en 2% y la tarea se vuelve mucho más fácil. Si el BC pierde credibilidad (como en 2021-22 cuando insistió en que la inflación era "transitoria"), las expectativas de desanclan y controlar la inflación requiere subidas mucho más agresivas.
+  </div>
+
+  <h3>La TN "Monetary Policy and Inflation" — Conceptos Clave</h3>
+  <div class="grid2">
+    <div class="card">
+      <div class="card-title">🎯 El Mecanismo de Transmisión</div>
+      <p>El BC sube el tipo de política (i) → tipos de mercado suben → (1) inversión empresarial más cara → I↓ → AD↓ · (2) crédito al consumo más caro → C↓ → AD↓ · (3) tipo de cambio se aprecia → exportaciones más caras → NX↓ → AD↓. La política monetaria actúa sobre AD a través de múltiples canales, todos con rezago de 12-18 meses.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">📊 Demanda de Dinero</div>
+      <p>Las familias y empresas demandan dinero por motivos de <strong>transacción</strong> (necesitan liquidez para comprar) y <strong>precaución</strong> (reserva ante imprevistos). Mayor PIB → mayor demanda de dinero. Mayor tipo de interés → menor demanda de dinero (coste de oportunidad de tener efectivo). El BC controla la oferta de dinero para influir en los tipos.</p>
+    </div>
+  </div>
+
   <div class="divider"></div>
   <h3>Para el Examen</h3>
   <ul>
     <li>Tipo neutral r*: definición, por qué no es observable, cómo se estima</li>
-    <li>Postura de política monetaria: expansiva vs. contractiva vs. neutral</li>
-    <li>Ecuación de Fisher: nominal, real, πᵉ y sus implicaciones</li>
-    <li>Instrumentos del banco central y sus mecanismos de transmisión</li>
-    <li>Zero Lower Bound: qué es y cómo responde el banco central</li>
-    <li>Rezagos de política monetaria: por qué dificultan la gestión del ciclo</li>
-    <li>Diferencia entre política monetaria y fiscal en el modelo AD-AS</li>
+    <li>Postura de política monetaria: expansiva (r_política &lt; r*) vs. contractiva (r_política &gt; r*)</li>
+    <li>Ecuación de Fisher: r = i − πᵉ — si inflación esperada sube con i fijo, el tipo real cae</li>
+    <li>Regla de Taylor: estructura, qué parámetros responde, cómo se usa en la práctica</li>
+    <li>Inflation targeting: qué es, por qué la credibilidad es crucial, consecuencias de perderla</li>
+    <li>Mecanismo de transmisión: cómo llega el tipo de política a I, C y NX (con rezago 12-18 meses)</li>
+    <li>Zero Lower Bound: qué es, herramientas alternativas (QE, forward guidance)</li>
+    <li>Demanda de dinero: motivos transacción y precaución, relación con tipo de interés</li>
   </ul>
 </div>
 
@@ -882,6 +1026,7 @@ function showSection(id, btn) {
   if (id === 'micro3') { initCeiling(); }
   if (id === 'micro4') { drawTax(); }
   if (id === 'macro1') { initADAS(); }
+  if (id === 'macro1b') { /* static section */ }
   if (id === 'macro2') { initFiscal(); }
   if (id === 'macro3') { drawFed(); }
   if (id === 'quiz') { renderQuiz(); }
