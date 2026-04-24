@@ -150,9 +150,6 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
   <button class="nav-tab" onclick="showSection('macro1',this)">Macro · AD-AS</button>
   <button class="nav-tab" onclick="showSection('macro2',this)">Macro · Fiscal</button>
   <button class="nav-tab" onclick="showSection('macro3',this)">Macro · Monetaria</button>
-  <button class="nav-tab" onclick="showSection('intfin1',this)">IntFin · Conceptos</button>
-  <button class="nav-tab" onclick="showSection('intfin2',this)">IntFin · Chile</button>
-  <button class="nav-tab" onclick="showSection('intfin3',this)">IntFin · Noruega</button>
   <button class="nav-tab" onclick="showSection('quiz',this)">📝 Test</button>
 </nav>
 
@@ -181,18 +178,18 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
       <div class="module-sessions">Sesiones 5–8</div>
     </div>
   </div>
-  <div class="module-card">
+  <div class="module-card" style="opacity:.45">
     <div class="module-num">III</div>
     <div class="module-info">
-      <h4>Finanzas Internacionales</h4>
+      <h4>Finanzas Internacionales <span style="font-size:11px;color:var(--accent3);font-family:'DM Mono',monospace;margin-left:8px">⚠ NO ENTRA EN EL EXAMEN</span></h4>
       <p>Tipos de cambio · Flujos de capital · Políticas en economías abiertas · Peso chileno, Noruega, Argentina</p>
       <div class="module-sessions">Sesiones 9–12 · Midterm Sesión 11</div>
     </div>
   </div>
-  <div class="module-card">
+  <div class="module-card" style="opacity:.45">
     <div class="module-num">IV</div>
     <div class="module-info">
-      <h4>Casos Globales</h4>
+      <h4>Casos Globales <span style="font-size:11px;color:var(--accent3);font-family:'DM Mono',monospace;margin-left:8px">⚠ NO ENTRA EN EL EXAMEN</span></h4>
       <p>Hong Kong · Sri Lanka · USA · Japón · México · Chile · Eurozona</p>
       <div class="module-sessions">Sesiones 13–19 · Final Sesión 22</div>
     </div>
@@ -206,8 +203,13 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
       <p>Tipo test. Cubre todos los módulos. Practica en la pestaña <strong>Test</strong> con +70 preguntas organizadas por tema.</p>
     </div>
     <div class="card">
-      <div class="card-title">🎯 Distribución</div>
-      <table><tr><td>Participación</td><td style="color:var(--accent);font-family:'DM Mono',monospace;font-weight:600">40%</td></tr><tr><td>Exámenes</td><td style="color:var(--accent);font-family:'DM Mono',monospace;font-weight:600">60%</td></tr></table>
+      <div class="card-title">🎯 Alcance del Examen</div>
+      <table>
+        <tr><td>✅ Módulo I — Microeconomía</td><td style="color:var(--accent4);font-family:'DM Mono',monospace;font-size:12px">ENTRA</td></tr>
+        <tr><td>✅ Módulo II — Macroeconomía (hasta Francia)</td><td style="color:var(--accent4);font-family:'DM Mono',monospace;font-size:12px">ENTRA</td></tr>
+        <tr><td>❌ Módulo III — Finanzas Internacionales</td><td style="color:var(--accent3);font-family:'DM Mono',monospace;font-size:12px">NO ENTRA</td></tr>
+        <tr><td>❌ Módulo IV — Casos Globales</td><td style="color:var(--accent3);font-family:'DM Mono',monospace;font-size:12px">NO ENTRA</td></tr>
+      </table>
     </div>
   </div>
   <div class="key-concept" style="margin-top:20px">
@@ -832,247 +834,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
   </ul>
 </div>
 
-<!-- MÓDULO III: FINANZAS INTERNACIONALES — CONCEPTOS -->
-<div id="intfin1" class="section">
-  <div class="tag" style="background:rgba(79,200,122,.1);color:#4fc87a;border:1px solid rgba(79,200,122,.25)">Módulo III · Conceptos Base</div>
-  <h2>Finanzas Internacionales — Marco Conceptual</h2>
-  <p>El Módulo III abre la economía al mundo. Ya no somos una isla — los bienes, los capitales y las personas se mueven entre países. Esto añade un nuevo mercado fundamental: el <strong>mercado de divisas</strong>, donde se determina el tipo de cambio.</p>
-
-  <div class="key-concept">
-    <strong>La pregunta central del módulo</strong>
-    ¿Cómo se relacionan los flujos de bienes (exportaciones, importaciones) con los flujos de capital (inversión extranjera, deuda)? Y ¿qué papel juega el tipo de cambio como precio que equilibra ambos lados?
-  </div>
-
-  <h3>La Balanza de Pagos</h3>
-  <p>Todo intercambio económico entre un país y el resto del mundo queda registrado en la <strong>balanza de pagos</strong>. Se divide en dos grandes cuentas que siempre suman cero.</p>
-
-  <div class="grid2">
-    <div class="card">
-      <div class="card-title">📦 Cuenta Corriente (CA)</div>
-      <p>Registra los flujos de <strong>bienes y servicios</strong> (exportaciones menos importaciones), más las rentas de los factores (intereses, dividendos recibidos del exterior) y las transferencias corrientes.</p>
-      <p><strong>CA > 0</strong> = superávit: el país exporta más de lo que importa. Está "prestando" al resto del mundo.</p>
-      <p><strong>CA < 0</strong> = déficit: el país importa más de lo que exporta. Está "pidiendo prestado" al resto del mundo.</p>
-    </div>
-    <div class="card">
-      <div class="card-title">💰 Cuenta Financiera (FA)</div>
-      <p>Registra los flujos de <strong>activos financieros</strong> — compra y venta de acciones, bonos, inmuebles, inversión directa, reservas del banco central.</p>
-      <p><strong>FA > 0</strong> = capital inflow: los extranjeros compran más activos domésticos de los que los residentes compran en el exterior. "Entra" dinero.</p>
-      <p><strong>FA < 0</strong> = capital outflow: los residentes compran más activos en el exterior de los que los extranjeros compran aquí.</p>
-    </div>
-  </div>
-
-  <div class="formula">CA + FA = 0 &nbsp;&nbsp;→&nbsp;&nbsp; CA = −FA</div>
-  <p>Esta identidad es contable, no una teoría — es siempre verdadera. Si un país tiene déficit corriente (importa más de lo que exporta), por definición está recibiendo capital del exterior (FA > 0). Cada flujo de bienes tiene su espejo en un flujo financiero.</p>
-
-  <div class="key-concept">
-    <strong>La intuición detrás de CA = S − I</strong>
-    Si un país ahorra más de lo que invierte doméstica­mente, el exceso de ahorro "sale" al exterior en forma de activos (capital outflow → CA superávit). Si invierte más de lo que ahorra, necesita financiación del exterior (capital inflow → CA déficit). La balanza corriente no es más que el exceso o déficit de ahorro sobre inversión a nivel nacional.
-  </div>
-
-  <h3>El Tipo de Cambio</h3>
-  <div class="grid2">
-    <div class="card">
-      <div class="card-title">📊 Nominal vs. Real</div>
-      <p><strong>Tipo de cambio nominal (E):</strong> el precio de la moneda extranjera en términos de la doméstica. Por convención del curso: <em>E = pesos por dólar</em>. E↑ = depreciación (el peso vale menos); E↓ = apreciación.</p>
-      <p><strong>Tipo de cambio real (RER):</strong> mide el precio relativo de los bienes extranjeros vs domésticos, teniendo en cuenta los niveles de precios de ambos países.</p>
-      <div class="formula">RER = E × P* / P</div>
-      <p style="font-size:12px;color:var(--muted)">RER↑ = los bienes extranjeros son relativamente más caros → las exportaciones del país son más competitivas.</p>
-    </div>
-    <div class="card">
-      <div class="card-title">⚖️ Regímenes Cambiarios</div>
-      <p><strong>Tipo flexible:</strong> el banco central no interviene. El mercado determina E libremente. Ajustes se dan vía precio (cambio en E). Ejemplo: Chile, Reino Unido, zona euro.</p>
-      <p><strong>Tipo fijo:</strong> el banco central se compromete a mantener E a un nivel determinado. Para ello compra/vende divisas. El ajuste se da vía cantidad de dinero y precios internos. Ejemplo: Argentina 1991–2001, Hong Kong.</p>
-      <p><strong>Intermedio / bandas / crawling peg:</strong> variantes entre ambos extremos.</p>
-    </div>
-  </div>
-
-  <h3>El Mercado de Divisas — S&D Aplicado</h3>
-  <p>El tipo de cambio es el precio que equilibra la oferta y la demanda de divisas. El modelo es exactamente el mismo que en Micro — misma lógica, nuevo mercado.</p>
-
-  <div class="chart-wrap">
-    <div class="chart-title">Mercado de Divisas — Modelo Interactivo</div>
-    <div class="chart-sub">Simula shocks que desplazan oferta o demanda de divisas (USD)</div>
-    <canvas id="fxCanvas" width="680" height="380"></canvas>
-    <div class="chart-controls">
-      <button class="ctrl-btn active" onclick="fxShock('base',this)">Equilibrio base</button>
-      <button class="ctrl-btn" onclick="fxShock('capitalOut',this)">↑ Capital outflow (riesgo↑)</button>
-      <button class="ctrl-btn" onclick="fxShock('capitalIn',this)">↑ Capital inflow (inversión↑)</button>
-      <button class="ctrl-btn" onclick="fxShock('exportBoom',this)">↑ Exportaciones (commodity↑)</button>
-      <button class="ctrl-btn" onclick="fxShock('importBoom',this)">↑ Importaciones (consumo↑)</button>
-    </div>
-    <div id="fxExplain" style="margin-top:12px;font-size:12.5px;color:var(--muted);padding:10px 14px;background:var(--surface);border-radius:6px;border-left:2px solid #4fc87a">
-      Equilibrio inicial. Oferta de USD (exportadores + capital inflow) = Demanda de USD (importadores + capital outflow). El tipo de cambio E equilibra ambos lados.
-    </div>
-    <div class="legend">
-      <div class="leg"><div class="leg-line" style="background:var(--supply)"></div>Oferta de divisas (exportadores + capital inflow)</div>
-      <div class="leg"><div class="leg-line" style="background:var(--demand)"></div>Demanda de divisas (importadores + capital outflow)</div>
-    </div>
-  </div>
-
-  <table>
-    <tr><th>¿Quién oferta divisas?</th><th>¿Quién demanda divisas?</th></tr>
-    <tr><td>Exportadores que convierten USD → pesos</td><td>Importadores que convierten pesos → USD</td></tr>
-    <tr><td>Inversores extranjeros que entran al país (capital inflow)</td><td>Residentes que invierten en el exterior (capital outflow)</td></tr>
-    <tr><td>Banco central vendiendo reservas (en régimen fijo)</td><td>Banco central comprando reservas (en régimen fijo)</td></tr>
-    <tr><td>Turistas que gastan en el país</td><td>Turistas del país que viajan al exterior</td></tr>
-  </table>
-
-  <h3>El Mecanismo de Ajuste Internacional</h3>
-  <p>En régimen flexible, los desequilibrios se corrigen vía tipo de cambio. Si hay un déficit corriente (importa más de lo que exporta), los importadores demandan más divisas que los exportadores ofrecen → E sube (moneda se deprecia) → los bienes domésticos se abaratan relativamente → las exportaciones suben y las importaciones bajan → el déficit se corrige automáticamente. <strong>El tipo de cambio real es el precio que equilibra el sector exterior.</strong></p>
-
-  <div class="divider"></div>
-  <h3>Para el Examen</h3>
-  <ul>
-    <li>Cuenta corriente (CA): qué incluye, qué significa un déficit/superávit</li>
-    <li>Cuenta financiera (FA): qué incluye, capital inflow vs outflow</li>
-    <li>Identidad CA + FA = 0: por qué siempre se cumple y qué implica</li>
-    <li>CA = S − I: la conexión entre ahorro/inversión y el sector exterior</li>
-    <li>Tipo de cambio nominal vs. real: definición, fórmula RER, dirección de efectos</li>
-    <li>Depreciación vs. apreciación: cuándo ocurre cada una y por qué</li>
-    <li>Regímenes cambiarios: flexible vs. fijo, mecanismo de ajuste en cada caso</li>
-  </ul>
-</div>
-
-<!-- MÓDULO III: CASO CHILE -->
-<div id="intfin2" class="section">
-  <div class="tag" style="background:rgba(79,200,122,.1);color:#4fc87a;border:1px solid rgba(79,200,122,.25)">Módulo III · Caso Chile</div>
-  <h2>El Peso Chileno y el Estallido Social (2019)</h2>
-  <p>En octubre de 2019, Chile —una economía pequeña, abierta al capital, con tipo de cambio flexible— fue sacudida por la peor crisis social desde la vuelta a la democracia en 1989. Todo comenzó con un alza de 30 pesos en el metro de Santiago (~USD 0.04), pero debajo ardían años de desigualdad e injusticias sistémicas. El caso nos pregunta: <strong>¿qué le pasó al tipo de cambio y por qué?</strong></p>
-
-  <h3>Los Hechos</h3>
-  <div class="grid2">
-    <div class="card">
-      <div class="card-title">📉 EMBI Spread (Riesgo País)</div>
-      <p>El spread de Chile saltó de <strong>131 pb</strong> (septiembre 2019) a <strong>146 pb</strong> (noviembre 2019). Lo relevante no es el nivel absoluto — Chile seguía siendo mucho menos riesgoso que Latinoamérica (~500 pb de media) — sino el <strong>movimiento relativo</strong>: mientras el resto del mundo se mantenía estable, Chile subió. Señal de un shock idiosincrático, no global.</p>
-    </div>
-    <div class="card">
-      <div class="card-title">💱 Tipo de Cambio Nominal</div>
-      <p>El peso se depreció bruscamente. El 21 de octubre de 2019 ya marcaba <strong>721 pesos/USD</strong>, acelerándose desde ~700 pre-estallido, y continuó subiendo en los meses siguientes. Usando la convención E = unidades de moneda doméstica por USD: <strong>E subió → el peso se depreció</strong>.</p>
-    </div>
-  </div>
-
-  <h3>El Mecanismo — 3 Pasos</h3>
-  <div class="key-concept">
-    <strong>Paso 1 → Shock político: ↑ Riesgo País</strong>
-    El Estallido generó incertidumbre política severa: riesgo de cambios constitucionales, inestabilidad institucional, posibilidad de políticas redistributivas abruptas. El <em>country risk</em> de Chile subió — los inversores exigen mayor retorno para mantener activos chilenos.
-  </div>
-  <div class="key-concept" style="border-left-color:var(--accent2)">
-    <strong>Paso 2 → ↑ Riesgo País → ↓ Retornos ajustados por riesgo → Capital outflow</strong>
-    Los inversores (domésticos y extranjeros) comparan retornos ajustados por riesgo entre países. Con el riesgo de Chile más alto, los retornos ajustados caen relativamente. La respuesta: <strong>vender activos chilenos y mover el dinero al exterior</strong>. Capital outflow.
-  </div>
-  <div class="key-concept" style="border-left-color:var(--accent3)">
-    <strong>Paso 3 → Capital outflow → Demanda de USD ↑ / Oferta de USD ↓ → Depreciación</strong>
-    En el mercado FX: los que salen de Chile venden pesos y compran dólares (demanda de USD sube). Los inversores extranjeros que retiran fondos dejan de ofrecer divisas (oferta de USD baja). Ambos efectos presionan E al alza: <strong>el peso se deprecia</strong>.
-  </div>
-
-  <table>
-    <tr><th>Variable</th><th>Dirección</th><th>Mecanismo</th></tr>
-    <tr><td>Riesgo país (EMBI)</td><td>↑ Sube</td><td>Incertidumbre política post-estallido</td></tr>
-    <tr><td>Retornos ajustados por riesgo</td><td>↓ Caen</td><td>Mismo retorno nominal, más riesgo</td></tr>
-    <tr><td>Flujos de capital</td><td>Capital outflow</td><td>Inversores venden activos chilenos</td></tr>
-    <tr><td>Demanda de USD</td><td>↑ Sube (D→ derecha)</td><td>Todos convierten pesos → USD</td></tr>
-    <tr><td>Oferta de USD</td><td>↓ Baja (S← izquierda)</td><td>Inversores extranjeros dejan de entrar</td></tr>
-    <tr><td>Tipo de cambio E</td><td>↑ E sube</td><td>Depreciación del peso</td></tr>
-  </table>
-
-  <h3>¿Qué Habría Pasado con Régimen Fijo?</h3>
-  <p>Con tipo de cambio fijo, el banco central hubiera tenido que <strong>vender reservas de USD</strong> para satisfacer la demanda extra de divisas y mantener E constante. Esto contrae la base monetaria (menos pesos en circulación), sube los tipos de interés domésticos y puede agravar la recesión. Si las reservas se agotan, el régimen fijo colapsa (crisis cambiaria). Chile con régimen flexible dejó que E subiera — el ajuste se dio vía precio, no vía reservas.</p>
-
-  <div class="key-concept">
-    <strong>Lección del caso: la ventaja del tipo flexible en crisis</strong>
-    En una crisis política, el tipo flexible actúa como "amortiguador automático". La depreciación abarata las exportaciones chilenas (mejor competitividad), encarece las importaciones (reduce el déficit corriente) y no consume reservas. El coste es la inflación importada y la volatilidad, pero el sistema se ajusta sin crisis de divisas.
-  </div>
-
-  <div class="divider"></div>
-  <h3>Para el Examen</h3>
-  <ul>
-    <li>Country risk (EMBI spread): qué mide y por qué afecta al tipo de cambio</li>
-    <li>El mecanismo completo: riesgo → retornos → flujos de capital → mercado FX → tipo de cambio</li>
-    <li>Capital outflow: en qué dirección desplaza la oferta y demanda de divisas</li>
-    <li>Diferencia de ajuste entre régimen flexible vs. fijo ante una crisis de confianza</li>
-    <li>Por qué en régimen flexible el tipo de cambio actúa como amortiguador</li>
-    <li>%ΔRER ≈ %ΔE + inflación externa − inflación doméstica: cómo se transmite la depreciación al tipo real</li>
-  </ul>
-</div>
-
-<!-- MÓDULO III: CASO NORUEGA -->
-<div id="intfin3" class="section">
-  <div class="tag" style="background:rgba(79,200,122,.1);color:#4fc87a;border:1px solid rgba(79,200,122,.25)">Módulo III · Caso Noruega</div>
-  <h2>Noruega y el Petróleo — Riqueza, Dutch Disease y el Fondo Soberano</h2>
-  <p>En 1969, Noruega descubre el campo petrolífero Ekofisk en el Mar del Norte. De repente, un país pescador y maderero de 4 millones de habitantes tiene acceso a una riqueza natural enorme. El caso nos pregunta: <strong>¿qué pasa con la balanza de pagos y el tipo de cambio cuando un país descubre un recurso natural?</strong> Y ¿por qué Noruega invierte sus ingresos en el exterior en lugar de gastarlos en casa?</p>
-
-  <h3>Las Dos Fases de la Riqueza Petrolera</h3>
-  <div class="grid2">
-    <div class="card">
-      <div class="card-title">⛏️ Fase 1: Inversión (1970s)</div>
-      <p>Para desarrollar el campo, Noruega necesita importar tecnología, plataformas y equipamiento que no produce internamente. Las importaciones suben y las exportaciones de petróleo aún no fluyen. Resultado:</p>
-      <ul>
-        <li><strong>CA < 0</strong> (déficit corriente)</li>
-        <li><strong>FA > 0</strong> (capital inflow — financiación extranjera)</li>
-        <li>Mayor demanda de USD → corona se <strong>deprecia</strong></li>
-      </ul>
-    </div>
-    <div class="card">
-      <div class="card-title">🛢️ Fase 2: Producción y Ahorro (1980s–hoy)</div>
-      <p>El petróleo fluye. Las exportaciones suben masivamente. Noruega decide no gastar todo en casa sino invertir el exceso en el exterior. Resultado:</p>
-      <ul>
-        <li><strong>CA > 0</strong> (superávit corriente)</li>
-        <li><strong>FA < 0</strong> (capital outflow — ahorro en exterior)</li>
-        <li>Mayor oferta de USD → corona se <strong>aprecia</strong> (si no se esteriliza)</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3>La Dutch Disease — El Mayor Riesgo</h3>
-  <div class="key-concept">
-    <strong>¿Qué es la Dutch Disease (Enfermedad Holandesa)?</strong>
-    Cuando un país descubre un recurso natural valioso y los ingresos fluyen hacia casa, la moneda se <strong>aprecia</strong>. Esa apreciación hace que todos los demás bienes exportables sean más caros para los compradores extranjeros → las exportaciones de pesca, manufactura, turismo pierden competitividad. Los trabajadores migran al sector del recurso natural porque paga más. Si algún día el recurso se agota, el resto de la economía exportadora ha sido destruida. El nombre viene de los Países Bajos, que en los años 60 descubrieron gas natural y vieron colapsar su industria manufacturera.
-  </div>
-
-  <h3>La Solución Noruega: El Fondo Soberano</h3>
-  <p>Noruega creó el <strong>Government Pension Fund Global</strong> — el mayor fondo soberano del mundo (~1.7 billones de USD). En lugar de gastar los ingresos petroleros internamente, los invierte en acciones y bonos globales. Esto tiene cuatro efectos:</p>
-
-  <div class="grid2">
-    <div class="card">
-      <div class="card-title">✅ Esterilización cambiaria</div>
-      <p>Al convertir las coronas a divisas extranjeras y sacarlas del país, Noruega reduce la presión apreciadora sobre la corona. El tipo de cambio no se dispara, la competitividad del resto de sectores se preserva. <strong>Evita la Dutch Disease.</strong></p>
-    </div>
-    <div class="card">
-      <div class="card-title">📅 Suavización intertemporal</div>
-      <p>El petróleo es finito. En lugar de gastar toda la riqueza hoy, Noruega la distribuye a lo largo del tiempo (incluidas generaciones futuras). Es el principio del consumo intertemporal aplicado a nivel país: no te gastes el bonus de una vez, inviértelo.</p>
-    </div>
-    <div class="card">
-      <div class="card-title">🌍 Diversificación</div>
-      <p>Los activos noruegos (acciones de empresas energéticas, inmuebles, etc.) están correlacionados con el precio del petróleo. Si el precio del petróleo cae, la economía ya sufre. Invertir globalmente rompe esa correlación.</p>
-    </div>
-    <div class="card">
-      <div class="card-title">🔗 CA = S − I</div>
-      <p>El superávit corriente de Noruega refleja que el país ahorra más de lo que invierte doméstica­mente. El fondo soberano IS el ahorro. La corona sale → CA > 0 → FA < 0. La identidad se cumple perfectamente.</p>
-    </div>
-  </div>
-
-  <h3>La Conexión con el Modelo Fundamental</h3>
-  <table>
-    <tr><th>Micro (S&D básico)</th><th>Finanzas Internacionales</th></tr>
-    <tr><td>Precio de equilibrio</td><td>Tipo de cambio real (RER)</td></tr>
-    <tr><td>Exceso de demanda</td><td>Déficit corriente (importa más de lo que exporta)</td></tr>
-    <tr><td>Exceso de oferta</td><td>Superávit corriente (exporta más de lo que importa)</td></tr>
-    <tr><td>Mercado de un bien</td><td>Mercado de capitales + bienes (economía abierta)</td></tr>
-    <tr><td>Shifters de demanda</td><td>Riesgo país, diferencial de tipos, expectativas</td></tr>
-  </table>
-
-  <div class="divider"></div>
-  <h3>Para el Examen</h3>
-  <ul>
-    <li>Las dos fases de Noruega: inversión (CA déficit) y producción/ahorro (CA superávit)</li>
-    <li>Dutch Disease: mecanismo completo (recurso → ingresos → apreciación → pérdida competitividad otros sectores)</li>
-    <li>Por qué Noruega invierte en el exterior y no en casa (4 razones: esterilización, intertemporalidad, diversificación, CA = S−I)</li>
-    <li>Capital outflow ↔ superávit corriente: la identidad y su intuición</li>
-    <li>Consumo intertemporal: el principio macro de no gastar todo el ingreso cuando se recibe</li>
-    <li>Fondo soberano como mecanismo de esterilización cambiaria</li>
-  </ul>
-</div>
-
+<!-- QUIZ -->
 <!-- QUIZ -->
 <div id="quiz" class="section">
   <div class="tag tag-micro" style="margin-right:8px">Microeconomía</div>
@@ -1096,7 +858,7 @@ input[type=range]{flex:1;accent-color:var(--accent);cursor:pointer}
     <button class="filter-chip" onclick="filterQuiz('macro-adas',this)">AD-AS</button>
     <button class="filter-chip" onclick="filterQuiz('macro-fiscal',this)">Política Fiscal</button>
     <button class="filter-chip" onclick="filterQuiz('macro-monetary',this)">Política Monetaria</button>
-    <button class="filter-chip" onclick="filterQuiz('intfin',this)">Fin. Internacional</button>
+    <button class="filter-chip" onclick="filterQuiz('real-exam',this)">⭐ Examen Real Ide</button>
   </div>
 
   <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
@@ -1122,7 +884,6 @@ function showSection(id, btn) {
   if (id === 'macro1') { initADAS(); }
   if (id === 'macro2') { initFiscal(); }
   if (id === 'macro3') { drawFed(); }
-  if (id === 'intfin1') { initFX(); }
   if (id === 'quiz') { renderQuiz(); }
 }
 
@@ -1877,81 +1638,102 @@ function drawFed() {
    QUIZ ENGINE
 ============================*/
 const ALL_QUESTIONS = [
-  // MICRO: S&D
-  {cat:'micro-sd', q:'¿Qué ocurre con la curva de demanda cuando aumenta el precio de un bien sustituto?', opts:['Se desplaza a la izquierda','Se desplaza a la derecha','Se produce un movimiento a lo largo de la curva','No cambia'], ans:1, ex:'Un bien sustituto más caro hace que los consumidores demanden más del bien original → la curva de demanda se desplaza a la derecha.'},
-  {cat:'micro-sd', q:'¿Cuál de los siguientes es un desplazador de la curva de oferta?', opts:['El precio del bien en cuestión','La renta de los consumidores','El coste de los inputs de producción','Las preferencias de los consumidores'], ans:2, ex:'Los shifters de oferta incluyen: coste de inputs, tecnología, número de productores. El precio solo causa movimiento a lo largo de la curva.'},
-  {cat:'micro-sd', q:'Si la oferta cae y la demanda sube simultáneamente, ¿qué ocurre con el precio de equilibrio?', opts:['Sube sin ambigüedad','Baja sin ambigüedad','El efecto sobre el precio es ambiguo','No cambia'], ans:0, ex:'Ambos shocks presionan el precio al alza: oferta cae (presión alcista) y demanda sube (presión alcista). El precio sube con certeza.'},
-  {cat:'micro-sd', q:'El Consumer Surplus (excedente del consumidor) es...', opts:['El área por debajo del precio de equilibrio y sobre la curva de demanda','El área por encima del precio de equilibrio y bajo la curva de demanda','La diferencia entre el coste de producción y el precio de venta','El área debajo de la curva de oferta'], ans:1, ex:'El CS es lo que el consumidor estaba dispuesto a pagar menos lo que realmente paga. En el gráfico: triángulo sobre el precio de equilibrio, bajo la curva de demanda.'},
-  {cat:'micro-sd', q:'Una curva de demanda con pendiente muy plana (casi horizontal) indica...', opts:['Demanda muy inelástica','Demanda muy elástica','Demanda unitaria','Ninguna de las anteriores'], ans:1, ex:'Pendiente casi horizontal = pequeño cambio de precio genera gran cambio en cantidad → demanda muy elástica.'},
-  {cat:'micro-sd', q:'¿Cuál de los siguientes factores NO incrementa la elasticidad-precio de la demanda?', opts:['Mayor disponibilidad de sustitutos','Horizonte temporal más largo','Ser un bien de primera necesidad','Definir el bien de forma específica'], ans:2, ex:'Los bienes de primera necesidad suelen ser inelásticos porque los consumidores no pueden prescindir de ellos aunque suba el precio.'},
-  {cat:'micro-sd', q:'En el modelo de mercado competitivo, el bienestar total se maximiza en el equilibrio porque...', opts:['El precio es el más bajo posible','Todas las unidades donde WTP > coste marginal se intercambian','El gobierno no interviene','No existen externalidades'], ans:1, ex:'El equilibrio produce exactamente la cantidad donde WTP = coste marginal. Todas las unidades con valor positivo neto se intercambian → bienestar total máximo.'},
-  {cat:'micro-sd', q:'Si el precio de los complementarios cae, ¿qué ocurre con la demanda del bien principal?', opts:['Cae','Sube','No cambia','Depende de la elasticidad'], ans:1, ex:'Si los complementarios son más baratos, los consumidores consumen más de ambos → demanda del bien principal sube.'},
-  {cat:'micro-sd', q:'Un mercado eficiente no necesita intervención cuando...', opts:['Existen externalidades positivas','No hay bienes públicos puros, ni externalidades, ni poder de mercado','Los precios son altos','Existe asimetría de información'], ans:1, ex:'El argumento de eficiencia de mercado falla ante: externalidades, bienes públicos, poder de mercado, asimetrías de información.'},
-  {cat:'micro-sd', q:'¿Qué distingue un movimiento a lo largo de la curva de demanda de un desplazamiento de la curva?', opts:['El movimiento ocurre cuando cambia la renta; el desplazamiento cuando cambia el precio','El movimiento ocurre cuando cambia el precio del bien; el desplazamiento cuando cambia cualquier otro factor','No hay diferencia, son equivalentes','El movimiento siempre es mayor que el desplazamiento'], ans:1, ex:'Distinción crítica del curso: el precio del propio bien → movimiento a lo largo de la curva. Cualquier otro factor (renta, sustitutos, etc.) → desplazamiento de la curva entera.'},
+  // ===================== MICRO: S&D =====================
+  {cat:'micro-sd', q:'Consider two markets, A and B. Product A has more substitutes than product B. Everything else constant, a tax on which product raises MORE government revenue?', opts:['Product A, because demand is more elastic','Product B, because demand is more inelastic','Both generate the same revenue','We need more information'], ans:1, ex:'More substitutes → more elastic demand. A tax on an inelastic good generates more revenue because quantity falls less. Product B (fewer substitutes) has more inelastic demand → higher tax revenue.'},
+  {cat:'micro-sd', q:'People consume tea or coffee. Weather conditions in tea-producing regions lead to higher tea production. Which of the following is likely to happen to coffee?', opts:['Price increases, quantity consumed increases','Price increases, quantity consumed decreases','Price decreases, quantity consumed decreases','Price decreases, quantity consumed increases'], ans:2, ex:'More tea supply → tea price falls. Tea and coffee are substitutes → cheaper tea reduces demand for coffee → demand curve for coffee shifts LEFT → both coffee price and quantity fall.'},
+  {cat:'micro-sd', q:'In Barcelona, bread is often consumed with tomato. Both the price of tomatoes AND the consumption of bread have increased. What could be responsible for this?', opts:['A fall in the price of tomato seeds','A fall in the price of flour','Both of the above','None of the above'], ans:1, ex:'Fall in flour price → bread supply increases → bread price falls → bread consumption rises. More bread consumption → demand for complementary tomatoes rises → tomato price rises. A fall in tomato seed prices would lower tomato prices (not raise them).'},
+  {cat:'micro-sd', q:'Bagels are often eaten with cream cheese. The price of cream cheese has increased, while the quantity of bagels sold has decreased. What could be responsible for this?', opts:['A fall in the price of milk','A fall in the price of flour','An increase in the price of milk','An increase in the price of flour'], ans:2, ex:'Milk is a key input for cream cheese. Higher milk price → cream cheese production costs rise → cream cheese supply falls → cream cheese price rises. Since bagels and cream cheese are complements, higher cream cheese price reduces demand for bagels → bagel quantity falls.'},
+  {cat:'micro-sd', q:'The demand curve for apples normally shifts after a significant change in:', opts:['The price of apples','The price of bananas (a substitute)','Both of the above','None of the above'], ans:1, ex:'A change in the price of apples itself causes a movement ALONG the demand curve, not a shift. The price of bananas (a substitute) is a demand shifter — it moves the entire curve.'},
+  {cat:'micro-sd', q:'Consider the market for alfalfa (used mainly for cattle feeding). Two things happen: (i) farmers develop a more efficient growing method, and (ii) a disease kills 50% of all cattle. What happens to equilibrium price and quantity of alfalfa?', opts:['Price and quantity both decrease','Price and quantity both increase','Price decreases and quantity increases','None of the above'], ans:3, ex:'(i) Better technology → supply shifts right → P↓, Q↑. (ii) Fewer cattle → demand shifts left → P↓, Q↓. Price definitely falls (both shocks push it down). Quantity: supply increase pushes Q up, demand decrease pushes Q down — net effect is ambiguous. No option correctly captures this.'},
+  {cat:'micro-sd', q:'Suppose the economy is booming and consumers become significantly richer. At the same time, the cost of key inputs for producers rises sharply. What necessarily happens to the equilibrium price?', opts:['Price increases','Price decreases','Price stays the same','None of the above — price effect is ambiguous'], ans:0, ex:'Higher income → demand shifts right → P↑. Higher input costs → supply shifts left → P↑. Both shocks push price UP, so price necessarily increases. Quantity is ambiguous (demand up pushes Q up, supply down pushes Q down).'},
+  {cat:'micro-sd', q:'Two markets: good X has very few close substitutes; good Y has many close substitutes. A government tax of the same size is applied to both. The deadweight loss will be:', opts:['Larger for good X','Larger for good Y','The same for both','Cannot be determined'], ans:1, ex:'More substitutes → more elastic demand → tax causes a larger fall in quantity → larger deadweight loss triangle. Good Y (many substitutes, elastic demand) generates more DWL. Good X (inelastic) generates less DWL but more tax revenue.'},
 
-  // MICRO: LABOR
-  {cat:'micro-labor', q:'La Routinization Hypothesis predice que la tecnología sustituye principalmente trabajos...', opts:['De alta cualificación abstracta','De baja cualificación en servicios personales','De cualificación media con tareas rutinarias','De alta cualificación manual'], ans:2, ex:'Los ordenadores automatizan tareas rutinarias y codificables → empleos de nivel medio (operadores, administrativos, contabilidad).'},
-  {cat:'micro-labor', q:'En el mercado laboral, ¿qué representa el "precio" en el modelo S&D?', opts:['El empleo','El PIB','El salario','La productividad'], ans:2, ex:'Salario = precio del trabajo; Empleo = cantidad. Las empresas demandan trabajo; los trabajadores lo ofrecen.'},
-  {cat:'micro-labor', q:'Si la tecnología actúa como complemento del trabajador de alto nivel, ¿qué ocurre con su curva de demanda laboral?', opts:['Se desplaza a la izquierda','Se desplaza a la derecha','Aumenta su pendiente','No cambia'], ans:1, ex:'Complemento significa que la tecnología hace al trabajador más productivo → las empresas demandan más de ese tipo de trabajo → curva de demanda laboral desplaza a la derecha → salario y empleo suben.'},
-  {cat:'micro-labor', q:'¿Qué es la polarización salarial según el caso de Automatización?', opts:['Los salarios altos caen y los bajos suben','Los salarios del nivel medio crecen más que los extremos','Los salarios de los niveles alto y bajo crecen relativamente más que los del medio','Solo suben los salarios de los trabajadores del sector tech'], ans:2, ex:'Polarización: el medio se "vacía". Arriba (complemento con tech) crece. Abajo (difícil de automatizar) crece modestamente. Medio (rutinario, sustituto de tech) se estanca o cae.'},
-  {cat:'micro-labor', q:'El ratio 90/50 mide...', opts:['El salario del percentil 90 dividido por el del percentil 10','El salario del percentil 90 dividido por el salario mediano','La brecha entre el 90% más rico y el 50% más pobre','La tasa de empleo de los trabajadores del percentil 90'], ans:1, ex:'90/50 = salario percentil 90 / salario mediano (percentil 50). Mide la desigualdad en la mitad superior de la distribución.'},
-  {cat:'micro-labor', q:'¿Por qué los desplazados del nivel medio tienden a recolocarse en empleos de nivel bajo en lugar de alto?', opts:['Porque los empleos de nivel alto no existen','Porque prefieren los empleos de servicios','Porque la recualificación hacia el nivel alto es costosa y lenta','Porque los empleos de nivel bajo pagan más'], ans:2, ex:'Recualificarse hacia empleos abstractos de nivel alto requiere educación y tiempo. La recolocación en servicios de nivel bajo es más inmediata y accesible.'},
-  {cat:'micro-labor', q:'El efecto escala de la automatización implica que...', opts:['La automatización siempre destruye más empleo del que crea','Al bajar costes, las empresas producen más y pueden demandar más trabajadores complementarios','Los trabajadores de nivel bajo son los más afectados negativamente','La tecnología solo beneficia a las empresas, no a los trabajadores'], ans:1, ex:'Efecto escala: la automatización reduce costes → las empresas son más competitivas y producen más → necesitan más trabajadores complementarios (programadores, analistas, gestores).'},
-  {cat:'micro-labor', q:'En el período 1988–2008, el ratio 50/10 en EEUU...', opts:['Creció fuertemente, indicando mayor desigualdad en la parte baja','Cayó, indicando que los de abajo mejoraron más que el medio','Se estancó o redujo levemente','Se comportó igual que en 1974–1988'], ans:2, ex:'La polarización de 1988–2008 se caracteriza por: 90/50 sigue subiendo (desigualdad alta) pero 50/10 deja de crecer (los bajos dejan de quedar más atrás que el medio).'},
+  // ===================== MICRO: LABOR =====================
+  {cat:'micro-labor', q:'Suppose the current wage is USD 12 and hours worked is 1 million in both New Jersey and Pennsylvania. Demand for low-skill labor is MORE elastic in NJ than PA. If the minimum wage rises from USD 7 to USD 15, what happens?', opts:['Low-skill employment decreases more in NJ than PA','Low-skill employment decreases more in PA than NJ','Excess supply of low-skill labor is larger in PA than NJ','None of the above'], ans:0, ex:'The minimum wage of $15 > current wage of $12 → binding price floor. More elastic demand in NJ means quantity demanded falls MORE when the wage rises → employment falls more in NJ. Excess supply is also larger in NJ for the same reason.'},
+  {cat:'micro-labor', q:'According to the Routinization Hypothesis, which type of work is MOST at risk of automation?', opts:['Abstract problem-solving tasks requiring creativity and judgment','Routine, codifiable tasks following clear procedural rules','Manual tasks requiring physical adaptation to unpredictable environments','Tasks requiring direct face-to-face interpersonal interaction'], ans:1, ex:'Computers and robots excel at routine, codifiable tasks — those that can be described as a set of rules or instructions. These are precisely mid-skill jobs: assembly-line work, bookkeeping, data entry, routine administrative tasks.'},
+  {cat:'micro-labor', q:'Technology acts as a complement to high-skill abstract workers. In the labor market for these workers, what necessarily happens?', opts:['Their labor demand curve shifts left, reducing wages','Their labor demand curve shifts right, increasing wages and employment','Their labor supply curve shifts left, reducing employment','Their wages fall as machines replace them'], ans:1, ex:'If technology complements a worker (makes them more productive), firms want MORE of those workers at any given wage → labor demand curve shifts RIGHT → both wages and employment increase. This is the opposite of substitution.'},
+  {cat:'micro-labor', q:'Displaced mid-skill workers tend to move into low-skill service jobs rather than re-skill into high-skill roles. What is the BEST economic explanation?', opts:['High-skill jobs pay less than low-skill jobs on average','Re-skilling is costly and time-consuming, making the low-skill path the lower-cost option','Labor demand for high-skill jobs is falling','Unions prevent entry into high-skill occupations'], ans:1, ex:'Re-skilling toward high-skill abstract roles requires years of education and training — a large up-front cost with uncertain return. Redeployment into service jobs is immediate and requires little investment. Rational agents choose the lower-cost path.'},
+  {cat:'micro-labor', q:'In the period 1988–2008, the US wage ratio 90/50 rose while the ratio 50/10 remained flat. This pattern is best described as:', opts:['Uniform wage inequality — inequality grew throughout the distribution','Wage polarization — the middle fell behind relative to both tails','Wage compression — the distribution became more equal','A purely cyclical phenomenon with no structural cause'], ans:1, ex:'Polarization: the top pulled away from the middle (90/50 rose) but the bottom no longer fell further behind the middle (50/10 flat). The middle stagnated relative to both ends — consistent with Routinization hollowing out mid-skill jobs.'},
 
-  // MICRO: PRICE CONTROLS
-  {cat:'micro-price', q:'¿Cuándo es un price ceiling "vinculante" (binding)?', opts:['Cuando está por encima del precio de equilibrio','Cuando está exactamente en el precio de equilibrio','Cuando está por debajo del precio de equilibrio','Siempre que lo establezca el gobierno'], ans:2, ex:'Un techo de precio solo tiene efecto real cuando el precio máximo legal está por debajo del precio que el mercado establecería libremente.'},
-  {cat:'micro-price', q:'En el caso Hurricane Sandy, ¿cuál fue el efecto sobre el mercado de gasolina?', opts:['Solo bajó la oferta','Solo subió la demanda','Bajó la oferta y subió la demanda simultáneamente','El mercado se equilibró sin problemas'], ans:2, ex:'Doble shock: oferta cayó (gasolineras sin electricidad, cadenas de suministro rotas) y demanda subió (acaparamiento por pánico). Ambos presionaron el precio al alza.'},
-  {cat:'micro-price', q:'Un price ceiling vinculante genera...', opts:['Exceso de oferta (surplus)','Exceso de demanda (shortage)','Equilibrio eficiente','Mayor bienestar para todos'], ans:1, ex:'Con el precio por debajo del equilibrio: Qd > Qs → exceso de demanda → shortage. El bien se agota rápidamente y hay colas.'},
-  {cat:'micro-price', q:'¿Cuál de los siguientes es un mecanismo de racionamiento alternativo cuando hay un price ceiling vinculante?', opts:['Mayor precio','Colas y tiempo de espera','Aumento de producción','Reducción de demanda'], ans:1, ex:'Cuando el precio no puede subir para equilibrar el mercado, otros mecanismos toman su lugar: colas (tiempo), favoritismo, lotería, mercado negro.'},
-  {cat:'micro-price', q:'El mayor problema del racionamiento por colas (tiempo) comparado con el racionamiento por precio es que...', opts:['El tiempo tiene coste sin generar ingresos para nadie','Las colas son más equitativas','El precio discrimina más que las colas','Las colas eliminan el exceso de demanda más eficientemente'], ans:0, ex:'El tiempo invertido en colas tiene coste para el consumidor pero no se transfiere a ningún vendedor → destrucción pura de valor, sin redistribución.'},
-  {cat:'micro-price', q:'¿Por qué un price ceiling transitorio (emergencia) es más defendible económicamente que uno permanente?', opts:['Porque en emergencias la demanda es siempre inelástica','Porque a corto plazo la oferta es inelástica, limitando el daño en la cantidad ofrecida','Porque el gobierno puede compensar a los productores','Porque la gente acepta mejor los precios bajos en emergencias'], ans:1, ex:'Con oferta inelástica a CP, aunque el precio esté por debajo del equilibrio, los productores no pueden reducir mucho su producción → el shortage es menor. A LP la oferta es más elástica y el daño se amplifica.'},
-  {cat:'micro-price', q:'Un price floor (suelo de precio) vinculante genera...', opts:['Exceso de demanda','Exceso de oferta','Equilibrio eficiente','Reducción del precio de mercado'], ans:1, ex:'Price floor por encima del equilibrio: Qs > Qd → exceso de oferta. Ejemplo: salario mínimo por encima del salario de equilibrio → desempleo.'},
-  {cat:'micro-price', q:'Las leyes anti-price gouging en Nueva Jersey durante Sandy criminalicaron al emprendedor que traía gasolina del upstate. Desde la perspectiva del modelo S&D, esto fue...', opts:['Correcto, porque protegió a los consumidores vulnerables','Ineficiente, porque eliminó el incentivo de precio que atraía nueva oferta','Indiferente para el resultado del mercado','Positivo para la oferta de gasolina'], ans:1, ex:'El precio alto era exactamente la señal que atraía nueva oferta al mercado. Al criminalizarlo, se eliminó el incentivo y la escasez se prolongó más tiempo.'},
-  {cat:'micro-price', q:'¿Cuál es la distinción normativa central en el debate sobre price controls?', opts:['Oferta vs. demanda','Eficiencia vs. equidad','Corto plazo vs. largo plazo','Micro vs. macro'], ans:1, ex:'Los price controls pueden mejorar la equidad (acceso para quienes tienen menos dinero) a costa de eficiencia (destrucción de valor, DWL, shortage). Son objetivos distintos que a menudo se contraponen.'},
+  // ===================== MICRO: PRICE CONTROLS =====================
+  {cat:'micro-price', q:'Consider the petrol market with equilibrium price €1.00/liter. The government sets a price ceiling at €1.50/liter. What is most likely to happen?', opts:['A significant increase in petrol demand could make the ceiling binding','A significant increase in petrol supply could make the ceiling binding','There will immediately be excess demand for petrol','There will immediately be excess supply of petrol'], ans:0, ex:'The ceiling at €1.50 is currently NON-binding (it is above the €1.00 equilibrium). For it to become binding, the free-market equilibrium price must rise ABOVE €1.50. That can happen if demand increases significantly enough to push equilibrium above the ceiling.'},
+  {cat:'micro-price', q:'A natural disaster dramatically reduces gasoline supply in New York. The area enforces a price ceiling at the pre-disaster price. What is likely to happen relative to the free-market equilibrium?', opts:['Quantity of gasoline bought does not change, but price is lower','The gasoline shortage is less severe than without the ceiling','Both of the above','None of the above'], ans:3, ex:'With supply falling and demand unchanged, the free-market equilibrium price would rise sharply to clear the market. The ceiling prevents this: (A) quantity bought FALLS (less is sold at ceiling price than in original equilibrium); (B) shortage is MORE severe than free market (which would self-clear at higher price). Neither A nor B is correct.'},
+  {cat:'micro-price', q:'Suppose the rice market is in equilibrium when the government sets a price FLOOR for rice 50% above the equilibrium price. Which best describes the outcome?', opts:['Excess supply at the new price; quantity sold goes down','Excess demand at the new price; quantity bought goes up','Excess supply at the new price; quantity sold goes up','Excess demand at the new price; quantity bought goes down'], ans:0, ex:'A price floor above equilibrium is binding → at that price, Qs > Qd → excess supply. The quantity actually transacted is determined by the SHORT side of the market (demand) → quantity sold is BELOW the original equilibrium. It goes DOWN, not up.'},
+  {cat:'micro-price', q:'A binding price ceiling generates a shortage. Which of the following is NOT one of the resulting inefficiencies?', opts:['Resources are wasted as consumers spend time queuing','The good is allocated to those who value it most, not who arrives first','Some mutually beneficial trades fail to occur (deadweight loss)','Sellers have less incentive to maintain product quality'], ans:1, ex:'A price ceiling means the good CANNOT be allocated to whoever values it most (that requires a rising price to signal willingness to pay). Instead it goes to whoever arrives first, knows the seller, or wins a lottery — an inefficient allocation.'},
+  {cat:'micro-price', q:'Why is a temporary price ceiling during an emergency less economically damaging than a permanent one?', opts:['Because consumers are more patient during emergencies','Because short-run supply is more inelastic — producers cannot reduce output much even at a low price','Because the government compensates producers during emergencies','Because demand is lower during emergencies'], ans:1, ex:'In the short run, supply is inelastic — existing capacity is fixed, contracts are signed, infrastructure is in place. Producers cannot easily exit the market even if the price is below their long-run cost. Over time, supply becomes elastic and producers invest less → the shortage worsens. This is the key argument for temporary vs. permanent ceilings.'},
+  {cat:'micro-price', q:'A price floor set above the market equilibrium for agricultural goods will necessarily:', opts:['Increase the quantity of the good actually sold to consumers','Decrease the quantity of the good actually sold to consumers','Have no effect since markets always clear','Increase consumer surplus'], ans:1, ex:'Binding price floor → Qs > Qd → market transacts at Qd (the short side). Qd at the floor price is BELOW Qd at the equilibrium price. So the quantity consumers actually buy falls. Consumer surplus also falls (higher price, less quantity consumed).'},
 
-  // MICRO: TAXES
-  {cat:'micro-tax', q:'La incidencia económica de un impuesto depende de...', opts:['A quién se le cobra legalmente el impuesto','La elasticidad relativa de oferta y demanda','El partido político en el gobierno','El tamaño del mercado'], ans:1, ex:'La incidencia económica (quién realmente paga) es independiente de quién lo ingresa a Hacienda. Depende de quién puede "escapar" del mercado — determinado por las elasticidades.'},
-  {cat:'micro-tax', q:'Si la demanda es perfectamente inelástica, ¿quién soporta el 100% del impuesto?', opts:['El vendedor','El comprador','Se reparte 50-50','Depende de la oferta'], ans:1, ex:'Demanda perfectamente inelástica significa que los compradores no pueden reducir su cantidad comprada aunque suba el precio → soportan el 100% del impuesto.'},
-  {cat:'micro-tax', q:'¿Qué es el Deadweight Loss (DWL) de un impuesto?', opts:['La recaudación total del gobierno','La pérdida de excedente de los consumidores que se transfiere al gobierno','Transacciones mutuamente beneficiosas que dejan de ocurrir por el impuesto','El excedente del productor que se destruye'], ans:2, ex:'El DWL es la pérdida de bienestar total que no recupera nadie: transacciones que habrían generado valor conjunto pero que el impuesto hace no rentables.'},
-  {cat:'micro-tax', q:'La cuña fiscal (tax wedge) es...', opts:['El importe del impuesto que paga el comprador','La diferencia entre el precio del comprador (Pb) y el precio del vendedor (Ps)','La recaudación total del gobierno','El DWL dividido por la cantidad intercambiada'], ans:1, ex:'La cuña = Pb - Ps = t (el importe del impuesto). El comprador paga Pb, el vendedor recibe Ps, la diferencia va al gobierno.'},
-  {cat:'micro-tax', q:'¿Cómo afecta un mayor impuesto al DWL?', opts:['El DWL crece linealmente con t','El DWL crece con el cuadrado de t','El DWL decrece porque la recaudación aumenta','El DWL no depende del importe del impuesto'], ans:1, ex:'DWL = ½ × t × ΔQ. Como ΔQ también crece con t, el DWL crece aproximadamente con t². Duplicar el impuesto cuadruplica el DWL.'},
-  {cat:'micro-tax', q:'¿Por qué se grava con impuestos más altos a bienes inelásticos como el tabaco o la gasolina?', opts:['Porque son bienes de lujo','Porque generan alta recaudación con poco DWL','Porque los consumidores de estos bienes son más ricos','Por razones históricas sin justificación económica'], ans:1, ex:'Con demanda inelástica: el impuesto causa poca reducción de cantidad → DWL pequeño. Al mismo tiempo, la recaudación (t × Qt) es alta porque Qt no cae mucho.'},
-  {cat:'micro-tax', q:'Si la oferta es más elástica que la demanda, ¿quién soporta mayor parte del impuesto?', opts:['El vendedor, porque tiene más elasticidad','El comprador, porque tiene menos elasticidad','Se reparte por igual','El gobierno'], ans:1, ex:'La parte más inelástica no puede escapar del mercado → absorbe más del impuesto. Si oferta más elástica, la demanda es relativamente más inelástica → compradores soportan más.'},
-  {cat:'micro-tax', q:'Un impuesto Pigouviano sobre una externalidad negativa...', opts:['Siempre genera DWL adicional','Puede reducir el DWL al corregir la sobreproducción generada por la externalidad','No tiene efectos sobre la eficiencia','Solo transfiere riqueza al gobierno'], ans:1, ex:'Si hay externalidad negativa, el mercado produce en exceso (no internaliza el coste social). El impuesto Pigouviano reduce la cantidad hacia el óptimo social → puede reducir el DWL total.'},
-  {cat:'micro-tax', q:'¿Qué ocurre con la cantidad intercambiada cuando se impone un impuesto?', opts:['Aumenta','Cae','No cambia','Depende de quién paga el impuesto legalmente'], ans:1, ex:'Con el impuesto, el precio del comprador sube y el precio del vendedor baja → la cantidad demandada cae y la ofrecida también → la cantidad transaccionada cae por debajo del equilibrio libre.'},
+  // ===================== MICRO: TAXES =====================
+  {cat:'micro-tax', q:'A tax on alcohol will very likely produce government revenue that is:', opts:['Higher in the long run than in the short run','Higher in the short run than in the long run','About the same in the short run and long run','None of the above'], ans:1, ex:'In the SR, alcohol demand is relatively inelastic (habits are hard to break quickly) → quantity falls little → high revenue. In the LR, demand becomes more elastic (people substitute, change behavior) → quantity falls more → revenue drops. SR revenue > LR revenue.'},
+  {cat:'micro-tax', q:'Consider two markets with the same tax. Market A has more elastic demand than Market B. Compared to Market B, Market A will have:', opts:['Higher tax revenue and larger deadweight loss','Lower tax revenue and larger deadweight loss','Higher tax revenue and smaller deadweight loss','Lower tax revenue and smaller deadweight loss'], ans:1, ex:'More elastic demand → larger fall in quantity when tax imposed → (1) lower tax revenue (TR = t × Q, Q falls more) and (2) larger DWL (the triangle of lost surplus grows with the quantity reduction). Inelastic markets are taxed more efficiently.'},
+  {cat:'micro-tax', q:'The government imposes a tax legally on sellers. In a market where BUYER demand is perfectly inelastic, who bears the full tax burden?', opts:['The seller, because they hand over the money to the government','The buyer, because they cannot reduce their quantity demanded','Split 50-50 regardless of who pays legally','The government absorbs part of the burden'], ans:1, ex:'Perfectly inelastic demand: buyers purchase the same quantity regardless of price. If the tax raises the price, buyers simply pay the higher price — they cannot substitute or reduce consumption. The entire burden falls on the buyer. The legal incidence is irrelevant.'},
+  {cat:'micro-tax', q:'If a tax of size t is doubled to 2t, what happens to the deadweight loss (DWL)?', opts:['DWL doubles','DWL triples','DWL approximately quadruples','DWL stays the same since revenue increases'], ans:2, ex:'DWL = ½ × t × ΔQ. Since ΔQ is itself proportional to t, DWL is proportional to t². Doubling t → DWL increases by a factor of 4 (approximately). This is why large taxes are disproportionately distortionary.'},
+  {cat:'micro-tax', q:'A Pigouvian tax on a negative externality (e.g., carbon tax on emissions) differs from a standard revenue tax because:', opts:['It generates more deadweight loss than a standard tax','It can reduce deadweight loss by correcting overproduction from the externality','It only affects producers, not consumers','It never generates government revenue'], ans:1, ex:'Without the tax, markets with negative externalities OVERPRODUCE relative to the social optimum (private cost < social cost). The Pigouvian tax reduces output toward the social optimum → DWL from the externality falls. The tax can increase efficiency rather than reduce it.'},
 
-  // MACRO: AD-AS
-  {cat:'macro-adas', q:'¿Por qué la curva AD tiene pendiente negativa en el gráfico P-Y?', opts:['Porque cuando los precios suben, los consumidores compran menos siempre','Porque precios más altos reducen el poder adquisitivo (efecto riqueza) y las exportaciones netas','Porque el gobierno recauda más cuando los precios suben','Porque la oferta siempre determina la demanda'], ans:1, ex:'AD tiene pendiente negativa por: efecto riqueza real (precios altos reducen poder adquisitivo), efecto tipo de interés (precios altos → más dinero demandado → tipos suben → I cae), y efecto comercio exterior.'},
-  {cat:'macro-adas', q:'¿Qué es el PIB potencial (Y*)?', opts:['El PIB máximo que puede alcanzar la economía en una emergencia','El PIB cuando todos los recursos se usan sin generar inflación sostenida','El PIB del año con mayor crecimiento histórico','El PIB nominal corregido por inflación'], ans:1, ex:'Y* (PIB potencial) es el nivel de producción consistente con pleno empleo y tasa de inflación estable. Representa la capacidad productiva normal de la economía.'},
-  {cat:'macro-adas', q:'Un recessionary gap ocurre cuando...', opts:['Y > Y*, la economía produce por encima del potencial','Y < Y*, la economía produce por debajo del potencial','La inflación supera el objetivo del banco central','El desempleo está por debajo de la tasa natural'], ans:1, ex:'Recessionary gap: la economía produce menos que su potencial → recursos infrautilizados → desempleo por encima de la tasa natural.'},
-  {cat:'macro-adas', q:'Un shock de oferta negativo (ej. subida del precio del petróleo) desplaza la curva SRAS...', opts:['Hacia la derecha, bajando los precios','Hacia la izquierda/arriba, subiendo los precios y reduciendo el PIB','Hacia abajo, aumentando el PIB','No afecta a la SRAS'], ans:1, ex:'Shock negativo de oferta → costes de producción suben → a cualquier nivel de Y, los productores exigen precios más altos → SRAS se desplaza hacia arriba. Resultado: mayor P y menor Y (stagflation).'},
-  {cat:'macro-adas', q:'La diferencia entre PIB nominal y PIB real es...', opts:['El PIB real incluye inflación; el nominal no','El PIB nominal incluye cambios de precios; el real solo cambios de cantidades','El PIB real siempre es mayor que el nominal','No hay diferencia práctica'], ans:1, ex:'PIB nominal = precios actuales × cantidades actuales. PIB real = precios de un año base × cantidades actuales. Solo el real mide el crecimiento "verdadero" de producción.'},
-  {cat:'macro-adas', q:'¿Por qué la rigidez salarial a la baja justifica la intervención de política económica?', opts:['Porque los salarios nunca deberían bajar','Porque sin ella el ajuste automático en recesión es muy lento','Porque la política monetaria siempre es efectiva','Porque la LRAS es horizontal'], ans:1, ex:'Si los salarios son rígidos a la baja, el ajuste automático desde una recesión (SRAS bajando) tarda mucho tiempo. La intervención (política fiscal/monetaria) puede acelerar la vuelta a Y*.'},
-  {cat:'macro-adas', q:'La Ecuación de Fisher establece que...', opts:['PIB real = PIB nominal - inflación','r = i - πᵉ (tipo real = nominal menos inflación esperada)','El ahorro siempre iguala a la inversión','Los tipos de interés no afectan al consumo'], ans:1, ex:'r = i - πᵉ. El tipo de interés real es lo que importa para las decisiones de inversión y consumo. Si la inflación sube sin que suba el tipo nominal, el tipo real cae → política monetaria más expansiva de lo que parece.'},
-  {cat:'macro-adas', q:'¿Cuál de los siguientes desplaza la curva AD hacia la derecha?', opts:['Aumento del gasto público (G)','Reducción del consumo privado (C)','Contracción monetaria (subida de tipos)','Reducción de las exportaciones'], ans:0, ex:'AD = C + I + G + NX. Cualquier aumento en sus componentes desplaza AD a la derecha. Política fiscal expansiva (↑G), monetaria expansiva (↓r → ↑I), ↑consumo, ↑exportaciones.'},
-  {cat:'macro-adas', q:'A largo plazo, después de un shock de demanda positivo sin intervención de política, ¿qué ocurre?', opts:['Y permanece por encima de Y*','La SRAS sube (salarios y costes aumentan) y Y vuelve a Y* con más inflación','La LRAS se desplaza a la derecha','El banco central baja tipos para mantener el crecimiento'], ans:1, ex:'Expansionary gap → mercado laboral tensionado → salarios suben → costes de producción suben → SRAS sube → P sube y Y cae de vuelta a Y*. Resultado: inflación más alta, mismo PIB potencial.'},
+  // ===================== MACRO: AD-AS =====================
+  {cat:'macro-adas', q:'Suppose that, due to a war, oil prices increase sharply. The SRAS curve _______ and real GDP _______ in the short run.', opts:['shifts right; increases','shifts left; decreases','shifts right; decreases','shifts left; increases'], ans:1, ex:'Higher oil prices raise production costs for ALL firms → SRAS shifts LEFT (upward). At any given price level, firms produce less. In SR equilibrium: P rises, Y falls — this is stagflation.'},
+  {cat:'macro-adas', q:'Suppose that COVID forces some factories to shut down AND simultaneously the government lowers income taxes (keeping spending fixed). In the short run, these two shocks necessarily lead to:', opts:['Higher prices and higher real GDP','Higher prices and lower real GDP','Higher real GDP','None of the above'], ans:3, ex:'Factory shutdowns: SRAS shifts left → P↑, Y↓. Tax cut: AD shifts right → P↑, Y↑. Prices: both shocks push P up → P necessarily rises. Real GDP: SRAS pushes Y down, AD pushes Y up → ambiguous. No single option (A, B, or C) is necessarily correct in its entirety.'},
+  {cat:'macro-adas', q:'A country is in long-run equilibrium. Oil prices rise (the country is a net importer) AND the government raises taxes, keeping spending and transfers constant. Which necessarily occurs?', opts:['An increase in real GDP and an increase in price level','A decrease in real GDP and a decrease in price level','A decrease in the price level','None of the above'], ans:3, ex:'Oil price rise → SRAS left → P↑, Y↓. Tax rise → AD left → P↓, Y↓. Real GDP: both shocks reduce Y → Y necessarily falls. Price: SRAS pushes P up, AD pushes P down → net effect ambiguous. "Decrease in GDP" is certain but no option correctly captures only that.'},
+  {cat:'macro-adas', q:'The economy is in long-run equilibrium. The most important oil platform in the Gulf of Mexico stops production. Simultaneously, the central bank lowers interest rates BELOW the neutral rate. This necessarily leads to:', opts:['Higher aggregate price level','Lower real GDP','Both of the above','Higher real GDP'], ans:0, ex:'Oil platform stop → SRAS shifts left → P↑, Y↓. CB cuts rates → AD shifts right → P↑, Y↑. Price: both shocks push P up → higher prices is certain. Real GDP: SRAS down pushes Y down, AD right pushes Y up → ambiguous. Only higher prices is necessarily true.'},
+  {cat:'macro-adas', q:'The economy is in long-run equilibrium. The government sends USD 1,000 checks to each household (keeping taxes constant). AND the central bank lowers rates below neutral. What necessarily occurs in the short run?', opts:['An increase in prices','An increase in real GDP','Both of the above','None of the above'], ans:2, ex:'Government transfers: AD shifts right → P↑, Y↑. CB rate cut: AD shifts right further → P↑, Y↑. BOTH shocks expand AD → prices necessarily rise AND real GDP necessarily increases in the short run. Both A and B are correct → answer C.'},
+  {cat:'macro-adas', q:'Consider an economy in long-run equilibrium. There is a NEGATIVE supply shock AND the central bank raises interest rates ABOVE the neutral rate. In the short run, real GDP will _______ and unemployment will _______:', opts:['Decrease; increase','Decrease; decrease','Increase; decrease','Either increase or decrease; remain the same'], ans:0, ex:'Negative supply shock (SRAS left): Y↓, unemployment↑. CB raises rates above neutral (AD left): Y↓ further, unemployment↑ further. Both shocks reduce Y and increase unemployment → the outcomes are unambiguous: GDP decreases, unemployment increases.'},
+  {cat:'macro-adas', q:'If real GDP is above its long-run potential AND the central bank raises interest rates above the neutral rate, what happens to nominal wages in the long run?', opts:['Nominal wages necessarily increase','Nominal wages necessarily decrease','Nominal wages are unaffected','Nominal wages can increase or decrease'], ans:3, ex:'Y > Y* → expansionary gap → upward pressure on wages. CB raises rates above neutral → AD contracts → may push Y below Y* → downward pressure on wages. The net effect depends on the magnitude of CB tightening. If CB just closes the gap, wages stabilize; if CB overshoots, wages fall. Outcome is ambiguous.'},
 
-  // MACRO: FISCAL
-  {cat:'macro-fiscal', q:'En el mercado de fondos prestables, ¿qué representa la curva de oferta?', opts:['La inversión privada de las empresas','El ahorro de los hogares y empresas','El déficit público','La deuda externa'], ans:1, ex:'Oferta de fondos prestables = ahorro privado (hogares que no gastan toda su renta). Demanda = inversión privada + necesidades de financiación del gobierno.'},
-  {cat:'macro-fiscal', q:'El crowding-out se produce cuando...', opts:['La inversión privada desplaza al gasto público','El mayor déficit público eleva el tipo de interés y reduce la inversión privada','Los consumidores aumentan su ahorro ante mayor gasto público','La inflación destruye el ahorro privado'], ans:1, ex:'Mayor déficit → gobierno demanda más fondos prestables → tipo de interés real sube → inversión privada más cara → cae. El gasto público "expulsa" inversión privada.'},
-  {cat:'macro-fiscal', q:'Los estabilizadores automáticos son mecanismos fiscales que...', opts:['Requieren votación en el Parlamento para activarse','Actúan contracíclicamente sin decisión discrecional del gobierno','Siempre generan superávit en expansión','Solo funcionan en países con alta deuda pública'], ans:1, ex:'Estabilizadores automáticos (prestaciones por desempleo, progresividad fiscal) se activan automáticamente: recesión → ↑gasto en subsidios + ↓recaudación → impulso automático sin necesidad de legislación nueva.'},
-  {cat:'macro-fiscal', q:'El déficit estructural se diferencia del déficit cíclico en que...', opts:['El estructural es mayor en recesión','El estructural persiste incluso en condiciones de pleno empleo','El cíclico es mayor en expansión','No hay diferencia práctica'], ans:1, ex:'Déficit cíclico = causado por el ciclo económico (automático). Déficit estructural = el que permanece si la economía estuviera en Y* → refleja las decisiones discrecionales de política fiscal.'},
-  {cat:'macro-fiscal', q:'Si el crowding-out es completo (oferta de fondos prestables perfectamente inelástica), el multiplicador fiscal es...', opts:['Mayor que 1','Igual a 1','Igual a 0','Negativo'], ans:2, ex:'Crowding-out completo: cada euro de gasto público desplaza exactamente un euro de inversión privada → efecto neto sobre AD = 0 → multiplicador = 0.'},
-  {cat:'macro-fiscal', q:'¿En qué situación el crowding-out es menor y el multiplicador fiscal mayor?', opts:['En pleno empleo con inflación alta','En recesión profunda con tipos de interés cercanos a cero (trampa de liquidez)','Con superávit público elevado','Con déficit por cuenta corriente alto'], ans:1, ex:'En trampa de liquidez (tipos ≈ 0), el banco central no puede/no subirá tipos aunque aumente el déficit → tipo de interés no sube → no hay crowding-out → multiplicador fiscal es máximo.'},
-  {cat:'macro-fiscal', q:'El dilema fiscal de Francia en 2023-24 es un ejemplo de...', opts:['Trampa de liquidez','Tensión entre consolidación fiscal (credibilidad de deuda) y mantenimiento del crecimiento a corto plazo','Inflación por demanda excesiva','Exceso de ahorro privado'], ans:1, ex:'Francia: deuda/PIB >110%, déficit >6%, presión de mercados. Consolidar reduce la deuda pero puede provocar recesión. Mantener el déficit sostiene el crecimiento pero puede hacer insostenible la deuda.'},
+  // ===================== MACRO: FISCAL =====================
+  {cat:'macro-fiscal', q:'Consider the loanable funds market. If the government decreases taxes while keeping spending constant, what happens to the neutral interest rate?', opts:['It increases','It decreases','It stays the same','It increases or decreases depending on circumstances'], ans:0, ex:'Tax cut with spending constant → fiscal deficit increases → government must borrow more → demand for loanable funds shifts RIGHT → equilibrium real interest rate (r*) rises. This is the crowding-out mechanism: government borrowing competes with private investment for available funds.'},
+  {cat:'macro-fiscal', q:'Two shocks occur in the loanable funds market: (i) demographic aging causes individuals to save more, and (ii) firms invest massively in AI data centers. What is most likely to happen to the neutral rate and funds transacted?', opts:['Neutral rate increases; funds transacted increase','Neutral rate decreases; funds transacted decrease','Neutral rate increases; funds transacted decrease','None of the above'], ans:3, ex:'More saving → supply shifts right → r*↓, Q↑. AI investment → demand shifts right → r*↑, Q↑. Neutral rate: supply pushes down, demand pushes up → ambiguous. Funds transacted: both shocks push Q up → Q necessarily increases. None of A, B, or C correctly captures the ambiguous r* and certain Q increase.'},
+  {cat:'macro-fiscal', q:'Government Debt/GDP is twice as large in Italy as Germany. Italian debt yields are higher and Italian nominal GDP grows more slowly. To keep its Debt/GDP ratio constant, Italy must run a primary fiscal surplus that is _______ Germany's.', opts:['Larger than','Smaller than','The same as','We need more information'], ans:0, ex:'The debt sustainability condition: primary surplus/GDP = (r − g) × (Debt/GDP). Italy has: higher r (higher yields), lower g (slower growth), AND higher Debt/GDP. Each factor requires a larger primary surplus. Italy needs a substantially larger primary surplus as a share of GDP than Germany.'},
+  {cat:'macro-fiscal', q:'In the loanable funds market, what does "crowding out" mean?', opts:['Higher government spending directly reduces private consumption','Higher government deficits raise real interest rates, which reduces private investment','The central bank buys government bonds, crowding out private bond markets','Tax increases crowd out private sector profits'], ans:1, ex:'Crowding out mechanism: government borrows more (fiscal deficit) → demand for loanable funds rises → real interest rate rises → private investment becomes more expensive → private investment falls. The government "displaces" private investment by competing for the same pool of savings.'},
+  {cat:'macro-fiscal', q:'In which situation is crowding out likely to be SMALLEST and the fiscal multiplier LARGEST?', opts:['When the economy is at full employment and inflation is high','When the economy is in a deep recession with interest rates near zero','When government debt as a share of GDP is very high','When the central bank is tightening monetary policy'], ans:1, ex:'In a deep recession at the zero lower bound: (1) the central bank cannot/will not raise rates even as government borrows more → no interest rate increase → no crowding out. (2) Idle resources mean government spending creates output without displacing private activity. The multiplier is maximized.'},
 
-  // MACRO: MONETARY
-  {cat:'macro-monetary', q:'El tipo neutral r* es aquel al que...', opts:['La inflación es exactamente 2%','La economía crece a su tasa máxima potencial','La política monetaria ni estimula ni frena la economía — es neutral','El banco central no puede bajar más los tipos'], ans:2, ex:'r* es el tipo de interés real consistente con pleno empleo e inflación estable. Si r_política = r*, la política es neutral. Por encima → contractiva; por debajo → expansiva.'},
-  {cat:'macro-monetary', q:'Si la inflación esperada sube del 2% al 4% pero el tipo nominal sigue en 3%, el tipo real...', opts:['Sube del 1% al 3%','Baja del 1% al -1%','No cambia, sigue en 3%','Depende de la política del banco central'], ans:1, ex:'r = i - πᵉ = 3% - 4% = -1%. Con tipos nominales fijos y expectativas de inflación más altas, el tipo real cae → política monetaria implícitamente más expansiva.'},
-  {cat:'macro-monetary', q:'El Zero Lower Bound (ZLB) es...', opts:['El nivel de desempleo mínimo posible','La incapacidad del tipo de interés nominal de bajar por debajo de cero','El nivel mínimo del PIB en recesión','El límite inferior del tipo de inflación objetivo'], ans:1, ex:'El tipo nominal no puede (fácilmente) ser negativo: la gente prefiere guardar efectivo a pagar por depositar. Esto limita la política monetaria convencional.'},
-  {cat:'macro-monetary', q:'¿Qué es el Quantitative Easing (QE)?', opts:['Una subida de tipos de interés de emergencia','Compras masivas de activos a largo plazo por el banco central para reducir tipos a largo plazo','Un aumento del gasto público del gobierno','Una reducción de los requerimientos de reservas bancarias'], ans:1, ex:'QE: el banco central compra bonos a largo plazo → precio de bonos sube → rentabilidad (tipo) baja → tipos a largo plazo caen → incentivo a invertir y consumir.'},
-  {cat:'macro-monetary', q:'Un error en la estimación de r* puede llevar al banco central a...', opts:['Tomar decisiones de política perfectamente calibradas','Ser sistemáticamente demasiado expansivo o contractivo sin saberlo','Ignorar la inflación','Fijar el tipo nominal demasiado alto siempre'], ans:1, ex:'Si r* real es 1% pero el banco central cree que es 2.5%, una política al 2.5% parece neutral pero en realidad es contractiva. El error en r* genera errores sistemáticos de política.'},
-  {cat:'macro-monetary', q:'Los rezagos de la política monetaria implican que...', opts:['La política monetaria actúa instantáneamente en el PIB y la inflación','Las subidas de tipos de hoy afectan a la economía con 12-18 meses de retraso','Solo afectan a la inflación, no al PIB','El banco central siempre llega a tiempo para estabilizar el ciclo'], ans:1, ex:'Los rezagos son largos e inciertos (12-18 meses típicamente). El banco central opera "a ciegas" sobre el futuro, lo que puede llevar a sobre-correcciones en el ciclo.'},
-  {cat:'macro-monetary', q:'La diferencia entre política monetaria y fiscal en el marco AD-AS es que...', opts:['La política monetaria actúa sobre la LRAS; la fiscal sobre la SRAS','La política monetaria desplaza AD vía tipos de interés; la fiscal la desplaza vía G y T directamente','Son idénticas en sus efectos','Solo la política fiscal puede combatir la inflación'], ans:1, ex:'Política monetaria: tipos de interés → I (inversión) → AD. Política fiscal: gasto público (G) o impuestos (T) → C o G → AD directamente. Ambas desplazan AD pero por mecanismos distintos.'}
+  // ===================== MACRO: MONETARY =====================
+  {cat:'macro-monetary', q:'The neutral interest rate r* increases exogenously. Neither the government nor the central bank reacts. What will necessarily occur in the LONG RUN?', opts:['An increase in real GDP and an increase in the price level','An increase in real GDP and a decrease in the price level','A decrease in real GDP and an increase in the price level','None of the above'], ans:3, ex:'In the long run, the economy always returns to Y* — real GDP does not change permanently. The price level adjustment path depends on the mechanism (whether r* rises because demand for funds increases or supply falls). No option correctly states "Y unchanged" so the answer is None of the above.'},
+  {cat:'macro-monetary', q:'The economy is in long-run equilibrium. There is a NEGATIVE supply shock AND the central bank raises interest rates above the neutral rate. In the short run, unemployment will _______ and prices will _______ compared to the original equilibrium:', opts:['Decrease; either increase or decrease','Increase; either increase or decrease','Increase; remain the same','Either increase or decrease; increase'], ans:1, ex:'Negative supply shock: SRAS left → Y↓, unemployment↑, P↑. CB raises rates above neutral: AD left → Y↓ further, unemployment↑ further, P↓. Unemployment: both shocks increase it → definitely rises. Prices: SRAS pushes P up, AD pushes P down → net effect ambiguous.'},
+  {cat:'macro-monetary', q:'The economy is in long-run equilibrium. The government DECREASES taxes (spending unchanged) AND the central bank LOWERS rates below the neutral rate. What is likely in the short run?', opts:['An increase in prices only','An increase in real GDP only','Both higher prices and higher real GDP','None of the above'], ans:2, ex:'Tax cut: AD shifts right → P↑, Y↑. CB rate cut: AD shifts right further → P↑, Y↑. Both shocks unambiguously expand AD. In the short run: prices rise AND real GDP rises. Both effects are certain — answer is C.'},
+  {cat:'macro-monetary', q:'Suppose the central bank only cares about price stability. Oil prices spike due to a war (country does not produce oil). What should the central bank do?', opts:['Lower interest rates below the neutral rate to offset the recession','Raise interest rates above the neutral rate to fight the resulting inflation','Increase government spending','Do nothing — oil shocks are transitory'], ans:1, ex:'Oil price spike → SRAS shifts left → stagflation (P↑, Y↓). If the CB only cares about price stability, it must fight the inflation → raise rates above neutral → AD shifts left → P comes down. The cost is that Y falls even further. This is the dilemma of supply shocks for inflation-targeting central banks.'},
+  {cat:'macro-monetary', q:'Consider Table 1 with 2022 data. Which country had the LARGEST real interest rate (real yield)?
+
+China: inflation 2.5%, nominal yield 2.20%
+Brazil: inflation 12%, nominal yield 11.50%
+Japan: inflation 2.50%, nominal yield -0.10%
+USA: inflation 8.60%, nominal yield 0.60%', opts:['China (real rate: -0.3%)','Brazil (real rate: -0.5%)','Japan (real rate: -2.6%)','USA (real rate: -8.0%)'], ans:0, ex:'Real rate = nominal yield − inflation. China: 2.20% − 2.5% = −0.3%. Brazil: 11.50% − 12% = −0.5%. Japan: −0.10% − 2.5% = −2.6%. USA: 0.60% − 8.60% = −8.0%. China has the largest (least negative) real rate at −0.3%.'},
+  {cat:'macro-monetary', q:'Using the same 2022 data table, which country had the SMALLEST real interest rate (most negative real yield)?', opts:['China (real rate: -0.3%)','Brazil (real rate: -0.5%)','Japan (real rate: -2.6%)','USA (real rate: -8.0%)'], ans:3, ex:'USA: 0.60% − 8.60% = −8.0%. This was the most negative real rate — meaning the US had the most aggressively negative real interest rate in 2022, reflecting very high inflation while the Fed had barely begun raising nominal rates.'},
+  {cat:'macro-monetary', q:'The economy is in long-run equilibrium. Oil prices fall (the country is a net oil importer) AND the central bank lowers rates below the neutral rate. In the short run, which is MOST LIKELY?', opts:['An increase in output and an increase in the price level','A decrease in output and a decrease in the price level','A decrease in output and an increase in the price level','A decrease in unemployment'], ans:3, ex:'Oil price fall (net importer) → SRAS shifts right → Y↑, P↓. CB rate cut → AD shifts right → Y↑, P↑. Real GDP: both shocks increase Y → unemployment necessarily falls. Price: SRAS down, AD up → ambiguous. Only the unemployment decrease is certain. Answer: D.'}
 ];
 
-let currentFilter = 'all';
+// ===================== PREGUNTAS REALES DEL EXAMEN DE IDE =====================
+const REAL_EXAM_QUESTIONS = [
+  {cat:'real-exam', q:'[Q1 — Real Exam] Consider two markets, A and B. Product A has more substitutes. Everything else constant, which raises MORE government revenue?', opts:['Price ceiling on product A','Price ceiling on product B','Tax on product A','Tax on product B'], ans:3, ex:'More substitutes = more elastic demand. A tax on inelastic goods (B, fewer substitutes) generates more revenue because quantity falls less. Price ceilings don\'t generate revenue — they set a maximum price. Tax on B (inelastic) → highest revenue.'},
+  {cat:'real-exam', q:'[Q2 — Real Exam] Weather improves tea production. Tea and coffee are substitutes. What likely happens to coffee?', opts:['Price increases, quantity decreases','Price increases, quantity increases','Price decreases, quantity decreases','Price decreases, quantity increases'], ans:2, ex:'More tea supply → tea price falls. Cheaper tea → consumers switch FROM coffee TO tea → coffee demand shifts LEFT → both coffee price and quantity fall.'},
+  {cat:'real-exam', q:'[Q3 — Real Exam] Petrol equilibrium price is €1.00/liter. Government sets ceiling at €1.50/liter. What is most likely to happen?', opts:['A significant demand increase could make the ceiling binding','A significant supply increase could make the ceiling binding','There will be excess demand for petrol','There will be excess supply of petrol'], ans:0, ex:'The ceiling at €1.50 is currently NON-binding (above equilibrium). It becomes binding only if the free-market equilibrium rises ABOVE €1.50 — which requires a large enough demand increase to push equilibrium beyond the ceiling.'},
+  {cat:'real-exam', q:'[Q4 — Real Exam] A natural disaster cuts gasoline supply in New York. A price ceiling is enforced at the pre-disaster price. Relative to the free-market equilibrium WITHOUT the ceiling:', opts:['Quantity bought doesn\'t change, but price is lower','Gasoline shortage is less severe','Both of the above','None of the above'], ans:3, ex:'(A) is wrong: quantity bought FALLS — at the ceiling price, less is supplied than at the free-market equilibrium. (B) is wrong: the shortage is MORE severe — without the ceiling, the price would rise to clear the market. Neither A nor B is correct → D.'},
+  {cat:'real-exam', q:'[Q5 — Real Exam] The demand curve for apples normally shifts after a significant change in:', opts:['Price of apples','Price of bananas (a substitute)','Both of the above','None of the above'], ans:1, ex:'Price of apples → movement ALONG the curve (not a shift). Price of bananas is a demand SHIFTER — it moves the entire demand curve. Only external factors (income, substitute prices, complementary prices, preferences) shift the curve.'},
+  {cat:'real-exam', q:'[Q6 — Real Exam] In Barcelona, bread is consumed with tomato. Both tomato prices AND bread consumption have increased. What could explain this?', opts:['A fall in the price of tomato seeds','A fall in the price of flour','Both of the above','None of the above'], ans:1, ex:'Fall in flour price → bread supply increases → bread price falls → bread consumption rises. More bread consumed → demand for complementary tomatoes rises → tomato price rises. A fall in tomato seed prices would LOWER tomato prices (opposite of what we observe). Only B works.'},
+  {cat:'real-exam', q:'[Q7 — Real Exam] Bagels and cream cheese are complements. Cream cheese price rose; bagel quantity fell. What caused this?', opts:['A fall in the price of milk','A fall in the price of flour','An increase in the price of milk','An increase in the price of flour'], ans:2, ex:'Milk is a key input for cream cheese. Higher milk price → cream cheese production costs rise → cream cheese supply falls → cream cheese price rises. Since bagels and cream cheese are complements, higher cream cheese price reduces demand for bagels → bagel quantity falls.'},
+  {cat:'real-exam', q:'[Q8 — Real Exam] Rice market is in equilibrium. Government sets a price FLOOR 50% above equilibrium. What happens?', opts:['Excess supply; quantity sold goes down','Excess demand; quantity bought goes up','Excess supply; quantity sold goes up','Excess demand; quantity bought goes down'], ans:0, ex:'Price floor above equilibrium → binding → Qs > Qd → excess supply. The market transacts at Qd (the short side), which is BELOW the original equilibrium Qd. Quantity sold goes DOWN.'},
+  {cat:'real-exam', q:'[Q9 — Real Exam] A tax on alcohol will very likely produce government revenue that is:', opts:['Higher in the long run than the short run','Higher in the short run than the long run','About the same in both periods','None of the above'], ans:1, ex:'SR: alcohol demand is inelastic (habits hard to break) → quantity falls little → high revenue. LR: demand becomes more elastic as people find substitutes and change habits → quantity falls more → revenue declines. SR revenue > LR revenue.'},
+  {cat:'real-exam', q:'[Q10 — Real Exam] Current wage = $12, hours worked = 1M in both NJ and PA. Demand for low-skill labor is MORE elastic in NJ. Minimum wage rises from $7 to $15. What happens?', opts:['Low-skill employment decreases more in NJ than PA','Low-skill employment decreases more in PA than NJ','Excess supply is larger in PA than NJ','None of the above'], ans:0, ex:'$15 > $12 current wage → binding price floor. More elastic demand in NJ → at the higher wage, quantity demanded falls MORE in NJ → employment falls more in NJ. Excess supply is also larger in NJ.'},
+  {cat:'real-exam', q:'[Q11 — Real Exam] Alfalfa market: (i) better farming technology developed; (ii) disease kills 50% of cattle. Effect on equilibrium price and quantity of alfalfa?', opts:['Price and quantity both decrease','Price and quantity both increase','Price decreases, quantity increases','None of the above'], ans:3, ex:'(i) Better tech → supply shifts right → P↓, Q↑. (ii) Less cattle → demand shifts left → P↓, Q↓. Price: both shocks push P DOWN → price definitely falls. Quantity: supply up (Q↑) vs demand down (Q↓) → AMBIGUOUS. No option correctly captures "price falls, quantity ambiguous" → D.'},
+  {cat:'real-exam', q:'[Q12 — Real Exam] War causes oil prices to spike. The central bank only cares about price stability. What should it do?', opts:['Decrease interest rates below the neutral rate','Increase interest rates above the neutral rate','Increase taxes','Increase government spending'], ans:1, ex:'Oil price spike → SRAS shifts left → stagflation (P↑, Y↓). CB focused only on price stability must fight inflation → raise rates above neutral → AD shifts left → P comes down. The cost: Y falls further. Taxes and government spending are fiscal policy, not CB tools.'},
+  {cat:'real-exam', q:'[Q13 — Real Exam] Country in long-run equilibrium. It is a net oil importer. Oil prices rise AND government increases taxes (spending constant). What necessarily occurs?', opts:['Increase in real GDP and increase in prices','Decrease in real GDP and decrease in prices','A decrease in prices','None of the above'], ans:3, ex:'Oil price rise → SRAS left → Y↓, P↑. Tax rise → AD left → Y↓, P↓. Real GDP: both shocks reduce Y → Y definitely falls. Prices: SRAS pushes P up, AD pushes P down → AMBIGUOUS. None of the options correctly captures "Y falls, P ambiguous" → D.'},
+  {cat:'real-exam', q:'[Q14 — Real Exam] Economy in long-run equilibrium. Neutral rate r* increases. Government and central bank do NOT react. What necessarily occurs in the LONG RUN?', opts:['Increase in real GDP and increase in prices','Increase in real GDP and decrease in prices','Decrease in real GDP and increase in prices','None of the above'], ans:3, ex:'In the long run, the economy always returns to Y* — real GDP does not permanently change. The price level effect depends on the mechanism. No option captures "Y unchanged" → D is correct. This tests whether you know that LR output is pinned at Y* regardless of financial market shocks.'},
+  {cat:'real-exam', q:'[Q15 — Real Exam] Economy in long-run equilibrium. Negative supply shock occurs AND central bank raises rates above neutral. In the short run, unemployment will _______ and prices will _______:', opts:['Decrease; either increase or decrease','Increase; either increase or decrease','Increase; remain the same','Either increase or decrease; increase'], ans:1, ex:'Negative supply shock: SRAS left → unemployment↑, P↑. CB raises rates: AD left → unemployment↑, P↓. Unemployment: both shocks increase it → definitely INCREASES. Prices: SRAS pushes up, AD pushes down → AMBIGUOUS (either increase or decrease).'},
+  {cat:'real-exam', q:'[Q16 — Real Exam] Real GDP is above long-run potential (Y > Y*). Central bank raises interest rates above neutral. What happens to nominal wages in the long run?', opts:['Nominal wages will increase','Nominal wages will decrease','Nominal wages will not be affected','Nominal wages can either increase or decrease'], ans:3, ex:'Y > Y* → upward wage pressure from tight labor market. CB raises rates → AD contracts → may push Y below Y* → downward wage pressure. The net long-run outcome depends on the magnitude of CB action. If CB closes the gap precisely, wages stabilize; if it overshoots, wages fall → AMBIGUOUS.'},
+  {cat:'real-exam', q:'[Q17 — Real Exam] Economy in long-run equilibrium. (i) Government decreases taxes (spending unchanged) AND (ii) central bank lowers rates below neutral. Short-run outcome?', opts:['An increase in prices','An increase in real GDP','Both of the above','None of the above'], ans:2, ex:'Tax cut → AD shifts right → P↑, Y↑. CB rate cut → AD shifts right further → P↑, Y↑. Both shocks unambiguously expand AD. In the short run: prices definitely rise AND real GDP definitely increases. Both A and B are correct → C.'},
+  {cat:'real-exam', q:'[Q18 — Real Exam] Negative supply shock AND central bank raises rates above neutral. In the short run, real GDP will _______ and unemployment will _______:', opts:['Decrease; increase','Decrease; decrease','Increase; decrease','Either increase or decrease; remain the same'], ans:0, ex:'Negative supply shock (SRAS left): Y↓, unemployment↑. CB raises rates above neutral (AD left): Y↓ further, unemployment↑ further. Both shocks move in the same direction: GDP definitely DECREASES, unemployment definitely INCREASES.'},
+  {cat:'real-exam', q:'[Q19 — Real Exam] Government sends a $1,000 check to each household (taxes unchanged). Economy was in long-run equilibrium. Central bank only cares about price stability. How does it react?', opts:['Increase taxes','Decrease reserve requirements','Increase interest rates','Decrease interest rates'], ans:2, ex:'Fiscal transfer → AD shifts right → inflationary pressure. CB focused on price stability must counteract → raises interest rates → AD shifts left → price pressure reduced. Taxes are fiscal policy (not the CB\'s tool). Decreasing reserve requirements would further expand money supply (wrong direction).'},
+  {cat:'real-exam', q:'[Q20 — Real Exam] Major Gulf of Mexico oil platform stops production. Simultaneously, the US central bank lowers rates BELOW the neutral rate. This necessarily leads to:', opts:['Higher US aggregate price level','Lower US real GDP','Both of the above','Higher US real GDP'], ans:0, ex:'Oil platform stop → SRAS shifts left → P↑, Y↓. CB cuts rates → AD shifts right → P↑, Y↑. Prices: BOTH shocks push P up → price level necessarily RISES. Real GDP: SRAS pushes Y down, AD pushes Y up → AMBIGUOUS. Only higher prices is certain → A.'},
+  {cat:'real-exam', q:'[Q21 — Real Exam] COVID forces factory shutdowns AND government lowers income taxes (spending fixed). Short-run outcome necessarily:', opts:['Higher prices and higher real GDP','Higher prices and lower real GDP','Higher real GDP','None of the above'], ans:3, ex:'Factory shutdowns → SRAS left → P↑, Y↓. Tax cut → AD right → P↑, Y↑. Prices: both shocks push P up → P necessarily rises. Real GDP: ambiguous (SRAS down, AD up). Higher prices is certain but no individual option A, B, or C is fully correct as a complete statement → D.'},
+  {cat:'real-exam', q:'[Q22 — Real Exam] In the loanable funds market, the government decreases taxes while keeping spending constant. What happens to the neutral interest rate r*?', opts:['Increases','Decreases','Stays the same','Increases or decreases depending on circumstances'], ans:0, ex:'Tax cut with spending unchanged → fiscal deficit rises → government borrows more → demand for loanable funds shifts RIGHT → equilibrium real rate r* RISES. This is the crowding-out mechanism at work in the financial market.'},
+  {cat:'real-exam', q:'[Q23 — Real Exam] Two shocks: (i) demographic aging → people save more; (ii) AI boom → firms invest massively in data centers. What is most likely to happen to the neutral rate and funds transacted?', opts:['Neutral rate increases; funds transacted increase','Neutral rate decreases; funds transacted decrease','Neutral rate increases; funds transacted decrease','None of the above'], ans:3, ex:'More saving → supply right → r*↓, Q↑. AI investment → demand right → r*↑, Q↑. Neutral rate: ambiguous (supply pushes down, demand pushes up). Funds transacted: both shocks increase Q → Q necessarily rises. No option captures "r* ambiguous, Q rises" → D.'},
+  {cat:'real-exam', q:'[Q24 — Real Exam] 2022 data: China (inflation 2.5%, yield 2.20%), Brazil (12%, 11.50%), Japan (2.50%, -0.10%), USA (8.60%, 0.60%). Which had the LARGEST real interest rate?', opts:['China: real rate = -0.3%','Brazil: real rate = -0.5%','Japan: real rate = -2.6%','USA: real rate = -8.0%'], ans:0, ex:'Real rate = nominal yield − inflation. China: 2.20% − 2.5% = −0.3%. Brazil: −0.5%. Japan: −2.6%. USA: −8.0%. China has the largest (least negative) real rate. All four were negative in 2022 — inflation was high everywhere while nominal rates were still low.'},
+  {cat:'real-exam', q:'[Q25 — Real Exam] Same 2022 data. Which country had the SMALLEST (most negative) real interest rate?', opts:['China: real rate = -0.3%','Brazil: real rate = -0.5%','Japan: real rate = -2.6%','USA: real rate = -8.0%'], ans:3, ex:'USA: 0.60% − 8.60% = −8.0%. The US had massively negative real rates in 2022 because inflation reached 8.6% while the Fed had barely started raising the federal funds rate. This was effectively the most expansionary real monetary stance among the four.'},
+  {cat:'real-exam', q:'[Q26 — Real Exam] Long-run equilibrium. Country is a net oil importer. Oil prices FALL AND central bank lowers rates below neutral. Short-run outcome most likely:', opts:['Increase in output and increase in prices','Decrease in output and decrease in prices','Decrease in output and increase in prices','A decrease in unemployment'], ans:3, ex:'Oil price fall (net importer) → SRAS shifts right → Y↑, P↓. CB rate cut → AD right → Y↑, P↑. Real GDP: both push Y up → unemployment necessarily FALLS. Prices: SRAS pushes down, AD pushes up → ambiguous. Only unemployment decrease is certain → D.'},
+  {cat:'real-exam', q:'[Q27 — Real Exam] Economy in long-run equilibrium. Gas prices rise sharply (country doesn\'t produce gas). The _______ shifts to the left and real GDP _______ in the short run.', opts:['SRAS; falls','AD; falls','SRAS; rises','AD; rises'], ans:0, ex:'Higher gas prices raise production costs → SRAS shifts LEFT (upward). At the new short-run equilibrium: P rises, Y falls — stagflation. Note: gas prices are a cost shock to PRODUCERS, so they shift SRAS, not AD. AD shifts when demand-side factors change (income, government spending, interest rates).'},
+  {cat:'real-exam', q:'[Q28 — Real Exam] Italy\'s Debt/GDP is twice Germany\'s. Italy\'s bond yields are higher and nominal GDP grows slower. To keep Debt/GDP constant, Italy must run a primary surplus that is _______ Germany\'s.', opts:['Larger than','Smaller than','The same as','We need more information'], ans:0, ex:'Debt sustainability: primary surplus/GDP = (r − g) × Debt/GDP. Italy has higher r (higher yields), lower g (slower growth), AND higher Debt/GDP. All three factors push the required primary surplus UP. Italy needs a substantially LARGER primary surplus as a share of GDP than Germany to stabilize its debt ratio.'}
+];
+
+ALL_QUESTIONS.push(...REAL_EXAM_QUESTIONS);
 let answered = {};
 let displayedQs = [];
 
@@ -1995,7 +1777,7 @@ function catLabel(cat) {
   const map={
     'micro-sd':'S&D Básico','micro-labor':'Mercado Laboral','micro-price':'Price Controls',
     'micro-tax':'Impuestos','macro-adas':'AD-AS','macro-fiscal':'Política Fiscal',
-    'macro-monetary':'Política Monetaria','intfin':'Finanzas Internacionales'
+    'macro-monetary':'Política Monetaria','real-exam':'⭐ Examen Real Ide'
   };
   return map[cat]||cat;
 }
@@ -2032,108 +1814,10 @@ document.addEventListener('DOMContentLoaded',()=>{
     if(active==='macro1') drawADAS();
     if(active==='macro2') drawFiscal();
     if(active==='macro3') drawFed();
-    if(active==='intfin1') drawFX();
   });
 });
 
-/* ============================
-   FX MARKET CHART (Módulo III)
-   Oferta de USD (exportadores + capital inflow): upward sloping in E-Q space
-     — higher E means more pesos per USD → more attractive to offer USD
-   Demanda de USD (importadores + capital outflow): downward sloping
-     — higher E means imports are more expensive → demand fewer USD
-   Base: D: E = 800 - 4Q,  S: E = 400 + 4Q  → Eq: Q=50, E=600
-============================*/
-let fxState = 'base';
-const fxTexts = {
-  base: 'Equilibrio inicial. Oferta de divisas (exportadores + capital inflow) = Demanda de divisas (importadores + capital outflow). E* = tipo de cambio de equilibrio.',
-  capitalOut: 'Capital outflow (riesgo país sube, como en Chile 2019): los inversores venden activos domésticos → necesitan USD → demanda de USD sube (D→). Al mismo tiempo, inversores extranjeros dejan de entrar → oferta de USD baja (S←). Ambos efectos: E* sube → la moneda se DEPRECIA.',
-  capitalIn: 'Capital inflow (inversión extranjera directa, boom financiero): llegan divisas del exterior → oferta de USD sube (S→). E* baja → la moneda se APRECIA. Peligro: si es excesivo puede generar burbuja y Dutch Disease.',
-  exportBoom: 'Boom exportador (precio del commodity sube — petróleo, cobre): los exportadores convierten más USD → oferta de USD sube (S→). E* baja → moneda se APRECIA. Positivo para importadores, negativo para competitividad de otros exportadores.',
-  importBoom: 'Auge de importaciones (boom de consumo, gasto público alto): los importadores necesitan más USD → demanda de USD sube (D→). E* sube → moneda se DEPRECIA. Refleja déficit corriente creciente.'
-};
-function initFX() { fxState='base'; drawFX(); }
-function fxShock(sc, btn) {
-  fxState = sc;
-  document.querySelectorAll('#intfin1 .ctrl-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('fxExplain').textContent = fxTexts[sc];
-  drawFX();
-}
-function drawFX() {
-  const XM = 100, YM = 1000; // E (pesos/USD) on Y axis
-  const c = makeChart('fxCanvas');
-  if (!c) return;
-  const {ctx} = c;
-  ctx.clearRect(0,0,c.W,c.H);
-  drawAxes(c, XM, YM, 'Cantidad de USD', 'Tipo de Cambio E (pesos/USD)', [20,40,60,80], [200,400,600,800,1000]);
 
-  // Base: Demand E = 800 - 4Q (downward), Supply E = 400 + 4Q (upward)
-  // Eq: 800-4Q = 400+4Q → 8Q=400 → Q=50, E=600
-  const sc = fxState;
-  const dOff = sc==='capitalOut'?120 : sc==='importBoom'?120 : 0;
-  const sOff = sc==='capitalOut'?-120 : sc==='capitalIn'?120 : sc==='exportBoom'?120 : 0;
-
-  // Ghost base curves when shifted
-  if (dOff!==0||sOff!==0) {
-    drawLine(c, XM, YM, 0, 800, 200, 0, 'rgba(200,168,75,.2)', 1.5, [5,5]);
-    drawLine(c, XM, YM, 0, 400, 150, 1000, 'rgba(79,168,200,.2)', 1.5, [5,5]);
-  }
-
-  // New demand: E = (800+dOff) - 4Q
-  const dA = 800 + dOff;
-  drawLine(c, XM, YM, 0, dA, dA/4, 0, '#c8a84b', 2.8);
-  curveLabel(c, XM, YM, 2, Math.min(YM*0.95, dA-20), dOff===0?'D (Demanda USD)':"D' (↑)", '#c8a84b', 'left');
-
-  // New supply: E = (400+sOff) + 4Q  — but supply slopes UP in this FX model
-  // Wait — actually supply of USD: at higher E, exporters are more willing to offer USD (more pesos for them)
-  // S: E = (400 - sOff_supply) + 4Q  where sOff>0 means supply shifts right (intercept drops)
-  // Redefine: sB = 400 - sOff (positive sOff = supply increases = curve shifts right)
-  const sB = 400 - sOff;
-  drawLine(c, XM, YM, 0, sB, (1000-sB)/4, 1000, '#4fa8c8', 2.8);
-  curveLabel(c, XM, YM, Math.min(XM-2, (1000-sB)/4-2), 990, sOff===0?'S (Oferta USD)':"S' (↑)", '#4fa8c8', 'right');
-
-  // Equilibrium: dA - 4Qe = sB + 4Qe → Qe = (dA-sB)/8
-  const Qe = (dA - sB) / 8;
-  const Ee = dA - 4*Qe;
-
-  if (Qe > 0 && Qe < XM && Ee > 0 && Ee < YM) {
-    drawEquilibrium(c, XM, YM, Qe, Ee, '#ffffff');
-    ctx.fillStyle='rgba(255,255,255,.55)'; ctx.font='bold 10px DM Mono';
-    ctx.textAlign='right'; ctx.fillText('E*='+Math.round(Ee), c.P.l-5, c.cy(Ee,YM)+4);
-    ctx.textAlign='center'; ctx.fillText('Q*='+Math.round(Qe), c.cx(Qe,XM), c.H-c.P.b+14);
-
-    // Apreciación/depreciación label
-    const baseE = 600;
-    if (Math.abs(Ee-baseE)>10) {
-      const dep = Ee > baseE;
-      ctx.fillStyle = dep ? '#c84f4f' : '#4fc87a';
-      ctx.font='bold 11px Sora'; ctx.textAlign='left';
-      ctx.fillText(dep ? '↑ Depreciación' : '↓ Apreciación', c.P.l+8, c.P.t+16);
-    }
-  }
-}
-
-/* ============================
-   INTERNATIONAL FINANCE QUIZ QUESTIONS
-============================*/
-const INTFIN_QUESTIONS = [
-  {cat:'intfin', q:'La identidad CA + FA = 0 implica que...', opts:['Un país siempre tiene déficit corriente si tiene deuda externa','Si hay déficit en cuenta corriente, debe haber capital inflow (FA > 0) por el mismo monto','La balanza de pagos siempre está en superávit','Las exportaciones siempre igualan a las importaciones'], ans:1, ex:'CA + FA = 0 es una identidad contable. Un déficit corriente (CA < 0) significa que el país importa más de lo que exporta, y eso se financia necesariamente con capital inflow del exterior (FA > 0).'},
-  {cat:'intfin', q:'¿Qué significa que el tipo de cambio nominal E suba (de 700 a 750 pesos/dólar)?', opts:['La moneda doméstica se aprecia','La moneda doméstica se deprecia','Las exportaciones se encarecen para los compradores extranjeros','El tipo de interés real sube'], ans:1, ex:'E = pesos por dólar. Si E sube, cada dólar vale más pesos → el peso es menos valioso → depreciación. Los bienes domésticos se abaratan para los extranjeros → las exportaciones se vuelven más competitivas.'},
-  {cat:'intfin', q:'En el mercado de divisas, ¿quién oferta divisas extranjeras (USD)?', opts:['Los importadores que necesitan pagar en USD','Los residentes que invierten en el exterior','Los exportadores que convierten sus ingresos en USD a pesos','El gobierno cuando financia déficit fiscal'], ans:2, ex:'Los exportadores reciben USD por sus ventas y los convierten a moneda local → ofertan USD en el mercado FX. También oferta: capital inflow (inversores extranjeros que entran al país).'},
-  {cat:'intfin', q:'Un aumento del riesgo país (country risk) genera, en una economía con tipo de cambio flexible...', opts:['Apreciación de la moneda','Depreciación de la moneda y reducción de reservas','Depreciación de la moneda sin afectar las reservas','Apreciación y aumento del déficit corriente'], ans:2, ex:'Mayor riesgo → capital outflow → demanda de divisas sube y oferta baja → E sube (depreciación). En régimen flexible, el banco central no interviene → las reservas no cambian. El ajuste es vía precio.'},
-  {cat:'intfin', q:'La relación CA = S − I significa que...', opts:['El déficit corriente siempre iguala al déficit fiscal','Un país con más ahorro que inversión doméstica tendrá superávit corriente','La inversión extranjera directa siempre genera déficit corriente','El ahorro público es igual a la inversión privada'], ans:1, ex:'CA = S − I: si el ahorro doméstico (S) supera la inversión doméstica (I), el exceso "sale" al exterior en forma de activos financieros → capital outflow → CA > 0 (superávit corriente). Noruega es el ejemplo perfecto.'},
-  {cat:'intfin', q:'La Dutch Disease (Enfermedad Holandesa) describe...', opts:['Un colapso de la moneda tras descubrir un recurso natural','La apreciación de la moneda tras un boom exportador que destruye competitividad de otros sectores','El agotamiento de las reservas de divisas','La deflación generada por importar bienes baratos'], ans:1, ex:'El boom exportador (petróleo, gas) genera superávit corriente y apreciación cambiaria. Esa apreciación encarece las exportaciones de todos los demás sectores (pesca, manufactura) → pierden competitividad → pueden desaparecer. Cuando el recurso natural se agote, no queda base exportadora.'},
-  {cat:'intfin', q:'¿Por qué el fondo soberano noruego invierte mayoritariamente en activos del exterior y no en Noruega?', opts:['Porque los activos noruegos tienen menor rentabilidad','Para evitar la apreciación excesiva de la corona y diversificar el riesgo','Porque la ley noruega lo prohíbe','Para mantener el déficit corriente bajo'], ans:1, ex:'Invertir los ingresos petroleros en el exterior evita que esos fondos presionen la demanda doméstica → menos apreciación → menos Dutch Disease. Además diversifica el riesgo (los activos noruegos están correlacionados con el petróleo).'},
-  {cat:'intfin', q:'En el caso del Estallido Social chileno (octubre 2019), el mecanismo que conectó la crisis política con la depreciación del peso fue...', opts:['El banco central bajó los tipos de interés','Mayor riesgo país → capital outflow → demanda de USD sube → E sube','El déficit fiscal disparó la deuda pública','Las exportaciones de cobre cayeron bruscamente'], ans:1, ex:'Mecanismo: shock político → riesgo país sube → retornos ajustados por riesgo de activos chilenos caen → capital outflow → demanda de USD sube / oferta de USD baja → E sube (depreciación del peso).'},
-  {cat:'intfin', q:'¿Cuál es la diferencia clave en el mecanismo de ajuste entre regímenes flexible y fijo ante un capital outflow?', opts:['En régimen flexible el banco central interviene; en fijo no','En régimen fijo el ajuste es vía precio; en flexible vía cantidad','En régimen flexible el tipo de cambio sube (depreciación); en fijo el banco central vende reservas para sostener E','No hay diferencia, ambos mecanismos son idénticos'], ans:2, ex:'Régimen flexible: E sube automáticamente (ajuste vía precio, sin pérdida de reservas). Régimen fijo: el banco central vende sus reservas de USD para mantener E constante. Si las reservas se agotan, el régimen colapsa en crisis cambiaria.'},
-  {cat:'intfin', q:'Si el tipo de cambio nominal sube un 10% y la inflación doméstica es 5% mientras la externa es 2%, ¿qué ocurre con el tipo de cambio real (RER)?', opts:['RER cae un 7%','RER sube un 7% aproximadamente','RER no cambia porque la inflación compensa','RER sube un 15%'], ans:1, ex:'%ΔRER ≈ %ΔE + π* − π = +10% + 2% − 5% = +7%. RER sube → los bienes domésticos se abaratan relativamente → mejora la competitividad exportadora a pesar de que parte del efecto se compensa por la inflación doméstica.'},
-  {cat:'intfin', q:'En la fase de inversión inicial del desarrollo petrolero noruego (años 70), ¿qué signo tenía la cuenta corriente?', opts:['CA > 0, porque Noruega exportaba petróleo','CA < 0, porque importaba tecnología y equipamiento para desarrollar el campo','CA = 0, porque era un régimen de tipo de cambio fijo','CA < 0 solo si el gobierno tenía déficit fiscal'], ans:1, ex:'En la fase de inversión, Noruega importa masivamente (plataformas, tecnología offshore, equipamiento) antes de que el petróleo fluya → importaciones > exportaciones → CA < 0. Esta fase se financia con capital inflow (FA > 0).'},
-  {cat:'intfin', q:'El principio de suavización intertemporal del consumo aplicado a un país implica que...', opts:['Un país debe maximizar su consumo actual sin importar el futuro','Un país con altos ingresos temporales (petróleo) debería ahorrar parte para distribuir el consumo a lo largo del tiempo','Los países ricos siempre tienen superávit corriente','La política fiscal no afecta a la balanza corriente'], ans:1, ex:'Igual que un individuo no gasta todo su bonus de una vez, un país con ingresos temporales (recurso finito) debería ahorrar para las generaciones futuras y para cuando el recurso se agote. Esto justifica el superávit corriente de Noruega y su fondo soberano.'}
-];
-
-// Add intfin questions to main array
-ALL_QUESTIONS.push(...INTFIN_QUESTIONS);
 </script>
 </body>
 </html>
